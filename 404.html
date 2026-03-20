@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Tidak Ditemukan | BesiKarya</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23f59e0b%22/><text x=%2250%22 y=%2270%22 font-size=%2260%22 font-family=%22Arial, sans-serif%22 font-weight=%22bold%22 fill=%22%230f172a%22 text-anchor=%22middle%22>B</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            light: '#f8fafc',
+                            accent: '#f59e0b',
+                            muted: '#64748b'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #020617; color: #f8fafc; }
+        .glass-nav { background: rgba(2, 6, 23, 0.7); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-accent selection:text-white flex flex-col min-h-screen">
+
+    <!-- Navbar Component Container -->
+    <div id="navbar-container"></div>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center pt-24 pb-24 relative overflow-hidden">
+        <!-- Glow Effect -->
+        <div class="absolute w-[600px] h-[600px] bg-brand-accent/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="text-center px-4 relative z-10">
+            <h1 class="text-[150px] md:text-[200px] font-black leading-none bg-clip-text text-transparent bg-gradient-to-br from-brand-accent to-yellow-200 opacity-90 mb-4" style="line-height: 0.8;">
+                404
+            </h1>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Halaman Tidak Ditemukan</h2>
+            <p class="text-slate-400 mb-10 max-w-md mx-auto text-lg leading-relaxed">
+                Maaf, mahakarya besi yang Anda cari mungkin telah dipindahkan atau tautan tidak lagi tersedia.
+            </p>
+            <a href="index.html" class="inline-flex justify-center items-center gap-2 bg-slate-800 hover:bg-brand-accent hover:text-brand-dark text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 border border-slate-700 hover:border-brand-accent">
+                Kembali ke Beranda
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer Component Container -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="components.js"></script>
+    <!-- Include data.js to satisfy app.js dependencies globally -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
