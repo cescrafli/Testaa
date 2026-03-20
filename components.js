@@ -15,13 +15,43 @@ document.addEventListener('DOMContentLoaded', () => {
     const activeClassMob = "block px-4 py-3 text-base font-bold text-brand-accent bg-orange-50 rounded-none border-l-4 border-brand-accent uppercase tracking-wide";
     const inactiveClassMob = "block px-4 py-3 text-base font-bold text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-none border-l-4 border-transparent uppercase tracking-wide";
 
+    // Inject Custom Scrollbar & AOS into head
+    if (!document.getElementById('premium-styles')) {
+        const style = document.createElement('style');
+        style.id = 'premium-styles';
+        style.innerHTML = `
+            /* Custom Scrollbar */
+            ::-webkit-scrollbar { width: 8px; }
+            ::-webkit-scrollbar-track { background: #f8fafc; }
+            ::-webkit-scrollbar-thumb { background: #ea580c; border-radius: 4px; }
+            ::-webkit-scrollbar-thumb:hover { background: #c2410c; }
+            
+            /* Navbar shrink transitions */
+            #navbar-wrapper, #navbar-logo-box, #navbar-logo-text { transition: all 0.3s ease; }
+        `;
+        document.head.appendChild(style);
+        
+        // Inject AOS CSS
+        const aosCss = document.createElement('link');
+        aosCss.rel = 'stylesheet';
+        aosCss.href = 'https://unpkg.com/aos@next/dist/aos.css';
+        document.head.appendChild(aosCss);
+        
+        // Inject AOS JS if not present
+        if (!document.querySelector('script[src*="aos.js"]')) {
+            const aosJs = document.createElement('script');
+            aosJs.src = 'https://unpkg.com/aos@next/dist/aos.js';
+            document.head.appendChild(aosJs);
+        }
+    }
+
     const navbarHTML = `
         <nav class="fixed w-full z-50 transition-all duration-300 bg-white border-b border-gray-200 shadow-sm" id="navbar">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between items-center h-20">
+                <div class="flex justify-between items-center h-20" id="navbar-wrapper">
                     <a href="index.html" class="flex-shrink-0 flex items-center gap-3 block group">
-                        <div class="w-10 h-10 bg-brand-accent rounded-sm flex items-center justify-center font-black text-white text-2xl shadow-sm transition-transform group-hover:scale-105">B</div>
-                        <span class="font-black text-2xl tracking-tighter text-slate-900 uppercase">Besi<span class="text-brand-accent">Karya</span></span>
+                        <div id="navbar-logo-box" class="w-10 h-10 bg-brand-accent rounded-sm flex items-center justify-center font-black text-white text-2xl shadow-sm transition-transform group-hover:scale-105">B</div>
+                        <span id="navbar-logo-text" class="font-black text-2xl tracking-tighter text-slate-900 uppercase">Besi<span class="text-brand-accent">Karya</span></span>
                     </a>
                     <div class="hidden md:flex space-x-6 lg:space-x-8 items-center">
                         <a href="index.html" class="${isBeranda ? activeClassDesk : inactiveClassDesk}">Beranda</a>

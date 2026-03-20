@@ -259,6 +259,39 @@ class DigitalShowcase {
 
 // Initialize when Components are Loaded into DOM
 window.addEventListener('ComponentsLoaded', () => {
+    // Wait a brief moment for AOS script to load if injected dynamically
+    const initPremiumFeatures = setInterval(() => {
+        if (typeof AOS !== 'undefined') {
+            AOS.init({ duration: 800, once: true, offset: 50 });
+            clearInterval(initPremiumFeatures);
+        }
+    }, 100);
+
+    // Navbar Shrink Effect
+    window.addEventListener('scroll', () => {
+        const wrapper = document.getElementById('navbar-wrapper');
+        const logoBox = document.getElementById('navbar-logo-box');
+        const logoText = document.getElementById('navbar-logo-text');
+        
+        if (wrapper && logoBox && logoText) {
+            if (window.scrollY > 50) {
+                // Shrink
+                wrapper.classList.replace('h-20', 'h-16');
+                logoBox.classList.replace('w-10', 'w-8');
+                logoBox.classList.replace('h-10', 'h-8');
+                logoBox.classList.replace('text-2xl', 'text-xl');
+                logoText.classList.replace('text-2xl', 'text-xl');
+            } else {
+                // Expand
+                wrapper.classList.replace('h-16', 'h-20');
+                logoBox.classList.replace('w-8', 'w-10');
+                logoBox.classList.replace('h-8', 'h-10');
+                logoBox.classList.replace('text-xl', 'text-2xl');
+                logoText.classList.replace('text-xl', 'text-2xl');
+            }
+        }
+    });
+
     if (typeof portfolioData !== 'undefined') {
         new DigitalShowcase(portfolioData, WHATSAPP_NUMBER);
         console.log("Digital Showcase UI + Corporate Light Theme initialized.");
