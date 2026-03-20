@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const path = window.location.pathname;
     const isKatalog = path.includes('katalog');
     const isTentang = path.includes('tentang');
-    const isBeranda = (!isKatalog && !isTentang) || path.endsWith('/') || path.endsWith('index.html');
+    const isProyek = path.includes('proyek');
+    const isBeranda = (!isKatalog && !isTentang && !isProyek) || path.endsWith('/') || path.endsWith('index.html');
 
     // Link styling helper (Corporate Light Theme)
     const activeClassDesk = "text-brand-accent font-bold transition-colors text-sm uppercase tracking-wider";
@@ -25,8 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="hidden md:flex space-x-8 items-center">
                         <a href="index.html" class="${isBeranda ? activeClassDesk : inactiveClassDesk}">Beranda</a>
                         <a href="katalog.html" class="${isKatalog ? activeClassDesk : inactiveClassDesk}">Katalog</a>
+                        <a href="proyek.html" class="${isProyek ? activeClassDesk : inactiveClassDesk}">Proyek Kami</a>
                         <a href="tentang.html" class="${isTentang ? activeClassDesk : inactiveClassDesk}">Tentang Kami</a>
-                        <a href="#" class="wa-global-btn bg-brand-accent text-white px-6 py-2.5 rounded-sm font-bold text-sm btn-hover flex items-center gap-2 uppercase tracking-wide shadow-sm" target="_blank" rel="noopener noreferrer">
+                        <a href="#" class="wa-global-btn bg-brand-accent text-white px-6 py-2.5 rounded-sm font-bold text-sm transition-all hover:-translate-y-0.5 hover:shadow-[0_10px_15px_-3px_rgba(234,88,12,0.3)] flex items-center gap-2 uppercase tracking-wide shadow-sm" target="_blank" rel="noopener noreferrer">
                             Hubungi Kami
                         </a>
                     </div>
@@ -45,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="px-0 pt-2 pb-4 space-y-1">
                     <a href="index.html" class="${isBeranda ? activeClassMob : inactiveClassMob}">Beranda</a>
                     <a href="katalog.html" class="${isKatalog ? activeClassMob : inactiveClassMob}">Katalog</a>
+                    <a href="proyek.html" class="${isProyek ? activeClassMob : inactiveClassMob}">Proyek Kami</a>
                     <a href="tentang.html" class="${isTentang ? activeClassMob : inactiveClassMob}">Tentang Kami</a>
                     <div class="px-4 mt-4">
                         <a href="#" class="wa-global-btn block w-full text-center px-4 py-3 text-base font-bold text-white bg-brand-accent rounded-sm shadow-sm uppercase tracking-wide" target="_blank" rel="noopener noreferrer">Hubungi Kami Spesialis</a>
@@ -71,8 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         <h4 class="text-white font-black mb-6 uppercase tracking-widest text-sm">Akses Cepat</h4>
                         <ul class="space-y-3 text-sm text-slate-400 font-semibold">
                             <li><a href="index.html" class="hover:text-brand-accent transition-colors flex items-center gap-2"><div class="w-1.5 h-1.5 bg-brand-accent rounded-sm"></div> Beranda</a></li>
-                            <li><a href="katalog.html" class="hover:text-brand-accent transition-colors flex items-center gap-2"><div class="w-1.5 h-1.5 bg-brand-accent rounded-sm"></div> Katalog Katalog</a></li>
+                            <li><a href="proyek.html" class="hover:text-brand-accent transition-colors flex items-center gap-2"><div class="w-1.5 h-1.5 bg-brand-accent rounded-sm"></div> Galeri Proyek</a></li>
                             <li><a href="tentang.html" class="hover:text-brand-accent transition-colors flex items-center gap-2"><div class="w-1.5 h-1.5 bg-brand-accent rounded-sm"></div> Filosofi Material</a></li>
+                            <li><a href="#" download="Company_Profile_BesiKarya.pdf" class="mt-4 hover:text-white transition-colors flex items-center gap-2 text-brand-accent border border-brand-accent/50 hover:bg-brand-accent py-2 px-3 rounded-sm w-fit"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg> Unduh e-Katalog PDF</a></li>
                         </ul>
                     </div>
                     <div>
