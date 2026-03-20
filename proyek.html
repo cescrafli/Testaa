@@ -139,6 +139,14 @@
                 loop: true,
                 autoplayVideos: true
             });
+            lightbox.on('open', () => {
+                const closeBtn = document.querySelector('.gclose');
+                const nextBtn = document.querySelector('.gnext');
+                const prevBtn = document.querySelector('.gprev');
+                if (closeBtn) closeBtn.setAttribute('aria-label', 'Tutup galeri');
+                if (nextBtn) nextBtn.setAttribute('aria-label', 'Foto selanjutnya');
+                if (prevBtn) prevBtn.setAttribute('aria-label', 'Foto sebelumnya');
+            });
         });
     </script>
     <script src="app.js"></script>

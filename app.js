@@ -111,40 +111,45 @@ class DigitalShowcase {
         const searchInput = document.getElementById('katalog-search');
         if (!searchInput) return;
 
+        let debounceTimer;
         searchInput.addEventListener('input', (e) => {
-            const query = e.target.value.toLowerCase();
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => {
+                const query = e.target.value.toLowerCase();
             
-            // Clear active filter visually
-            if (this.filterButtons.length) {
-                this.filterButtons.forEach(b => {
-                    b.classList.remove('active', 'bg-slate-900', 'text-white');
-                    b.classList.add('text-slate-600', 'border-gray-300');
-                });
-            }
-
-            if (query === '') {
-                const allBtn = document.querySelector('[data-filter="all"]');
-                if (allBtn) {
-                    allBtn.classList.add('active', 'bg-slate-900', 'text-white');
-                    allBtn.classList.remove('text-slate-600', 'border-gray-300');
+                // Clear active filter visually
+                if (this.filterButtons.length) {
+                    this.filterButtons.forEach(b => {
+                        b.classList.remove('active', 'bg-slate-900', 'text-white');
+                        b.classList.add('text-slate-600', 'border-gray-300');
+                    });
                 }
-                this.renderSearchData(this.data);
-                return;
-            }
 
-            const searchMatches = this.data.filter(item => 
-                item.title.toLowerCase().includes(query) || 
-                item.description.toLowerCase().includes(query) ||
-                item.category.toLowerCase().includes(query)
-            );
+                if (query === '') {
+                    const allBtn = document.querySelector('[data-filter="all"]');
+                    if (allBtn) {
+                        allBtn.classList.add('active', 'bg-slate-900', 'text-white');
+                        allBtn.classList.remove('text-slate-600', 'border-gray-300');
+                    }
+                    this.renderSearchData(this.data);
+                    return;
+                }
 
-            this.renderSearchData(searchMatches);
+                const searchMatches = this.data.filter(item => 
+                    item.title.toLowerCase().includes(query) || 
+                    item.description.toLowerCase().includes(query) ||
+                    item.category.toLowerCase().includes(query)
+                );
+
+                this.renderSearchData(searchMatches);
+            }, 300);
         });
     }
 
     renderSearchData(filteredData) {
         if (!this.galleryContainer) return;
         this.galleryContainer.innerHTML = '';
+        if (this.renderTimer) clearTimeout(this.renderTimer);
 
         if (filteredData.length === 0) {
             this.galleryContainer.innerHTML = `
@@ -168,7 +173,7 @@ class DigitalShowcase {
         `.repeat(6);
         this.galleryContainer.innerHTML = skeletonHTML;
 
-        setTimeout(() => {
+        this.renderTimer = setTimeout(() => {
             const html = filteredData.map(item => this.createCardTemplate(item)).join('');
             this.galleryContainer.innerHTML = html;
             
@@ -179,6 +184,14 @@ class DigitalShowcase {
                     touchNavigation: true,
                     loop: true,
                     autoplayVideos: true
+                });
+                this.lightbox.on('open', () => {
+                    const closeBtn = document.querySelector('.gclose');
+                    const nextBtn = document.querySelector('.gnext');
+                    const prevBtn = document.querySelector('.gprev');
+                    if (closeBtn) closeBtn.setAttribute('aria-label', 'Tutup galeri');
+                    if (nextBtn) nextBtn.setAttribute('aria-label', 'Foto selanjutnya');
+                    if (prevBtn) prevBtn.setAttribute('aria-label', 'Foto sebelumnya');
                 });
             }
         }, 600);
@@ -192,8 +205,8 @@ class DigitalShowcase {
         return `
             <div class="project-card bg-white border border-gray-200 rounded-sm overflow-hidden group flex flex-col h-full animate-fade-in shadow-sm hover:shadow-xl">
                 <div class="relative overflow-hidden aspect-[4/3] bg-slate-100">
-                    <a href="${item.image}" class="glightbox block w-full h-full" data-gallery="katalog-gallery" data-title="${item.title}" data-description="${item.description}">
-                        <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105" loading="lazy">
+                    <a href="${item.image}" class="glightbox block w-full h-full" aria-label="Perbesar gambar ${item.title}" data-gallery="katalog-gallery" data-title="${item.title}" data-description="${item.description}">
+                        <img src="${item.image}" alt="${item.title}" width="800" height="600" loading="lazy" decoding="async" class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105">
                         <div class="absolute inset-0 bg-slate-900/5 group-hover:bg-transparent transition-colors duration-300 pointer-events-none"></div>
                         <div class="absolute top-4 right-4 bg-white/95 backdrop-blur-md px-3 py-1 rounded-sm border border-gray-200 text-xs font-bold text-brand-accent shadow-sm uppercase tracking-widest pointer-events-none">
                             ${item.category}
@@ -216,6 +229,7 @@ class DigitalShowcase {
     renderGallery(category) {
         if (!this.galleryContainer) return;
         this.galleryContainer.innerHTML = '';
+        if (this.renderTimer) clearTimeout(this.renderTimer);
         
         const filteredData = category === 'all' 
             ? this.data 
@@ -230,7 +244,20 @@ class DigitalShowcase {
             return;
         }
 
-        setTimeout(() => {
+        const skeletonHTML = `
+            <div class="project-card bg-white border border-gray-200 rounded-sm overflow-hidden flex flex-col h-full shadow-sm animate-pulse">
+                <div class="aspect-[4/3] bg-slate-200 w-full"></div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <div class="h-6 bg-slate-200 rounded w-3/4 mb-4 mt-2"></div>
+                    <div class="h-4 bg-slate-200 rounded w-full mb-2"></div>
+                    <div class="h-4 bg-slate-200 rounded w-5/6 mb-6"></div>
+                    <div class="mt-auto h-12 bg-slate-200 rounded w-full"></div>
+                </div>
+            </div>
+        `.repeat(6);
+        this.galleryContainer.innerHTML = skeletonHTML;
+
+        this.renderTimer = setTimeout(() => {
             const html = filteredData.map(item => this.createCardTemplate(item)).join('');
             this.galleryContainer.innerHTML = html;
             
@@ -241,6 +268,14 @@ class DigitalShowcase {
                     touchNavigation: true,
                     loop: true,
                     autoplayVideos: true
+                });
+                this.lightbox.on('open', () => {
+                    const closeBtn = document.querySelector('.gclose');
+                    const nextBtn = document.querySelector('.gnext');
+                    const prevBtn = document.querySelector('.gprev');
+                    if (closeBtn) closeBtn.setAttribute('aria-label', 'Tutup galeri');
+                    if (nextBtn) nextBtn.setAttribute('aria-label', 'Foto selanjutnya');
+                    if (prevBtn) prevBtn.setAttribute('aria-label', 'Foto sebelumnya');
                 });
             }
         }, 600);
