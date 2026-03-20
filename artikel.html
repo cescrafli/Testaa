@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurnal Edukasi | BesiKarya</title>
+    <meta name="description" content="Kumpulan artikel edukasi dan wawasan material besi industrial, pagar laser, serta tren arsitektur terkini.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%220%22 fill=%22%23ea580c%22/><text x=%2250%22 y=%2270%22 font-size=%2260%22 font-family=%22Inter, sans-serif%22 font-weight=%22black%22 fill=%22%23ffffff%22 text-anchor=%22middle%22>B</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            light: '#f8fafc',
+                            accent: '#ea580c',
+                            muted: '#64748b'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #f8fafc; color: #1e293b; }
+        .article-card { transition: all 0.3s ease; }
+        .article-card:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-accent selection:text-white flex flex-col min-h-screen">
+
+    <!-- Navbar Component Container -->
+    <div id="navbar-container"></div>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-24 bg-slate-50">
+        <section class="py-16 relative border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center mb-16">
+                    <h1 class="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight uppercase">Jurnal <span class="text-brand-accent">Edukasi</span></h1>
+                    <p class="text-slate-600 max-w-2xl mx-auto text-lg font-medium">Buku panduan arsitektural komprehensif dari tim teknis kami untuk membantu Anda membuat keputusan yang paling tepat dalam spesifikasi fabrikasi besi perumahan mewah Anda.</p>
+                </div>
+
+                <!-- Articles Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    
+                    <!-- Article 1 -->
+                    <article class="article-card bg-white border border-gray-200 rounded-sm overflow-hidden flex flex-col h-full shadow-sm group">
+                        <div class="relative overflow-hidden aspect-video bg-slate-100">
+                            <img src="https://images.unsplash.com/photo-1574360982390-e2213b194fb8?auto=format&fit=crop&w=800&q=80" alt="Galvanis vs Biasa" class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105">
+                            <div class="absolute top-4 left-4 bg-brand-accent px-3 py-1 text-white text-xs font-bold rounded-sm uppercase tracking-widest">Pengetahuan Baja</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <p class="text-xs text-slate-500 font-bold tracking-widest uppercase mb-3 text-brand-accent">12 Agustus 2026</p>
+                            <h3 class="text-xl font-black text-slate-900 mb-3 uppercase tracking-tight leading-snug group-hover:text-brand-accent transition-colors">Perbedaan Kritis Besi Hollow Galvanis dan Hollow Hitam Biasa</h3>
+                            <p class="text-slate-600 text-sm mb-6 flex-grow line-clamp-3 font-medium leading-relaxed">Jangan pertaruhkan properti puluhan miliar Anda akibat karat 2 tahun. Pelajari mengapa kontraktor berkelas Internasional mengharamkan pipa hitam berkarat...</p>
+                            <a href="#" class="inline-flex items-center gap-2 text-slate-900 font-bold uppercase tracking-widest text-sm hover:text-brand-accent transition-colors">
+                                Baca Selengkapnya <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="article-card bg-white border border-gray-200 rounded-sm overflow-hidden flex flex-col h-full shadow-sm group">
+                        <div class="relative overflow-hidden aspect-video bg-slate-100">
+                            <img src="https://images.unsplash.com/photo-1549419137-ea769395f190?auto=format&fit=crop&w=800&q=80" alt="Tren Pagar Laser Cutting" class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105">
+                            <div class="absolute top-4 left-4 bg-brand-accent px-3 py-1 text-white text-xs font-bold rounded-sm uppercase tracking-widest">Tren & Desain</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <p class="text-xs text-slate-500 font-bold tracking-widest uppercase mb-3 text-brand-accent">04 September 2026</p>
+                            <h3 class="text-xl font-black text-slate-900 mb-3 uppercase tracking-tight leading-snug group-hover:text-brand-accent transition-colors">Tren Fasad dan Pagar Laser Cutting 2026 untuk Rumah Tropis</h3>
+                            <p class="text-slate-600 text-sm mb-6 flex-grow line-clamp-3 font-medium leading-relaxed">Ketahui ketebalan ideal plat baja CNC laser cutting agar tidak melintir saat terkena panas ekstrim Jakarta. Berapa motif ideal untuk fasad rumah idaman...</p>
+                            <a href="#" class="inline-flex items-center gap-2 text-slate-900 font-bold uppercase tracking-widest text-sm hover:text-brand-accent transition-colors">
+                                Baca Selengkapnya <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article class="article-card bg-white border border-gray-200 rounded-sm overflow-hidden flex flex-col h-full shadow-sm group">
+                        <div class="relative overflow-hidden aspect-video bg-slate-100">
+                            <img src="https://images.unsplash.com/photo-1621873117498-7557dc0aa912?auto=format&fit=crop&w=800&q=80" alt="Cat Semprot vs Kuas" class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105">
+                            <div class="absolute top-4 left-4 bg-brand-accent px-3 py-1 text-white text-xs font-bold rounded-sm uppercase tracking-widest">Tips Inspeksi</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <p class="text-xs text-slate-500 font-bold tracking-widest uppercase mb-3 text-brand-accent">29 Oktober 2026</p>
+                            <h3 class="text-xl font-black text-slate-900 mb-3 uppercase tracking-tight leading-snug group-hover:text-brand-accent transition-colors">Mengapa Pekerjaan Kuas Tangan Mereduksi Kewibawaan Eksterior Anda</h3>
+                            <p class="text-slate-600 text-sm mb-6 flex-grow line-clamp-3 font-medium leading-relaxed">Penjelasan empiris mengapa teknik Spray Gun Otomotif berpadu dengan Cat Dasar Epoxy adalah standar mutlak pengerjaan pabrik korporat internasional...</p>
+                            <a href="#" class="inline-flex items-center gap-2 text-slate-900 font-bold uppercase tracking-widest text-sm hover:text-brand-accent transition-colors">
+                                Baca Selengkapnya <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component Container -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="components.js"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

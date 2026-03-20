@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Proyek | BesiKarya</title>
+    <meta name="description" content="Kumpulan portofolio instalasi proyek besi, kanopi, dan teralis di perumahan komersial dan residensial.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%220%22 fill=%22%23ea580c%22/><text x=%2250%22 y=%2270%22 font-size=%2260%22 font-family=%22Inter, sans-serif%22 font-weight=%22black%22 fill=%22%23ffffff%22 text-anchor=%22middle%22>B</text></svg>">
+    
+    <!-- GLightbox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            light: '#f8fafc',
+                            accent: '#ea580c',
+                            muted: '#64748b'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #f8fafc; color: #1e293b; }
+        .glightbox-clean .gslide-description { background: #0f172a !important; color: white !important; }
+        .glightbox-clean .gslide-title { color: #ea580c !important; font-weight: 900 !important; font-family: 'Inter', sans-serif !important; text-transform: uppercase; }
+        .glightbox-clean .gslide-desc { color: #cbd5e1 !important; font-family: 'Inter', sans-serif !important; }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-accent selection:text-white flex flex-col min-h-screen">
+
+    <!-- Navbar Component Container -->
+    <div id="navbar-container"></div>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-24 bg-white border-b border-gray-200">
+        <section class="py-16 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center mb-16">
+                    <h1 class="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight uppercase">Galeri <span class="text-brand-accent">Proyek Lapangan</span></h1>
+                    <p class="text-slate-600 max-w-2xl mx-auto text-lg font-medium">Dokumentasi otentik instalasi mahakarya besi kami di berbagai proyek hunian premium dan komersial elit di Jakarta.</p>
+                </div>
+
+                <!-- Projects Grid -->
+                <!-- We use native HTML for proyek.html to keep it distinct from data.js products, but utilizing GLightbox -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <a href="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80" 
+                       class="glightbox block relative aspect-[4/3] rounded-sm overflow-hidden group shadow-sm hover:shadow-xl transition-shadow border border-gray-200"
+                       data-gallery="proyek-gallery" 
+                       data-title="Instalasi Fasad & Balkon" 
+                       data-description="Perumahan Pantai Indah Kapuk (PIK) Jakarta. Material Hollow Baja 2mm Finishing Duko.">
+                       <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" alt="Fasad PIK">
+                       <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-300 flex flex-col justify-end p-6">
+                           <div class="text-brand-accent font-black text-xl uppercase tracking-widest translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Fasad & Balkon PIK</div>
+                           <div class="text-slate-300 font-medium text-sm mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Klik Untuk Memperbesar</div>
+                       </div>
+                    </a>
+
+                    <a href="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" 
+                       class="glightbox block relative aspect-[4/3] rounded-sm overflow-hidden group shadow-sm hover:shadow-xl transition-shadow border border-gray-200"
+                       data-gallery="proyek-gallery" 
+                       data-title="Partisi Ruang Kaca & Besi" 
+                       data-description="Gedung Perkantoran Sudirman SCBD. Rangka solid Industrial Style.">
+                       <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" alt="Partisi SCBD">
+                       <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-300 flex flex-col justify-end p-6">
+                           <div class="text-brand-accent font-black text-xl uppercase tracking-widest translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Partisi SCBD</div>
+                           <div class="text-slate-300 font-medium text-sm mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Klik Untuk Memperbesar</div>
+                       </div>
+                    </a>
+
+                    <a href="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80" 
+                       class="glightbox block relative aspect-[4/3] rounded-sm overflow-hidden group shadow-sm hover:shadow-xl transition-shadow border border-gray-200"
+                       data-gallery="proyek-gallery" 
+                       data-title="Pilar Kanopi Eksterior" 
+                       data-description="Residensial Kemang Jakarta. Struktur Kanopi H-Beam Kaca Tempered 10mm.">
+                       <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" alt="Kanopi Kemang">
+                       <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-300 flex flex-col justify-end p-6">
+                           <div class="text-brand-accent font-black text-xl uppercase tracking-widest translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Kanopi Kemang H-Beam</div>
+                           <div class="text-slate-300 font-medium text-sm mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Klik Untuk Memperbesar</div>
+                       </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component Container -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="components.js"></script>
+    <script src="data.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+        // Initialize GLightbox standalone for this page
+        document.addEventListener('DOMContentLoaded', () => {
+            const lightbox = GLightbox({
+                touchNavigation: true,
+                loop: true,
+                autoplayVideos: true
+            });
+        });
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
