@@ -51,4 +51,4 @@ const portfolioData = [
     }
 ];
 
-const WHATSAPP_NUMBER = "6281234567890"; // Format: 62xx
+const WHATSAPP_NUMBER = "6285852317383"; // Format: 62xx

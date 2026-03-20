@@ -1,7 +1,25 @@
 // components.js
 
+// Preloader Style (Head injection prevents FOUC)
+if (!document.getElementById('splash-style')) {
+    const splashStyle = document.createElement('style');
+    splashStyle.id = 'splash-style';
+    splashStyle.innerHTML = `
+        body { opacity: 0; transition: opacity 0.5s ease-in-out; }
+        body.page-loaded { opacity: 1; }
+        #splash-screen {
+            position: fixed; inset: 0; top: 0; left: 0; width: 100%; height: 100%; z-index: 99999;
+            background-color: #ffffff;
+            display: flex; align-items: center; justify-content: center;
+            opacity: 1; transition: opacity 0.4s ease-in-out;
+        }
+        #splash-screen.fade-out { opacity: 0; pointer-events: none; }
+    `;
+    document.head.appendChild(splashStyle);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // Determine active page
     const path = window.location.pathname;
     const isKatalog = path.includes('katalog');
@@ -10,8 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const isBeranda = (!isKatalog && !isTentang && !isProyek) || path.endsWith('/') || path.endsWith('index.html');
 
     // Link styling helper (Corporate Light Theme)
-    const activeClassDesk = "text-brand-accent font-bold transition-colors text-sm uppercase tracking-wider";
-    const inactiveClassDesk = "text-slate-600 hover:text-slate-900 transition-colors text-sm font-bold uppercase tracking-wider";
+    const activeClassDesk = "text-brand-accent font-bold transition-colors text-sm uppercase tracking-wider relative after:absolute after:-bottom-1.5 after:left-0 after:h-[2px] after:w-full after:bg-brand-accent";
+    const inactiveClassDesk = "text-slate-600 hover:text-slate-900 transition-colors text-sm font-bold uppercase tracking-wider relative after:absolute after:-bottom-1.5 after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-brand-accent after:transition-all after:duration-300";
     const activeClassMob = "block px-4 py-3 text-base font-bold text-brand-accent bg-orange-50 rounded-none border-l-4 border-brand-accent uppercase tracking-wide";
     const inactiveClassMob = "block px-4 py-3 text-base font-bold text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-none border-l-4 border-transparent uppercase tracking-wide";
 
@@ -30,13 +48,13 @@ document.addEventListener('DOMContentLoaded', () => {
             #navbar-wrapper, #navbar-logo-box, #navbar-logo-text { transition: all 0.3s ease; }
         `;
         document.head.appendChild(style);
-        
+
         // Inject AOS CSS
         const aosCss = document.createElement('link');
         aosCss.rel = 'stylesheet';
         aosCss.href = 'https://unpkg.com/aos@next/dist/aos.css';
         document.head.appendChild(aosCss);
-        
+
         // Inject AOS JS if not present
         if (!document.querySelector('script[src*="aos.js"]')) {
             const aosJs = document.createElement('script');
@@ -44,6 +62,46 @@ document.addEventListener('DOMContentLoaded', () => {
             document.head.appendChild(aosJs);
         }
     }
+
+    // Splash Screen Logic
+    const splashHTML = `
+        <div id="splash-screen">
+            <div class="flex flex-col items-center animate-pulse">
+                <div class="w-16 h-16 bg-brand-accent rounded-sm flex items-center justify-center font-black text-white text-4xl shadow-md mb-4">B</div>
+            </div>
+        </div>
+    `;
+    document.body.insertAdjacentHTML('afterbegin', splashHTML);
+
+    window.addEventListener('load', () => {
+        document.body.classList.add('page-loaded');
+        const splash = document.getElementById('splash-screen');
+        if (splash) {
+            splash.classList.add('fade-out');
+            setTimeout(() => { splash.style.display = 'none'; }, 400);
+        }
+    });
+
+    document.querySelectorAll('a').forEach(anchor => {
+        anchor.addEventListener('click', (e) => {
+            const href = anchor.getAttribute('href');
+            // Valid internal links
+            if (href && !href.startsWith('#') && !href.startsWith('http') && anchor.target !== '_blank' && !anchor.hasAttribute('download')) {
+                e.preventDefault();
+                const splash = document.getElementById('splash-screen');
+                if (splash) {
+                    splash.style.display = 'flex';
+                    // Force reflow
+                    void splash.offsetWidth;
+                    splash.classList.remove('fade-out');
+                    document.body.classList.remove('page-loaded');
+                }
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 400); // Wait for fade out
+            }
+        });
+    });
 
     const navbarHTML = `
         <nav class="fixed w-full z-50 transition-all duration-300 bg-white border-b border-gray-200 shadow-sm" id="navbar">
@@ -131,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <div class="bg-slate-800 p-2 rounded-sm shrink-0 text-brand-accent">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                                 </div>
-                                <span class="font-bold">+62 812 3456 7890</span>
+                                <span class="font-bold">+62 858 5231 7383</span>
                             </li>
                         </ul>
                     </div>

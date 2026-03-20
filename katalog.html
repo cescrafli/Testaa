@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Katalog Showcase | BesiKarya</title>
     <meta name="description" content="Katalog digital produk custom besi, kanopi, teralis, dan pagar.">
-    
+
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%220%22 fill=%22%23ea580c%22/><text x=%2250%22 y=%2270%22 font-size=%2260%22 font-family=%22Inter, sans-serif%22 font-weight=%22black%22 fill=%22%23ffffff%22 text-anchor=%22middle%22>B</text></svg>">
-    
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%220%22 fill=%22%23ea580c%22/><text x=%2250%22 y=%2270%22 font-size=%2260%22 font-family=%22Inter, sans-serif%22 font-weight=%22black%22 fill=%22%23ffffff%22 text-anchor=%22middle%22>B</text></svg>">
+
     <!-- GLightbox CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-    
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Katalog Digital Showcase | BesiKarya">
-    <meta property="og:description" content="Katalog digital produk custom besi, kanopi, teralis, dan pagar oleh BesiKarya.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1504307651254-35680f4f7285?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:description"
+        content="Katalog digital produk custom besi, kanopi, teralis, dan pagar oleh BesiKarya.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1504307651254-35680f4f7285?auto=format&fit=crop&w=1200&q=80">
     <meta property="og:url" content="https://besikarya.com/katalog.html">
     <meta property="og:type" content="website">
 
@@ -34,16 +38,16 @@
         "postalCode": "11440",
         "addressCountry": "ID"
       },
-      "telephone": "+6281234567890",
+      "telephone": "+6285852317383",
       "openingHours": "Mo,Tu,We,Th,Fr,Sa 08:00-17:00"
     }
-    </script>    
+    </script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -64,17 +68,62 @@
         }
     </script>
     <style>
-        body { background-color: #f8fafc; color: #1e293b; }
-        .project-card { transition: all 0.3s ease; }
-        .project-card:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); }
-        .filter-btn.active { background-color: #1e293b; color: #ffffff; font-weight: 700; border-color: #1e293b; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .animate-fade-in { animation: fadeIn 0.4s ease-out forwards; }
-        .glightbox-clean .gslide-description { background: #0f172a !important; color: white !important; }
-        .glightbox-clean .gslide-title { color: #ea580c !important; font-weight: 900 !important; font-family: 'Inter', sans-serif !important; text-transform: uppercase; }
-        .glightbox-clean .gslide-desc { color: #cbd5e1 !important; font-family: 'Inter', sans-serif !important; }
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        .project-card {
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+
+        .filter-btn.active {
+            background-color: #1e293b;
+            color: #ffffff;
+            font-weight: 700;
+            border-color: #1e293b;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+
+        .glightbox-clean .gslide-description {
+            background: #0f172a !important;
+            color: white !important;
+        }
+
+        .glightbox-clean .gslide-title {
+            color: #ea580c !important;
+            font-weight: 900 !important;
+            font-family: 'Inter', sans-serif !important;
+            text-transform: uppercase;
+        }
+
+        .glightbox-clean .gslide-desc {
+            color: #cbd5e1 !important;
+            font-family: 'Inter', sans-serif !important;
+        }
     </style>
 </head>
+
 <body class="antialiased selection:bg-brand-accent selection:text-white flex flex-col min-h-screen">
 
     <!-- Navbar Component Container -->
@@ -85,27 +134,44 @@
         <!-- Digital Showcase / Catalog Section -->
         <section class="py-16 relative border-b border-gray-200">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
+
                 <div class="text-center mb-12">
-                    <h1 class="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight uppercase">Katalog <span class="text-brand-accent">Produk</span></h1>
-                    <p class="text-slate-600 max-w-2xl mx-auto text-lg">Jelajahi portofolio mahakarya terbaik kami. Setiap desain dapat dikustomisasi secara presisi sesuai dengan arsitektur rumah Anda.</p>
+                    <h1 class="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight uppercase">Katalog
+                        <span class="text-brand-accent">Produk</span></h1>
+                    <p class="text-slate-600 max-w-2xl mx-auto text-lg">Jelajahi portofolio mahakarya terbaik kami.
+                        Setiap desain dapat dikustomisasi secara presisi sesuai dengan arsitektur rumah Anda.</p>
                 </div>
 
                 <!-- Live Search -->
                 <div class="max-w-md mx-auto mb-10 relative">
                     <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                        <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
                     </div>
-                    <input type="text" id="katalog-search" class="w-full bg-white border border-gray-300 text-slate-900 rounded-sm py-3 pl-12 pr-4 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors shadow-sm" placeholder="Cari berdasarkan model atau nama produk...">
+                    <input type="text" id="katalog-search"
+                        class="w-full bg-white border border-gray-300 text-slate-900 rounded-sm py-3 pl-12 pr-4 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors shadow-sm"
+                        placeholder="Cari berdasarkan model atau nama produk...">
                 </div>
 
                 <!-- Filters -->
                 <div class="flex flex-wrap justify-center gap-3 mb-12" id="filter-container">
-                    <button class="filter-btn active px-6 py-2 rounded-sm border border-gray-300 text-sm font-semibold transition-colors" data-filter="all">Semua</button>
-                    <button class="filter-btn px-6 py-2 rounded-sm border border-gray-300 text-slate-600 hover:text-slate-900 hover:border-gray-500 text-sm font-semibold transition-colors" data-filter="Kanopi">Kanopi</button>
-                    <button class="filter-btn px-6 py-2 rounded-sm border border-gray-300 text-slate-600 hover:text-slate-900 hover:border-gray-500 text-sm font-semibold transition-colors" data-filter="Teralis">Teralis</button>
-                    <button class="filter-btn px-6 py-2 rounded-sm border border-gray-300 text-slate-600 hover:text-slate-900 hover:border-gray-500 text-sm font-semibold transition-colors" data-filter="Jendela">Jendela</button>
-                    <button class="filter-btn px-6 py-2 rounded-sm border border-gray-300 text-slate-600 hover:text-slate-900 hover:border-gray-500 text-sm font-semibold transition-colors" data-filter="Pagar">Pagar</button>
+                    <button
+                        class="filter-btn active px-6 py-2 rounded-sm border border-gray-300 text-sm font-semibold transition-colors"
+                        data-filter="all">Semua</button>
+                    <button
+                        class="filter-btn px-6 py-2 rounded-sm border border-gray-300 text-slate-600 hover:text-slate-900 hover:border-gray-500 text-sm font-semibold transition-colors"
+                        data-filter="Kanopi">Kanopi</button>
+                    <button
+                        class="filter-btn px-6 py-2 rounded-sm border border-gray-300 text-slate-600 hover:text-slate-900 hover:border-gray-500 text-sm font-semibold transition-colors"
+                        data-filter="Teralis">Teralis</button>
+                    <button
+                        class="filter-btn px-6 py-2 rounded-sm border border-gray-300 text-slate-600 hover:text-slate-900 hover:border-gray-500 text-sm font-semibold transition-colors"
+                        data-filter="Jendela">Jendela</button>
+                    <button
+                        class="filter-btn px-6 py-2 rounded-sm border border-gray-300 text-slate-600 hover:text-slate-900 hover:border-gray-500 text-sm font-semibold transition-colors"
+                        data-filter="Pagar">Pagar</button>
                 </div>
 
                 <!-- Gallery Grid -->
@@ -126,4 +192,5 @@
     <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     <script src="app.js"></script>
 </body>
+
 </html>
