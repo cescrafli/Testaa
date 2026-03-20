@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span class="text-gray-300">|</span>
                         <a href="${enLinkHref}" class="text-brand-accent font-black text-sm">EN</a>
                         <a href="kontak.html" class="bg-slate-900 text-white px-6 py-2.5 rounded-sm font-bold text-sm transition-all hover:bg-brand-accent shadow-sm flex items-center gap-2 uppercase tracking-wide">
-                            Kirim Blueprint
+                            Send Blueprint
                         </a>
                     </div>
                     <!-- Mobile menu button -->
@@ -174,10 +174,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div>
                         <h4 class="text-white font-black mb-6 uppercase tracking-widest text-sm">Quick Access</h4>
                         <ul class="space-y-3 text-sm text-slate-400 font-semibold">
-                            <li><a href="index.html" class="hover:text-brand-accent transition-colors flex items-center gap-2"><div class="w-1.5 h-1.5 bg-brand-accent rounded-sm"></div> Beranda</a></li>
-                            <li><a href="proyek.html" class="hover:text-brand-accent transition-colors flex items-center gap-2"><div class="w-1.5 h-1.5 bg-brand-accent rounded-sm"></div> Galeri Proyek</a></li>
-                            <li><a href="tentang.html" class="hover:text-brand-accent transition-colors flex items-center gap-2"><div class="w-1.5 h-1.5 bg-brand-accent rounded-sm"></div> Filosofi Material</a></li>
-                            <li><a href="#" download="Company_Profile_BesiKarya.pdf" class="mt-4 hover:text-white transition-colors flex items-center gap-2 text-brand-accent border border-brand-accent/50 hover:bg-brand-accent py-2 px-3 rounded-sm w-fit"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg> Unduh e-Katalog PDF</a></li>
+                            <li><a href="index.html" class="hover:text-brand-accent transition-colors flex items-center gap-2"><div class="w-1.5 h-1.5 bg-brand-accent rounded-sm"></div> Home</a></li>
+                            <li><a href="proyek.html" class="hover:text-brand-accent transition-colors flex items-center gap-2"><div class="w-1.5 h-1.5 bg-brand-accent rounded-sm"></div> Project Gallery</a></li>
+                            <li><a href="tentang.html" class="hover:text-brand-accent transition-colors flex items-center gap-2"><div class="w-1.5 h-1.5 bg-brand-accent rounded-sm"></div> Material Philosophy</a></li>
+                            <li><a href="#" download="Company_Profile_BesiKarya.pdf" class="mt-4 hover:text-white transition-colors flex items-center gap-2 text-brand-accent border border-brand-accent/50 hover:bg-brand-accent py-2 px-3 rounded-sm w-fit"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg> Download e-Catalog PDF</a></li>
                         </ul>
                     </div>
                     <div>

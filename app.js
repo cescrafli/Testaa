@@ -153,7 +153,13 @@ class DigitalShowcase {
 
         if (filteredData.length === 0) {
             this.galleryContainer.innerHTML = `
-                <div class="col-span-full text-center py-12">
+                
+                <div class="col-span-full text-center py-16 flex flex-col items-center justify-center opacity-80 animate-fade-in">
+                    <svg class="w-24 h-24 text-slate-300 mb-6 drop-shadow-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 21h4c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8c0 1.956.702 3.748 1.865 5.135"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10l-4 4m0-4l4 4"></path>
+                        <circle cx="12" cy="12" r="9" stroke-width="1.5" stroke-dasharray="2 4"></circle>
+                    </svg>
                     <p class="text-slate-500 font-semibold tracking-wide uppercase">Hasil tidak ditemukan. Silakan gunakan kata kunci lainnya.</p>
                 </div>
             `;
