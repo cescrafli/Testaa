@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hubungi Kami | BesiKarya</title>
-    <meta name="description" content="Kirimkan blueprint arsitektur Anda untuk penawaran harga pengerjaan besi, kanopi, dan teralis.">
-    
+    <title>Contact Us | BesiKarya</title>
+    <meta name="description"
+        content="Kirimkan blueprint arsitektur Anda untuk penawaran harga pengerjaan besi, kanopi, dan teralis.">
+
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%220%22 fill=%22%23ea580c%22/><text x=%2250%22 y=%2270%22 font-size=%2260%22 font-family=%22Inter, sans-serif%22 font-weight=%22black%22 fill=%22%23ffffff%22 text-anchor=%22middle%22>B</text></svg>">
-    
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%220%22 fill=%22%23ea580c%22/><text x=%2250%22 y=%2270%22 font-size=%2260%22 font-family=%22Inter, sans-serif%22 font-weight=%22black%22 fill=%22%23ffffff%22 text-anchor=%22middle%22>B</text></svg>">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -34,9 +37,13 @@
         }
     </script>
     <style>
-        body { background-color: #f8fafc; color: #1e293b; }
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
     </style>
 </head>
+
 <body class="antialiased selection:bg-brand-accent selection:text-white flex flex-col min-h-screen">
 
     <!-- Navbar Component Container -->
@@ -46,31 +53,58 @@
     <main class="flex-grow pt-24 pb-24 bg-white border-b border-gray-200">
         <section class="py-16 relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
+
+                <!-- Breadcrumbs -->
+                <nav class="flex mb-8 text-sm font-medium text-slate-500" aria-label="Breadcrumb" data-aos="fade-down">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                        <li class="inline-flex items-center">
+                            <a href="index.html" class="inline-flex items-center hover:text-brand-accent transition-colors">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                            Home
+                            </a>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                            <svg class="w-6 h-6 text-slate-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            <span class="ml-1 md:ml-2 text-slate-800 font-bold uppercase tracking-widest text-xs">Contact Us</span>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+
                 <div class="grid lg:grid-cols-5 gap-16 items-start">
-                    
+
                     <!-- Contact Info -->
                     <div class="lg:col-span-2">
-                        <h1 class="text-4xl font-black text-slate-900 mb-6 uppercase tracking-tight">Kirim <span class="text-brand-accent">Blueprint</span> Proyek Anda</h1>
-                        <p class="text-slate-600 mb-10 leading-relaxed font-medium">Tim estimator kami akan menganalisa gambar desain spesifikasi BQ (Bill of Quantities) Anda dan memberikan penawaran harga komersial paling efisien maksimum 2x24 jam waktu kerja.</p>
-                        
+                        <h1 class="text-4xl font-black text-slate-900 mb-6 uppercase tracking-tight">Send Your <span
+                                class="text-brand-accent">Blueprint</span></h1>
+                        <p class="text-slate-600 mb-10 leading-relaxed font-medium">Our estimator team will analyze your BQ (Bill of Quantities) design drawings and provide the most efficient commercial quotation within a maximum of 2x24 working hours.</p>
+
                         <div class="space-y-6">
                             <div class="flex items-start gap-4">
                                 <div class="bg-slate-100 p-3 rounded-sm text-brand-accent shrink-0">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
                                 </div>
                                 <div>
-                                    <h4 class="text-sm font-bold text-slate-900 uppercase tracking-widest mb-1">Email Resmi Penawaran</h4>
+                                    <h4 class="text-sm font-bold text-slate-900 uppercase tracking-widest mb-1">Official Quotation Email</h4>
                                     <p class="text-slate-600 font-medium">tender@besikarya.com</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4">
                                 <div class="bg-slate-100 p-3 rounded-sm text-brand-accent shrink-0">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                        </path>
+                                    </svg>
                                 </div>
                                 <div>
-                                    <h4 class="text-sm font-bold text-slate-900 uppercase tracking-widest mb-1">Telepon Pabrik / Hotline</h4>
-                                    <p class="text-slate-600 font-medium">+62 812 3456 7890</p>
+                                    <h4 class="text-sm font-bold text-slate-900 uppercase tracking-widest mb-1">Factory Phone / Hotline</h4>
+                                    <p class="text-slate-600 font-medium">+62 858 5231 7383</p>
                                 </div>
                             </div>
                         </div>
@@ -81,38 +115,49 @@
                         <div class="bg-slate-50 border border-gray-200 p-8 md:p-10 rounded-sm shadow-md">
                             <!-- Replace specific hash down the line if going to prod -->
                             <form action="https://formspree.io/f/xbjnqzzn" method="POST" class="space-y-6">
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label for="name" class="block text-xs font-bold text-slate-900 uppercase tracking-widest mb-2">Nama Representatif</label>
-                                        <input type="text" id="name" name="name" required class="w-full bg-white border border-gray-300 text-slate-900 rounded-sm px-4 py-3 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors font-medium">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+                                    <div class="relative z-0 w-full group">
+                                        <input type="text" id="name" name="name" required
+                                            class="block py-2.5 px-0 w-full text-base font-medium text-slate-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-brand-accent peer" placeholder=" ">
+                                        <label for="name"
+                                            class="peer-focus:font-bold absolute text-sm text-slate-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-brand-accent peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 uppercase tracking-widest font-bold">Representative Name</label>
                                     </div>
-                                    <div>
-                                        <label for="company" class="block text-xs font-bold text-slate-900 uppercase tracking-widest mb-2">Nama Perusahaan / Institusi</label>
-                                        <input type="text" id="company" name="company" class="w-full bg-white border border-gray-300 text-slate-900 rounded-sm px-4 py-3 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors font-medium">
-                                    </div>
-                                </div>
-                                
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label for="email" class="block text-xs font-bold text-slate-900 uppercase tracking-widest mb-2">Alamat Email</label>
-                                        <input type="email" id="email" name="_replyto" required class="w-full bg-white border border-gray-300 text-slate-900 rounded-sm px-4 py-3 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors font-medium">
-                                    </div>
-                                    <div>
-                                        <label for="phone" class="block text-xs font-bold text-slate-900 uppercase tracking-widest mb-2">Nomor Telepon / WA</label>
-                                        <input type="tel" id="phone" name="phone" required class="w-full bg-white border border-gray-300 text-slate-900 rounded-sm px-4 py-3 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors font-medium">
+                                    <div class="relative z-0 w-full group">
+                                        <input type="text" id="company" name="company"
+                                            class="block py-2.5 px-0 w-full text-base font-medium text-slate-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-brand-accent peer" placeholder=" ">
+                                        <label for="company"
+                                            class="peer-focus:font-bold absolute text-sm text-slate-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-brand-accent peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 uppercase tracking-widest font-bold">Company / Institution</label>
                                     </div>
                                 </div>
 
-                                <div>
-                                    <label for="message" class="block text-xs font-bold text-slate-900 uppercase tracking-widest mb-2">Deskripsi Proyek Eksekutif</label>
-                                    <textarea id="message" name="message" rows="5" required class="w-full bg-white border border-gray-300 text-slate-900 rounded-sm px-4 py-3 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors font-medium resize-none" placeholder="Tuliskan spesifikasi produk, volume/meter lari, atau tautan ke Google Drive blueprint gambar kerja (BQ) Anda di sini..."></textarea>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+                                    <div class="relative z-0 w-full group">
+                                        <input type="email" id="email" name="_replyto" required
+                                            class="block py-2.5 px-0 w-full text-base font-medium text-slate-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-brand-accent peer" placeholder=" ">
+                                        <label for="email"
+                                            class="peer-focus:font-bold absolute text-sm text-slate-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-brand-accent peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 uppercase tracking-widest font-bold">Email Address</label>
+                                    </div>
+                                    <div class="relative z-0 w-full group">
+                                        <input type="tel" id="phone" name="phone" required
+                                            class="block py-2.5 px-0 w-full text-base font-medium text-slate-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-brand-accent peer" placeholder=" ">
+                                        <label for="phone"
+                                            class="peer-focus:font-bold absolute text-sm text-slate-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-brand-accent peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 uppercase tracking-widest font-bold">Phone Number</label>
+                                    </div>
+                                </div>
+
+                                <div class="relative z-0 w-full mb-8 group mt-8">
+                                    <textarea id="message" name="message" rows="5" required
+                                        class="block py-2.5 px-0 w-full text-base font-medium text-slate-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-brand-accent peer resize-none" placeholder=" "></textarea>
+                                    <label for="message"
+                                        class="peer-focus:font-bold absolute text-sm text-slate-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-brand-accent peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 uppercase tracking-widest font-bold">Executive Project Description</label>
                                 </div>
 
                                 <!-- Honeypot -->
                                 <input type="text" name="_gotcha" style="display:none">
-                                
-                                <button type="submit" class="w-full bg-slate-900 hover:bg-brand-accent text-white px-8 py-4 rounded-sm font-bold text-lg transition-colors border-2 border-slate-900 hover:border-brand-accent uppercase tracking-widest shadow-sm">
-                                    Kirim Permintaan Penawaran Terikat
+
+                                <button type="submit"
+                                    class="w-full bg-slate-900 hover:bg-brand-accent text-white px-8 py-4 rounded-sm font-bold text-lg transition-colors border-2 border-slate-900 hover:border-brand-accent uppercase tracking-widest shadow-sm">
+                                    Send Binding Quotation Request
                                 </button>
                             </form>
                         </div>
@@ -127,8 +172,9 @@
     <div id="footer-container"></div>
 
     <!-- Scripts -->
-    <script src="components.js"></script>
+    <script src="components.js?v=3"></script>
     <script src="data.js"></script>
-    <script src="app.js"></script>
+    <script src="app.js?v=2"></script>
 </body>
+
 </html>

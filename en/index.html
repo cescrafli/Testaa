@@ -1,23 +1,29 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BesiKarya | Premium Custom Ironworks</title>
-    <meta name="description" content="Jasa custom besi profesional untuk jendela, teralis, dan kanopi. Desain elegan, pengerjaan presisi.">
-    
+    <meta name="description"
+        content="Professional custom iron services for windows, trellises, and canopies. Elegant design, precise workmanship.">
+
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%220%22 fill=%22%23ea580c%22/><text x=%2250%22 y=%2270%22 font-size=%2260%22 font-family=%22Inter, sans-serif%22 font-weight=%22black%22 fill=%22%23ffffff%22 text-anchor=%22middle%22>B</text></svg>">
-    
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%220%22 fill=%22%23ea580c%22/><text x=%2250%22 y=%2270%22 font-size=%2260%22 font-family=%22Inter, sans-serif%22 font-weight=%22black%22 fill=%22%23ffffff%22 text-anchor=%22middle%22>B</text></svg>">
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="BesiKarya | Premium Custom Ironworks">
-    <meta property="og:description" content="Jasa custom besi profesional untuk jendela, teralis, dan kanopi. Desain elegan, pengerjaan presisi.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1504307651254-35680f4f7285?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:description"
+        content="Professional custom iron services for windows, trellises, and canopies. Elegant design, precise workmanship.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1504307651254-35680f4f7285?auto=format&fit=crop&w=1200&q=80">
     <meta property="og:url" content="https://besikarya.com/index.html">
     <meta property="og:type" content="website">
 
     <!-- Preload Hero Image (LCP Optimization) -->
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1504307651254-35680f4f7285?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80">
+    <link rel="preload" as="image"
+        href="https://images.unsplash.com/photo-1504307651254-35680f4f7285?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80">
 
     <!-- JSON-LD Local Business -->
     <script type="application/ld+json">
@@ -34,7 +40,7 @@
         "postalCode": "11440",
         "addressCountry": "ID"
       },
-      "telephone": "+6281234567890",
+      "telephone": "+6285852317383",
       "openingHours": "Mo,Tu,We,Th,Fr,Sa 08:00-17:00"
     }
     </script>
@@ -43,7 +49,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -64,11 +73,23 @@
         }
     </script>
     <style>
-        body { background-color: #f8fafc; color: #1e293b; } /* bg-slate-50 text-slate-800 */
-        .btn-hover { transition: all 0.3s ease; }
-        .btn-hover:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(234, 88, 12, 0.3); }
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        /* bg-slate-50 text-slate-800 */
+        .btn-hover {
+            transition: all 0.3s ease;
+        }
+
+        .btn-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(234, 88, 12, 0.3);
+        }
     </style>
 </head>
+
 <body class="antialiased selection:bg-brand-accent selection:text-white flex flex-col min-h-screen">
 
     <!-- Navbar Component Container -->
@@ -77,38 +98,79 @@
     <!-- Main Content -->
     <main class="flex-grow pt-[80px]">
         <!-- Hero Section Light Theme -->
-        <section class="relative py-20 lg:py-32 min-h-[80vh] flex items-center bg-white border-b border-gray-200 overflow-hidden">
+        <section
+            class="relative py-20 lg:py-32 min-h-[80vh] flex items-center bg-white border-b border-gray-200 overflow-hidden">
             <!-- Background Image with Light Overlay -->
-            <div class="absolute inset-0 z-0">
-                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504307651254-35680f4f7285?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center bg-no-repeat opacity-15 grayscale"></div>
-                <div class="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-transparent"></div>
+            <!-- Swiper Background Slider -->
+            <div class="absolute inset-0 z-0 swiper hero-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div
+                            class="absolute inset-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1504307651254-35680f4f7285?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center bg-no-repeat opacity-15 grayscale">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div
+                            class="absolute inset-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center bg-no-repeat opacity-15 grayscale">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div
+                            class="absolute inset-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center bg-no-repeat opacity-15 grayscale">
+                        </div>
+                    </div>
+                </div>
+                <!-- Gradient Overlay -->
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-transparent z-10 pointer-events-none">
+                </div>
             </div>
-            
+
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
                 <div class="max-w-3xl">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-orange-50 border border-orange-200 mb-6 shadow-sm">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-orange-50 border border-orange-200 mb-6 shadow-sm"
+                        data-aos="fade-down" data-aos-delay="100">
                         <span class="w-2 h-2 rounded-none bg-brand-accent"></span>
-                        <span class="text-xs font-bold text-orange-700 uppercase tracking-widest">Premium Ironworks Specialist</span>
+                        <span class="text-xs font-bold text-orange-700 uppercase tracking-widest">Premium Ironworks
+                            Specialist</span>
                     </div>
-                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-black leading-tight mb-6 text-slate-900 tracking-tight text-balance">
-                        Estetika <span class="text-brand-accent">Besi</span><br/> 
-                        Kekuatan Presisi.
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-black leading-tight mb-6 text-slate-900 tracking-tight text-balance"
+                        data-aos="fade-up" data-aos-delay="300">
+                        Iron <span class="text-brand-accent">Aesthetics,</span><br />
+                        Precision Strength.
                     </h1>
-                    <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl font-normal leading-relaxed">
-                        Transformasi hunian Anda dengan mahakarya besi kustom. Dari kanopi tegak lurus minimalis hingga teralis presisi tingkat tinggi, kami menggabungkan durabilitas baja dengan sentuhan arsitektur modern.
+                    <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl font-normal leading-relaxed"
+                        data-aos="fade-up" data-aos-delay="400">
+                        Transform your home with custom iron masterpieces. From minimalist canopies to
+                        high-precision trellises, we merge steel durability with modern architectural
+                        touches.
                     </p>
-                    <div class="flex flex-col sm:flex-row flex-wrap gap-4">
-                        <a href="katalog.html" class="bg-brand-accent text-white px-8 py-4 rounded-sm font-bold text-lg btn-hover text-center inline-flex justify-center items-center gap-2 uppercase tracking-wide">
+                    <div class="flex flex-col sm:flex-row flex-wrap gap-4" data-aos="fade-up" data-aos-delay="500">
+                        <a href="katalog.html"
+                            class="bg-brand-accent text-white px-8 py-4 rounded-sm font-bold text-lg btn-hover text-center inline-flex justify-center items-center gap-2 uppercase tracking-wide">
                             Lihat Katalog Kami
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                            </svg>
                         </a>
-                        <a href="#" class="wa-global-btn bg-white hover:bg-slate-50 text-slate-900 border-2 border-slate-900 px-8 py-4 rounded-sm font-bold text-lg transition-colors text-center inline-flex justify-center items-center gap-2 uppercase tracking-wide" target="_blank" rel="noopener noreferrer">
-                            Free Consultation
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                        <a href="#"
+                            class="wa-global-btn bg-white hover:bg-slate-50 text-slate-900 border-2 border-slate-900 px-8 py-4 rounded-sm font-bold text-lg transition-colors text-center inline-flex justify-center items-center gap-2 uppercase tracking-wide"
+                            target="_blank" rel="noopener noreferrer">
+                            Konsultasi Gratis
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                                </path>
+                            </svg>
                         </a>
-                        <a href="#" download="Company_Profile_BesiKarya.pdf" class="bg-transparent hover:bg-slate-100 text-slate-700 border border-slate-300 px-8 py-4 rounded-sm font-bold text-lg transition-colors text-center inline-flex justify-center items-center gap-2 uppercase tracking-wide">
-                            Download Company Profile (PDF)
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                        <a href="#" download="Company_Profile_BesiKarya_EN.pdf"
+                            class="bg-transparent hover:bg-slate-100 text-slate-700 border border-slate-300 px-8 py-4 rounded-sm font-bold text-lg transition-colors text-center inline-flex justify-center items-center gap-2 uppercase tracking-wide">
+                            Unduh Company Profile (PDF)
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -118,9 +180,12 @@
         <!-- Trust / Partner Banner -->
         <div class="bg-slate-50 border-b border-gray-200 py-12 relative z-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <p class="text-center text-xs font-bold text-slate-500 tracking-[0.2em] uppercase mb-8">Dipercaya Oleh Mitra & Material Terkemuka</p>
-                <div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60 grayscale transition-all duration-300 hover:grayscale-0 hover:opacity-100">
-                    <div class="text-2xl font-black font-sans uppercase tracking-tight text-slate-900">NIPPON PAINT</div>
+                <p class="text-center text-xs font-bold text-slate-500 tracking-[0.2em] uppercase mb-8">Trusted by
+                    Leading Partners & Materials</p>
+                <div
+                    class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60 grayscale transition-all duration-300 hover:grayscale-0 hover:opacity-100">
+                    <div class="text-2xl font-black font-sans uppercase tracking-tight text-slate-900">NIPPON PAINT
+                    </div>
                     <div class="text-2xl font-black font-sans uppercase tracking-tight text-blue-800">DEKKSON</div>
                     <div class="text-2xl font-black font-sans uppercase tracking-tight text-slate-900">ALDERON</div>
                     <div class="text-2xl font-black font-sans uppercase tracking-tight text-red-700">MAKITA</div>
@@ -132,22 +197,26 @@
         <!-- Stat Bar -->
         <div class="bg-white border-b border-gray-200 relative z-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-transparent md:divide-gray-200">
-                    <div>
+                <div
+                    class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-transparent md:divide-gray-200">
+                    <div data-aos="zoom-in" data-aos-delay="100">
                         <div class="text-4xl font-black text-slate-900 mb-1 tracking-tight">500+</div>
-                        <div class="text-xs text-slate-500 font-bold uppercase tracking-widest">Proyek Selesai</div>
+                        <div class="text-xs text-slate-500 font-bold uppercase tracking-widest">Completed Projects</div>
                     </div>
-                    <div>
-                        <div class="text-4xl font-black text-slate-900 mb-1 tracking-tight">10<span class="text-brand-accent">+</span></div>
-                        <div class="text-xs text-slate-500 font-bold uppercase tracking-widest">Tahun Pengalaman</div>
+                    <div data-aos="zoom-in" data-aos-delay="200">
+                        <div class="text-4xl font-black text-slate-900 mb-1 tracking-tight">10<span
+                                class="text-brand-accent">+</span></div>
+                        <div class="text-xs text-slate-500 font-bold uppercase tracking-widest">Years Experience</div>
                     </div>
-                    <div>
-                        <div class="text-4xl font-black text-slate-900 mb-1 tracking-tight">100<span class="text-brand-accent">%</span></div>
-                        <div class="text-xs text-slate-500 font-bold uppercase tracking-widest">Besi Premium</div>
+                    <div data-aos="zoom-in" data-aos-delay="300">
+                        <div class="text-4xl font-black text-slate-900 mb-1 tracking-tight">100<span
+                                class="text-brand-accent">%</span></div>
+                        <div class="text-xs text-slate-500 font-bold uppercase tracking-widest">Premium Iron</div>
                     </div>
-                    <div>
-                        <div class="text-4xl font-black text-slate-900 mb-1 tracking-tight">5<span class="text-brand-accent">Thn</span></div>
-                        <div class="text-xs text-slate-500 font-bold uppercase tracking-widest">Garansi Rangka</div>
+                    <div data-aos="zoom-in" data-aos-delay="400">
+                        <div class="text-4xl font-black text-slate-900 mb-1 tracking-tight">5<span
+                                class="text-brand-accent">Thn</span></div>
+                        <div class="text-xs text-slate-500 font-bold uppercase tracking-widest">Frame Warranty</div>
                     </div>
                 </div>
             </div>
@@ -158,8 +227,23 @@
     <div id="footer-container"></div>
 
     <!-- Scripts -->
-    <script src="components.js"></script>
+    <script src="components.js?v=3"></script>
     <script src="data.js"></script>
-    <script src="app.js"></script>
+    <script src="app.js?v=2"></script>
+    <!-- Swiper Setup -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const swiper = new Swiper('.hero-swiper', {
+                effect: 'fade',
+                fadeEffect: { crossFade: true },
+                loop: true,
+                autoplay: { delay: 4000, disableOnInteraction: false },
+                speed: 1200,
+                allowTouchMove: false
+            });
+        });
+    </script>
 </body>
+
 </html>

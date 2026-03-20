@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tentang Kami | BesiKarya</title>
-    <meta name="description" content="Mengapa memilih BesiKarya? Pengalaman, kualitas material, anatomi teknis presisi, dan komitmen pada estetika besi industri.">
-    
+    <title>About Us | BesiKarya</title>
+    <meta name="description"
+        content="Mengapa memilih BesiKarya? Pengalaman, kualitas material, anatomi teknis presisi, dan komitmen pada estetika besi industri.">
+
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%220%22 fill=%22%23ea580c%22/><text x=%2250%22 y=%2270%22 font-size=%2260%22 font-family=%22Inter, sans-serif%22 font-weight=%22black%22 fill=%22%23ffffff%22 text-anchor=%22middle%22>B</text></svg>">
-    
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%220%22 fill=%22%23ea580c%22/><text x=%2250%22 y=%2270%22 font-size=%2260%22 font-family=%22Inter, sans-serif%22 font-weight=%22black%22 fill=%22%23ffffff%22 text-anchor=%22middle%22>B</text></svg>">
+
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Tentang Kami | BesiKarya">
-    <meta property="og:description" content="Mengapa memilih BesiKarya? Pengalaman, kualitas material, anatomi teknis presisi, dan komitmen pada estetika besi industri.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1574360982390-e2213b194fb8?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:title" content="About Us | BesiKarya">
+    <meta property="og:description"
+        content="Mengapa memilih BesiKarya? Pengalaman, kualitas material, anatomi teknis presisi, dan komitmen pada estetika besi industri.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1574360982390-e2213b194fb8?auto=format&fit=crop&w=1200&q=80">
     <meta property="og:url" content="https://besikarya.com/tentang.html">
     <meta property="og:type" content="website">
 
@@ -31,16 +36,16 @@
         "postalCode": "11440",
         "addressCountry": "ID"
       },
-      "telephone": "+6281234567890",
+      "telephone": "+6285852317383",
       "openingHours": "Mo,Tu,We,Th,Fr,Sa 08:00-17:00"
     }
-    </script>    
+    </script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -61,9 +66,13 @@
         }
     </script>
     <style>
-        body { background-color: #f8fafc; color: #1e293b; }
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
     </style>
 </head>
+
 <body class="antialiased selection:bg-brand-accent selection:text-white flex flex-col min-h-screen">
 
     <!-- Navbar Component Container -->
@@ -73,42 +82,87 @@
     <main class="flex-grow pt-24 pb-0 bg-white border-b border-gray-200">
         <!-- Why Choose Us / Tentang -->
         <section class="py-16 relative overflow-hidden">
-            
+
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <!-- Breadcrumbs -->
+                <nav class="flex mb-12 text-sm font-medium text-slate-500" aria-label="Breadcrumb" data-aos="fade-down">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                        <li class="inline-flex items-center">
+                            <a href="index.html" class="inline-flex items-center hover:text-brand-accent transition-colors">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                            Home
+                            </a>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                            <svg class="w-6 h-6 text-slate-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            <span class="ml-1 md:ml-2 text-slate-800 font-bold uppercase tracking-widest text-xs">About Us</span>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+
                 <div class="grid lg:grid-cols-2 gap-16 items-center">
                     <div>
-                        <h1 class="text-4xl md:text-5xl font-black text-slate-900 mb-6 uppercase tracking-tight">Filosofi <span class="text-brand-accent">BesiKarya</span></h1>
-                        <p class="text-slate-600 mb-8 leading-relaxed text-lg font-medium">Kami bukan sekadar bengkel las. Kami adalah aplikator dan artisan besi industrial yang memprioritaskan kekuatan struktural dan akurasi desain untuk setiap detail properti eksklusif Anda.</p>
-                        
+                        <h1 class="text-4xl md:text-5xl font-black text-slate-900 mb-6 uppercase tracking-tight"
+                            data-aos="fade-right" data-aos-delay="100">Philosophy <span
+                                class="text-brand-accent">BesiKarya</span></h1>
+                        <p class="text-slate-600 mb-8 leading-relaxed text-lg font-medium" data-aos="fade-right"
+                            data-aos-delay="200">Kami bukan sekadar bengkel las. Kami adalah aplikator dan artisan besi
+                            industrial yang memprioritaskan kekuatan struktural dan akurasi desain untuk setiap detail
+                            properti eksklusif Anda.</p>
+
                         <div class="space-y-8 mt-12">
-                            <div class="flex gap-4">
-                                <div class="flex-shrink-0 w-14 h-14 rounded-sm bg-slate-50 border border-gray-200 flex items-center justify-center text-brand-accent shadow-sm">
-                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                            <div class="flex gap-4" data-aos="fade-up" data-aos-delay="300">
+                                <div
+                                    class="flex-shrink-0 w-14 h-14 rounded-sm bg-slate-50 border border-gray-200 flex items-center justify-center text-brand-accent shadow-sm">
+                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                        </path>
+                                    </svg>
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-bold text-slate-900 mb-2">Material Premium Murni</h3>
-                                    <p class="text-slate-600 leading-relaxed font-medium">Menggunakan plat dan pipa galvanis ketebalan penuh (full toleransi), menjamin rigiditas dan umur teknis yang jauh melebih standar.</p>
+                                    <h3 class="text-xl font-bold text-slate-900 mb-2">Pure Premium Materials</h3>
+                                    <p class="text-slate-600 leading-relaxed font-medium">Menggunakan plat dan pipa
+                                        galvanis ketebalan penuh (full toleransi), menjamin rigiditas dan umur teknis
+                                        yang jauh melebih standar.</p>
                                 </div>
                             </div>
-                            <div class="flex gap-4">
-                                <div class="flex-shrink-0 w-14 h-14 rounded-sm bg-slate-50 border border-gray-200 flex items-center justify-center text-brand-accent shadow-sm">
-                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                            <div class="flex gap-4" data-aos="fade-up" data-aos-delay="400">
+                                <div
+                                    class="flex-shrink-0 w-14 h-14 rounded-sm bg-slate-50 border border-gray-200 flex items-center justify-center text-brand-accent shadow-sm">
+                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01">
+                                        </path>
+                                    </svg>
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-bold text-slate-900 mb-2">Pengecatan Oven System</h3>
-                                    <p class="text-slate-600 leading-relaxed font-medium">Teknik spray gun dipadukan dengan cat dasar epoxy anti-karat, memberikan permukaan halus tanpa risiko terkelupas.</p>
+                                    <h3 class="text-xl font-bold text-slate-900 mb-2">Oven System Painting</h3>
+                                    <p class="text-slate-600 leading-relaxed font-medium">Teknik spray gun dipadukan
+                                        dengan cat dasar epoxy anti-karat, memberikan permukaan halus tanpa risiko
+                                        terkelupas.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="relative mt-10 lg:mt-0">
+                    <div class="relative mt-10 lg:mt-0" data-aos="fade-left" data-aos-delay="200">
                         <div class="aspect-[4/5] rounded-sm overflow-hidden relative group shadow-xl">
-                            <img src="https://images.unsplash.com/photo-1574360982390-e2213b194fb8?q=80&w=1200&auto=format&fit=crop" alt="Welding Process" class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105 group-hover:grayscale-0">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
-                            
-                            <div class="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-md p-6 rounded-sm border border-gray-200 shadow-md">
-                                <div class="text-slate-900 font-black text-2xl mb-1 uppercase tracking-tight">Inspeksi Pengelasan</div>
-                                <p class="text-slate-600 text-sm md:text-base font-medium leading-relaxed mt-2">Setiap sambungan dielas dengan tingkat penetrasi maksimal hingga kokoh secara struktural sebelum penggerindaan akhir.</p>
+                            <img src="https://images.unsplash.com/photo-1574360982390-e2213b194fb8?q=80&w=1200&auto=format&fit=crop"
+                                alt="Welding Process"
+                                class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105 group-hover:grayscale-0">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80">
+                            </div>
+
+                            <div
+                                class="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-md p-6 rounded-sm border border-gray-200 shadow-md">
+                                <div class="text-slate-900 font-black text-2xl mb-1 uppercase tracking-tight">Inspeksi
+                                    Pengelasan</div>
+                                <p class="text-slate-600 text-sm md:text-base font-medium leading-relaxed mt-2">Setiap
+                                    sambungan dielas dengan tingkat penetrasi maksimal hingga kokoh secara struktural
+                                    sebelum penggerindaan akhir.</p>
                             </div>
                         </div>
                     </div>
@@ -119,38 +173,59 @@
         <!-- Anatomi Kualitas Seksi Teknis (B2B Requirement) -->
         <section class="py-20 bg-slate-50 border-t border-gray-200">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-4 uppercase tracking-tight">Anatomi Kualitas</h2>
-                    <p class="text-slate-600 max-w-2xl mx-auto text-lg font-medium">Kami percaya bahwa kemewahan terletak pada detail. Berikut adalah spesifikasi teknis dan piranti keras (hardware) standar yang kami tetapkan di setiap mahakarya.</p>
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-4 uppercase tracking-tight">Anatomi
+                        Kualitas</h2>
+                    <p class="text-slate-600 max-w-2xl mx-auto text-lg font-medium">Kami percaya bahwa kemewahan
+                        terletak pada detail. Berikut adalah spesifikasi teknis dan piranti keras (hardware) standar
+                        yang kami tetapkan di setiap mahakarya.</p>
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8">
                     <!-- Feature 1 -->
-                    <div class="bg-white border border-gray-200 p-8 rounded-sm shadow-sm hover:shadow-lg transition-shadow group">
+                    <div class="bg-white border border-gray-200 p-8 rounded-sm shadow-sm hover:shadow-lg transition-shadow group"
+                        data-aos="fade-up" data-aos-delay="100">
                         <div class="aspect-square bg-slate-100 mb-6 rounded-sm overflow-hidden relative">
                             <!-- Placeholder image for metal thickness -->
-                            <img src="https://images.unsplash.com/photo-1535813547-99c456a41d4a?auto=format&fit=crop&w=600&q=80" alt="Ketebalan Besi" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                            <img src="https://images.unsplash.com/photo-1535813547-99c456a41d4a?auto=format&fit=crop&w=600&q=80"
+                                alt="Ketebalan Besi"
+                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
                         </div>
-                        <h3 class="text-xl font-black text-slate-900 mb-3 uppercase tracking-wide">Fabrikasi Logam Padat</h3>
-                        <p class="text-slate-600 font-medium">Besi Hollow Galvanis 2mm+. Spesifikasi material mentah diukur sangat akurat dengan kaliper untuk memastikan stabilitas mekanis struktural anti-goyang.</p>
+                        <h3 class="text-xl font-black text-slate-900 mb-3 uppercase tracking-wide">Fabrikasi Logam Padat
+                        </h3>
+                        <p class="text-slate-600 font-medium">Besi Hollow Galvanis 2mm+. Spesifikasi material mentah
+                            diukur sangat akurat dengan kaliper untuk memastikan stabilitas mekanis struktural
+                            anti-goyang.</p>
                     </div>
                     <!-- Feature 2 -->
-                    <div class="bg-white border border-gray-200 p-8 rounded-sm shadow-sm hover:shadow-lg transition-shadow group">
+                    <div class="bg-white border border-gray-200 p-8 rounded-sm shadow-sm hover:shadow-lg transition-shadow group"
+                        data-aos="fade-up" data-aos-delay="200">
                         <div class="aspect-square bg-slate-100 mb-6 rounded-sm overflow-hidden relative">
                             <!-- Placeholder image for lock hardware -->
-                            <img src="https://images.unsplash.com/photo-1621873117498-7557dc0aa912?auto=format&fit=crop&w=600&q=80" alt="Hardware Engsel Kunci" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                            <img src="https://images.unsplash.com/photo-1621873117498-7557dc0aa912?auto=format&fit=crop&w=600&q=80"
+                                alt="Hardware Engsel Kunci"
+                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
                         </div>
-                        <h3 class="text-xl font-black text-slate-900 mb-3 uppercase tracking-wide">Hardware Aksesori Impor</h3>
-                        <p class="text-slate-600 font-medium">Engsel stainless tugas berat (Heavy Duty), roda nilon anti-krik, dan sistem silinder kunci merk Dekkson. Mempertahankan kehalusan operasi belasan tahun.</p>
+                        <h3 class="text-xl font-black text-slate-900 mb-3 uppercase tracking-wide">Hardware Aksesori
+                            Impor</h3>
+                        <p class="text-slate-600 font-medium">Engsel stainless tugas berat (Heavy Duty), roda nilon
+                            anti-krik, dan sistem silinder kunci merk Dekkson. Mempertahankan kehalusan operasi belasan
+                            tahun.</p>
                     </div>
                     <!-- Feature 3 -->
-                    <div class="bg-white border border-gray-200 p-8 rounded-sm shadow-sm hover:shadow-lg transition-shadow group">
+                    <div class="bg-white border border-gray-200 p-8 rounded-sm shadow-sm hover:shadow-lg transition-shadow group"
+                        data-aos="fade-up" data-aos-delay="300">
                         <div class="aspect-square bg-slate-100 mb-6 rounded-sm overflow-hidden relative">
                             <!-- Placeholder image for welding seam -->
-                            <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80" alt="Sambungan Presisi" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                            <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80"
+                                alt="Sambungan Presisi"
+                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
                         </div>
-                        <h3 class="text-xl font-black text-slate-900 mb-3 uppercase tracking-wide">Sambungan Tanpa Celah</h3>
-                        <p class="text-slate-600 font-medium">Titik temu antar bidang dibenamkan menggunakan laser tempel dan didempul otomotif sampai tak kasat mata, menyembunyikan sisi tajam untuk keamanan absolut.</p>
+                        <h3 class="text-xl font-black text-slate-900 mb-3 uppercase tracking-wide">Sambungan Tanpa Celah
+                        </h3>
+                        <p class="text-slate-600 font-medium">Titik temu antar bidang dibenamkan menggunakan laser
+                            tempel dan didempul otomotif sampai tak kasat mata, menyembunyikan sisi tajam untuk keamanan
+                            absolut.</p>
                     </div>
                 </div>
             </div>
@@ -160,18 +235,18 @@
         <section class="py-20 bg-white border-t border-gray-200">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-4 uppercase tracking-tight">Kunjungi Studio Fabrikasi Kami</h2>
-                    <p class="text-slate-600 max-w-2xl mx-auto text-lg font-medium">Bahan premium menghasilkan mahakarya. Lihat langsung proses manufaktur di workshop berstandar K3 kami.</p>
+                    <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-4 uppercase tracking-tight">Kunjungi
+                        Studio Fabrikasi Kami</h2>
+                    <p class="text-slate-600 max-w-2xl mx-auto text-lg font-medium">Bahan premium menghasilkan
+                        mahakarya. Lihat langsung proses manufaktur di workshop berstandar K3 kami.</p>
                 </div>
                 <!-- Embed Google Maps Responsive Wrapper -->
-                <div class="w-full aspect-[16/9] md:aspect-[21/9] bg-slate-100 border-2 border-slate-200 p-2 rounded-sm shadow-md">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3966.3986382098674!2d106.75947385!3d-6.1950298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f704bc86280b%3A0xbc4e2be00c283726!2sPuri%20Indah%20CBD%2C%20Jakarta%20Barat!5e0!3m2!1sen!2sid!4v1689230551065!5m2!1sen!2sid" 
-                        class="w-full h-full grayscale hover:grayscale-0 transition-all duration-700" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
+                <div
+                    class="w-full aspect-[16/9] md:aspect-[21/9] bg-slate-100 border-2 border-slate-200 p-2 rounded-sm shadow-md">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126914.5422899453!2d106.7594738!3d-6.1950298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f704bc86280b%3A0xbc4e2be00c283726!2sJakarta!5e0!3m2!1sen!2sid!4v1689230551065"
+                        class="w-full h-full grayscale hover:grayscale-0 transition-all duration-700" style="border:0;"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
             </div>
@@ -183,8 +258,9 @@
     <div id="footer-container"></div>
 
     <!-- Scripts -->
-    <script src="components.js"></script>
+    <script src="components.js?v=3"></script>
     <script src="data.js"></script>
-    <script src="app.js"></script>
+    <script src="app.js?v=2"></script>
 </body>
+
 </html>

@@ -24,6 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const path = window.location.pathname;
     const isKatalog = path.includes('katalog');
     const isTentang = path.includes('tentang');
+    
+    const currentFile = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
+    const idLinkHref = currentFile;
+    const enLinkHref = 'en/' + currentFile;
     const isProyek = path.includes('proyek');
     const isBeranda = (!isKatalog && !isTentang && !isProyek) || path.endsWith('/') || path.endsWith('index.html');
 
@@ -118,17 +122,17 @@ document.addEventListener('DOMContentLoaded', () => {
                         <a href="artikel.html" class="${path.includes('artikel') ? activeClassDesk : inactiveClassDesk}">Jurnal</a>
                         <a href="tentang.html" class="${isTentang ? activeClassDesk : inactiveClassDesk}">Tentang</a>
                         <div class="h-6 w-px bg-gray-300 mx-2"></div>
-                        <a href="index.html" class="text-brand-accent font-black text-sm">ID</a>
+                        <a href="${idLinkHref}" class="text-brand-accent font-black text-sm">ID</a>
                         <span class="text-gray-300">|</span>
-                        <a href="en/index.html" class="text-slate-400 hover:text-slate-900 font-bold text-sm transition-colors">EN</a>
-                        <a href="kontak.html" class="wa-global-btn bg-slate-900 text-white px-6 py-2.5 rounded-sm font-bold text-sm transition-all hover:bg-brand-accent shadow-sm flex items-center gap-2 uppercase tracking-wide">
+                        <a href="${enLinkHref}" class="text-slate-400 hover:text-slate-900 font-bold text-sm transition-colors">EN</a>
+                        <a href="kontak.html" class="bg-slate-900 text-white px-6 py-2.5 rounded-sm font-bold text-sm transition-all hover:bg-brand-accent shadow-sm flex items-center gap-2 uppercase tracking-wide">
                             Kirim Blueprint
                         </a>
                     </div>
                     <!-- Mobile menu button -->
                     <div class="md:hidden flex items-center gap-4">
                         <div class="flex items-center gap-2 text-xs font-bold">
-                            <a href="index.html" class="text-brand-accent">ID</a> <span class="text-gray-300">|</span> <a href="en/index.html" class="text-slate-400">EN</a>
+                            <a href="${idLinkHref}" class="text-brand-accent">ID</a> <span class="text-gray-300">|</span> <a href="${enLinkHref}" class="text-slate-400">EN</a>
                         </div>
                         <button id="mobile-menu-btn" aria-label="Buka menu utama" aria-expanded="false" class="text-slate-600 hover:text-slate-900 focus:outline-none bg-slate-50 p-2 rounded-sm border border-gray-200">
                             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -147,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <a href="artikel.html" class="${path.includes('artikel') ? activeClassMob : inactiveClassMob}">Jurnal Edukasi</a>
                     <a href="tentang.html" class="${isTentang ? activeClassMob : inactiveClassMob}">Tentang Kami</a>
                     <div class="px-4 mt-4">
-                        <a href="kontak.html" class="wa-global-btn block w-full text-center px-4 py-3 text-base font-bold text-white bg-slate-900 rounded-sm shadow-sm uppercase tracking-wide">Konsultasi / Quotation</a>
+                        <a href="kontak.html" class="block w-full text-center px-4 py-3 text-base font-bold text-white bg-slate-900 rounded-sm shadow-sm uppercase tracking-wide">Konsultasi / Quotation</a>
                     </div>
                 </div>
             </div>
