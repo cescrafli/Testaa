@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami | BesiKarya</title>
+    <meta name="description" content="Mengapa memilih BesiKarya? Pengalaman, kualitas material, dan komitmen pada estetika besi.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            light: '#f8fafc',
+                            accent: '#f59e0b',
+                            muted: '#64748b'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #020617; color: #f8fafc; }
+        .glass-nav { background: rgba(2, 6, 23, 0.7); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .btn-hover { transition: all 0.3s ease; }
+        .btn-hover:hover { box-shadow: 0 0 20px rgba(245, 158, 11, 0.4); transform: translateY(-2px); }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-accent selection:text-white flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 shadow-lg bg-slate-950/90 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 block">
+                    <div class="w-8 h-8 bg-brand-accent rounded-sm flex items-center justify-center font-bold text-brand-dark text-xl">B</div>
+                    <span class="font-bold text-2xl tracking-tight text-white">Besi<span class="text-brand-accent text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-yellow-300">Karya</span></span>
+                </a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Beranda</a>
+                    <a href="katalog.html" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Katalog</a>
+                    <a href="tentang.html" class="text-brand-accent font-semibold transition-colors text-sm">Tentang Kami</a>
+                    <a href="#" class="wa-global-btn bg-brand-accent text-brand-dark px-5 py-2.5 rounded-md font-semibold text-sm btn-hover flex items-center gap-2" target="_blank" rel="noopener noreferrer">
+                        Hubungi Kami
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 absolute w-full">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-800 rounded-md">Beranda</a>
+                <a href="katalog.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-800 rounded-md">Katalog</a>
+                <a href="tentang.html" class="block px-3 py-2 text-base font-semibold text-brand-accent bg-slate-800 rounded-md">Tentang Kami</a>
+                <a href="#" class="wa-global-btn block px-3 py-2 text-base font-medium text-brand-accent hover:text-yellow-400 rounded-md" target="_blank" rel="noopener noreferrer">Hubungi Kami</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-24 pb-24">
+        <!-- Why Choose Us / Tentang -->
+        <section class="py-16 bg-[#020617] relative overflow-hidden">
+            <!-- Decor -->
+            <div class="absolute -right-40 -top-40 w-96 h-96 bg-brand-accent/5 rounded-full blur-3xl"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Mengapa Memilih BesiKarya?</h1>
+                        <p class="text-slate-400 mb-8 leading-relaxed text-lg">Kami bukan sekadar bengkel las. Kami adalah artisan besi yang memperhatikan setiap detail dari fungsionalitas hingga nilai estetika untuk mempercantik arsitektur hunian Anda.</p>
+                        
+                        <div class="space-y-8 mt-12">
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-slate-800/80 border border-slate-700 flex items-center justify-center text-brand-accent shadow-lg shadow-brand-accent/5">
+                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white mb-2">Material Premium Berkualitas</h3>
+                                    <p class="text-slate-400">Menggunakan besi galvanis anti-karat dengan ketebalan standar proyek premium murni, memastikan durabilitas hingga puluhan tahun.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-slate-800/80 border border-slate-700 flex items-center justify-center text-brand-accent shadow-lg shadow-brand-accent/5">
+                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white mb-2">Pengecatan Sempurna</h3>
+                                    <p class="text-slate-400">Finishing menggunakan spray gun dan sistem cat anti-gores untuk hasil mulus sempurna bak mobil mewah yang tak memudar.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-slate-800/80 border border-slate-700 flex items-center justify-center text-brand-accent shadow-lg shadow-brand-accent/5">
+                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white mb-2">Zero Maintenance</h3>
+                                    <p class="text-slate-400">Arsitektur desain yang presisi sehingga struktur besi mudah dibersihkan dan tidak membutuhkan perlakuan perbaikan bertahun-tahun.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative mt-10 lg:mt-0">
+                        <div class="aspect-[4/5] rounded-2xl overflow-hidden relative group shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1574360982390-e2213b194fb8?q=80&w=1200&auto=format&fit=crop" alt="Welding Process" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent opacity-80"></div>
+                            
+                            <div class="absolute bottom-8 left-8 right-8 bg-slate-900/80 backdrop-blur-md p-6 rounded-xl border border-white/10 shadow-xl">
+                                <div class="text-brand-accent font-black text-3xl mb-1">Presisi Tinggi.</div>
+                                <p class="text-slate-300 text-sm md:text-base leading-relaxed mt-2">Setiap detail lengkungan diukur teliti, sambungan dilas matang, dan digerinda hingga halus, sampai mata Anda tidak akan melihat bekas sambungan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#020617] border-t border-slate-800 pt-16 pb-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 bg-brand-accent rounded-sm flex items-center justify-center font-bold text-brand-dark text-xl">B</div>
+                        <span class="font-bold text-2xl tracking-tight text-white">Besi<span class="text-brand-accent text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-yellow-300">Karya</span></span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        Menghadirkan keindahan dan kekuatan maksimal pada setiap sudut rumah Anda melalui mahakarya besi kustom berkualitas premium.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Akses Cepat</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="index.html" class="hover:text-brand-accent transition-colors">Beranda</a></li>
+                        <li><a href="katalog.html" class="hover:text-brand-accent transition-colors">Digital Showcase</a></li>
+                        <li><a href="tentang.html" class="hover:text-brand-accent transition-colors">Tentang Kami</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Kontak Studio</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 flex-shrink-0 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+                            <span>Jl. Arsitektur No. 128, Jakarta Barat, 11440</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-slate-500">© 2026 BesiKarya Custom Ironworks. All rights reserved.</p>
+                <p class="text-xs text-slate-600">Built with static aesthetic pipeline.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

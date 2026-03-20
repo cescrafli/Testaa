@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Showcase | BesiKarya</title>
+    <meta name="description" content="Katalog digital produk custom besi, kanopi, teralis, dan pagar.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            light: '#f8fafc',
+                            accent: '#f59e0b',
+                            muted: '#64748b'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #020617; color: #f8fafc; }
+        .glass-nav { background: rgba(2, 6, 23, 0.7); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .project-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .project-card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5); }
+        .project-card:hover img { transform: scale(1.05); }
+        .btn-hover { transition: all 0.3s ease; }
+        .btn-hover:hover { box-shadow: 0 0 20px rgba(245, 158, 11, 0.4); transform: translateY(-2px); }
+        .filter-btn.active { background-color: #f59e0b; color: #020617; font-weight: 600; border-color: #f59e0b; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-fade-in { animation: fadeIn 0.6s ease-out forwards; }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-accent selection:text-white flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 shadow-lg bg-slate-950/90 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 block">
+                    <div class="w-8 h-8 bg-brand-accent rounded-sm flex items-center justify-center font-bold text-brand-dark text-xl">B</div>
+                    <span class="font-bold text-2xl tracking-tight text-white">Besi<span class="text-brand-accent text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-yellow-300">Karya</span></span>
+                </a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Beranda</a>
+                    <a href="katalog.html" class="text-brand-accent font-semibold transition-colors text-sm">Katalog</a>
+                    <a href="tentang.html" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Tentang Kami</a>
+                    <a href="#" class="wa-global-btn bg-brand-accent text-brand-dark px-5 py-2.5 rounded-md font-semibold text-sm btn-hover flex items-center gap-2" target="_blank" rel="noopener noreferrer">
+                        Hubungi Kami
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 absolute w-full">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-800 rounded-md">Beranda</a>
+                <a href="katalog.html" class="block px-3 py-2 text-base font-semibold text-brand-accent bg-slate-800 rounded-md">Katalog</a>
+                <a href="tentang.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-800 rounded-md">Tentang Kami</a>
+                <a href="#" class="wa-global-btn block px-3 py-2 text-base font-medium text-brand-accent hover:text-yellow-400 rounded-md" target="_blank" rel="noopener noreferrer">Hubungi Kami</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-24">
+        <!-- Digital Showcase / Catalog Section -->
+        <section class="py-16 bg-[#020617] relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center mb-16">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Digital Showcase</h1>
+                    <p class="text-slate-400 max-w-2xl mx-auto text-lg">Jelajahi portofolio mahakarya terbaik kami. Setiap desain dapat dikustomisasi secara presisi sesuai dengan arsitektur rumah Anda.</p>
+                </div>
+
+                <!-- Filters -->
+                <div class="flex flex-wrap justify-center gap-3 mb-12" id="filter-container">
+                    <button class="filter-btn active px-6 py-2 rounded-full border border-slate-700 text-sm font-medium transition-colors" data-filter="all">Semua</button>
+                    <button class="filter-btn px-6 py-2 rounded-full border border-slate-700 text-slate-300 hover:text-white hover:border-slate-500 text-sm font-medium transition-colors" data-filter="Kanopi">Kanopi</button>
+                    <button class="filter-btn px-6 py-2 rounded-full border border-slate-700 text-slate-300 hover:text-white hover:border-slate-500 text-sm font-medium transition-colors" data-filter="Teralis">Teralis</button>
+                    <button class="filter-btn px-6 py-2 rounded-full border border-slate-700 text-slate-300 hover:text-white hover:border-slate-500 text-sm font-medium transition-colors" data-filter="Jendela">Jendela</button>
+                    <button class="filter-btn px-6 py-2 rounded-full border border-slate-700 text-slate-300 hover:text-white hover:border-slate-500 text-sm font-medium transition-colors" data-filter="Pagar">Pagar</button>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="gallery-grid">
+                    <!-- Products will be injected here via JavaScript -->
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#020617] border-t border-slate-800 pt-16 pb-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 bg-brand-accent rounded-sm flex items-center justify-center font-bold text-brand-dark text-xl">B</div>
+                        <span class="font-bold text-2xl tracking-tight text-white">Besi<span class="text-brand-accent text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-yellow-300">Karya</span></span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        Menghadirkan keindahan dan kekuatan maksimal pada setiap sudut rumah Anda melalui mahakarya besi kustom berkualitas premium.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Akses Cepat</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="index.html" class="hover:text-brand-accent transition-colors">Beranda</a></li>
+                        <li><a href="katalog.html" class="hover:text-brand-accent transition-colors">Digital Showcase</a></li>
+                        <li><a href="tentang.html" class="hover:text-brand-accent transition-colors">Tentang Kami</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Kontak Studio</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 flex-shrink-0 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+                            <span>Jl. Arsitektur No. 128, Jakarta Barat, 11440</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-slate-500">© 2026 BesiKarya Custom Ironworks. All rights reserved.</p>
+                <p class="text-xs text-slate-600">Built with static aesthetic pipeline.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
