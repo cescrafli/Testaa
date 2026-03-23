@@ -1,266 +1,292 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | BesiKarya</title>
-    <meta name="description"
-        content="Mengapa memilih BesiKarya? Pengalaman, kualitas material, anatomi teknis presisi, dan komitmen pada estetika besi industri.">
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 
-    <!-- Favicon -->
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%220%22 fill=%22%23ea580c%22/><text x=%2250%22 y=%2270%22 font-size=%2260%22 font-family=%22Inter, sans-serif%22 font-weight=%22black%22 fill=%22%23ffffff%22 text-anchor=%22middle%22>B</text></svg>">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #fbf9f8; }
+        .sharp-edge { border-radius: 0 !important; }
+    </style>
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="About Us | BesiKarya">
-    <meta property="og:description"
-        content="Mengapa memilih BesiKarya? Pengalaman, kualitas material, anatomi teknis presisi, dan komitmen pada estetika besi industri.">
-    <meta property="og:image"
-        content="https://images.unsplash.com/photo-1574360982390-e2213b194fb8?auto=format&fit=crop&w=1200&q=80">
-    <meta property="og:url" content="https://besikarya.com/tentang.html">
-    <meta property="og:type" content="website">
+<meta name="description" content="BesiKarya: Premium Industrial Atelier specializing in architectural ironworks and custom metal solutions since 1994." />
+<meta property="og:title" content="BesiKarya | Architectural Ironworks" />
+<meta property="og:description" content="Precision metalcraft for contemporary architecture. Built for scale, forged for permanence." />
 
-    <!-- JSON-LD Local Business -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "BesiKarya Custom Ironworks",
-      "image": "https://images.unsplash.com/photo-1504307651254-35680f4f7285?auto=format&fit=crop&w=1200&q=80",
-      "description": "Jasa custom besi profesional untuk jendela, teralis, dan kanopi.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Jl. Arsitektur No. 128",
-        "addressLocality": "Jakarta Barat",
-        "postalCode": "11440",
-        "addressCountry": "ID"
-      },
-      "telephone": "+6285852317383",
-      "openingHours": "Mo,Tu,We,Th,Fr,Sa 08:00-17:00"
-    }
-    </script>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚙️</text></svg>">
 
-    <!-- Tailwind CSS (CDN) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
+
+
+<script id="tailwind-config">
         tailwind.config = {
+            darkMode: "class",
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: {
-                        brand: {
-                            dark: '#0f172a',
-                            light: '#f8fafc',
-                            accent: '#ea580c',
-                            muted: '#64748b'
-                        }
-                    }
-                }
-            }
+                        "primary-fixed-dim": "#ffb5a0",
+                        "on-tertiary-container": "#fefcff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#e2dfde",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-secondary-container": "#636262",
+                        "tertiary-container": "#0075d6",
+                        "on-error": "#ffffff",
+                        "on-surface": "#1b1c1c",
+                        "on-primary-fixed": "#3b0900",
+                        "surface-container-highest": "#e4e2e2",
+                        "surface-bright": "#fbf9f8",
+                        "background": "#fbf9f8",
+                        "tertiary-fixed-dim": "#a5c8ff",
+                        "on-primary-container": "#fffbff",
+                        "surface-dim": "#dbdad9",
+                        "on-background": "#1b1c1c",
+                        "tertiary-fixed": "#d4e3ff",
+                        "primary": "#ad2c00",
+                        "inverse-surface": "#303031",
+                        "surface-tint": "#b12d00",
+                        "secondary": "#5f5e5e",
+                        "on-primary": "#ffffff",
+                        "primary-fixed": "#ffdbd1",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "inverse-primary": "#ffb5a0",
+                        "tertiary": "#005cab",
+                        "inverse-on-surface": "#f2f0f0",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f5f3f3",
+                        "surface-container": "#efeded",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#872000",
+                        "on-tertiary-fixed-variant": "#004786",
+                        "surface-variant": "#e4e2e2",
+                        "on-surface-variant": "#5d4038",
+                        "surface-container-high": "#e9e8e7",
+                        "surface": "#fbf9f8",
+                        "primary-container": "#d83900",
+                        "outline-variant": "#e7bdb2",
+                        "on-tertiary-fixed": "#001c3a",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "outline": "#926f66",
+                        "secondary-fixed": "#e5e2e1",
+                        "error": "#ba1a1a"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+                },
+            },
         }
     </script>
-    <style>
-        body {
-            background-color: #f8fafc;
-            color: #1e293b;
-        }
-    </style>
 </head>
+<body class="text-on-surface selection:bg-primary selection:text-white">
+<nav class="fixed top-0 w-full z-50 border-b-0 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-8 py-4 max-w-full">
+<div class="text-xl font-black tracking-tighter text-zinc-900 dark:text-zinc-50 uppercase">BesiKarya</div>
+<div class="hidden md:flex items-center gap-8 font-['Inter'] font-medium tracking-tight text-sm">
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="proyek.html">Portfolio</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="katalog.html">Services</a>
+<a class="text-primary dark:text-primary border-b-2 border-primary font-black transition-colors duration-150" href="tentang.html">Process</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="artikel.html">Insights</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="kontak.html">Contact</a>
+</div>
+<div class="hidden md:flex items-center gap-6">
+    <div class="flex items-center border border-outline-variant/30 rounded-sm overflow-hidden">
+        <a href="../tentang.html" class="px-3 py-1 bg-surface-container text-on-surface text-[10px] font-bold tracking-widest hover:bg-surface-variant transition-colors">ID</a>
+        <a href="#" class="px-3 py-1 bg-primary text-white text-[10px] font-bold tracking-widest">EN</a>
+    </div>
+    <a href="kontak.html" class="bg-primary text-on-primary px-6 py-2 text-sm font-bold uppercase tracking-widest hover:bg-primary-container transition-colors duration-150 active:scale-95" style="display:inline-flex; align-items:center; justify-content:center;">Request Quote</a>
+</div>
+</div>
 
-<body class="antialiased selection:bg-brand-accent selection:text-white flex flex-col min-h-screen">
+        <!-- Mobile Nav Toggle -->
+        <button onclick="document.getElementById('mobile-menu-overlay').classList.toggle('hidden')" class="md:hidden text-on-surface hover:text-primary transition-colors absolute right-8 top-1/2 -translate-y-1/2 z-50 relative">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+        
+        <!-- Bespoke Mobile Overlay -->
+        <div id="mobile-menu-overlay" class="hidden fixed inset-0 z-40 bg-surface/95 backdrop-blur-xl flex flex-col items-center justify-center space-y-8 animate-fade-in">
+            <button onclick="document.getElementById('mobile-menu-overlay').classList.add('hidden')" class="absolute top-8 right-8 text-on-surface hover:text-primary">
+                <span class="material-symbols-outlined text-4xl">close</span>
+            </button>
+            <div class="flex flex-col items-center space-y-6 text-xl tracking-widest uppercase font-black text-on-surface">
+                
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="proyek.html">Portfolio</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="katalog.html">Services</a>
+<a class="text-primary dark:text-primary border-b-2 border-primary font-black transition-colors duration-150" href="tentang.html">Process</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="artikel.html">Insights</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="kontak.html">Contact</a>
 
-    <!-- Navbar Component Container -->
-    <div id="navbar-container"></div>
-
-    <!-- Main Content -->
-    <main class="flex-grow pt-24 pb-0 bg-white border-b border-gray-200">
-        <!-- Why Choose Us / Tentang -->
-        <section class="py-16 relative overflow-hidden">
-
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <!-- Breadcrumbs -->
-                <nav class="flex mb-12 text-sm font-medium text-slate-500" aria-label="Breadcrumb" data-aos="fade-down">
-                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
-                        <li class="inline-flex items-center">
-                            <a href="index.html" class="inline-flex items-center hover:text-brand-accent transition-colors">
-                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
-                            Home
-                            </a>
-                        </li>
-                        <li>
-                            <div class="flex items-center">
-                            <svg class="w-6 h-6 text-slate-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-                            <span class="ml-1 md:ml-2 text-slate-800 font-bold uppercase tracking-widest text-xs">About Us</span>
-                            </div>
-                        </li>
-                    </ol>
-                </nav>
-
-                <div class="grid lg:grid-cols-2 gap-16 items-center">
-                    <div>
-                        <h1 class="text-4xl md:text-5xl font-black text-slate-900 mb-6 uppercase tracking-tight"
-                            data-aos="fade-right" data-aos-delay="100">Philosophy <span
-                                class="text-brand-accent">BesiKarya</span></h1>
-                        <p class="text-slate-600 mb-8 leading-relaxed text-lg font-medium" data-aos="fade-right"
-                            data-aos-delay="200">Kami bukan sekadar bengkel las. Kami adalah aplikator dan artisan besi
-                            industrial yang memprioritaskan kekuatan struktural dan akurasi desain untuk setiap detail
-                            properti eksklusif Anda.</p>
-
-                        <div class="space-y-8 mt-12">
-                            <div class="flex gap-4" data-aos="fade-up" data-aos-delay="300">
-                                <div
-                                    class="flex-shrink-0 w-14 h-14 rounded-sm bg-slate-50 border border-gray-200 flex items-center justify-center text-brand-accent shadow-sm">
-                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
-                                        </path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-slate-900 mb-2">Pure Premium Materials</h3>
-                                    <p class="text-slate-600 leading-relaxed font-medium">Menggunakan plat dan pipa
-                                        galvanis ketebalan penuh (full toleransi), menjamin rigiditas dan umur teknis
-                                        yang jauh melebih standar.</p>
-                                </div>
-                            </div>
-                            <div class="flex gap-4" data-aos="fade-up" data-aos-delay="400">
-                                <div
-                                    class="flex-shrink-0 w-14 h-14 rounded-sm bg-slate-50 border border-gray-200 flex items-center justify-center text-brand-accent shadow-sm">
-                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01">
-                                        </path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-slate-900 mb-2">Oven System Painting</h3>
-                                    <p class="text-slate-600 leading-relaxed font-medium">Teknik spray gun dipadukan
-                                        dengan cat dasar epoxy anti-karat, memberikan permukaan halus tanpa risiko
-                                        terkelupas.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative mt-10 lg:mt-0" data-aos="fade-left" data-aos-delay="200">
-                        <div class="aspect-[4/5] rounded-sm overflow-hidden relative group shadow-xl">
-                            <img src="https://images.unsplash.com/photo-1574360982390-e2213b194fb8?q=80&w=1200&auto=format&fit=crop"
-                                alt="Welding Process"
-                                class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105 group-hover:grayscale-0">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80">
-                            </div>
-
-                            <div
-                                class="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-md p-6 rounded-sm border border-gray-200 shadow-md">
-                                <div class="text-slate-900 font-black text-2xl mb-1 uppercase tracking-tight">Inspeksi
-                                    Pengelasan</div>
-                                <p class="text-slate-600 text-sm md:text-base font-medium leading-relaxed mt-2">Setiap
-                                    sambungan dielas dengan tingkat penetrasi maksimal hingga kokoh secara struktural
-                                    sebelum penggerindaan akhir.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </section>
-
-        <!-- Anatomy Quality Seksi Teknis (B2B Requirement) -->
-        <section class="py-20 bg-slate-50 border-t border-gray-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16" data-aos="fade-up">
-                    <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-4 uppercase tracking-tight">Anatomy
-                        Quality</h2>
-                    <p class="text-slate-600 max-w-2xl mx-auto text-lg font-medium">Kami percaya bahwa kemewahan
-                        terletak pada detail. Berikut adalah spesifikasi teknis dan piranti keras (hardware) standar
-                        yang kami tetapkan di setiap mahakarya.</p>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Feature 1 -->
-                    <div class="bg-white border border-gray-200 p-8 rounded-sm shadow-sm hover:shadow-lg transition-shadow group"
-                        data-aos="fade-up" data-aos-delay="100">
-                        <div class="aspect-square bg-slate-100 mb-6 rounded-sm overflow-hidden relative">
-                            <!-- Placeholder image for metal thickness -->
-                            <img src="https://images.unsplash.com/photo-1535813547-99c456a41d4a?auto=format&fit=crop&w=600&q=80"
-                                alt="Ketebalan Besi"
-                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
-                        </div>
-                        <h3 class="text-xl font-black text-slate-900 mb-3 uppercase tracking-wide">Fabrikasi Logam Padat
-                        </h3>
-                        <p class="text-slate-600 font-medium">Besi Hollow Galvanis 2mm+. Spesifikasi material mentah
-                            diukur sangat akurat dengan kaliper untuk memastikan stabilitas mekanis struktural
-                            anti-goyang.</p>
-                    </div>
-                    <!-- Feature 2 -->
-                    <div class="bg-white border border-gray-200 p-8 rounded-sm shadow-sm hover:shadow-lg transition-shadow group"
-                        data-aos="fade-up" data-aos-delay="200">
-                        <div class="aspect-square bg-slate-100 mb-6 rounded-sm overflow-hidden relative">
-                            <!-- Placeholder image for lock hardware -->
-                            <img src="https://images.unsplash.com/photo-1621873117498-7557dc0aa912?auto=format&fit=crop&w=600&q=80"
-                                alt="Hardware Engsel Kunci"
-                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
-                        </div>
-                        <h3 class="text-xl font-black text-slate-900 mb-3 uppercase tracking-wide">Hardware Aksesori
-                            Impor</h3>
-                        <p class="text-slate-600 font-medium">Engsel stainless tugas berat (Heavy Duty), roda nilon
-                            anti-krik, dan sistem silinder kunci merk Dekkson. Mempertahankan kehalusan operasi belasan
-                            tahun.</p>
-                    </div>
-                    <!-- Feature 3 -->
-                    <div class="bg-white border border-gray-200 p-8 rounded-sm shadow-sm hover:shadow-lg transition-shadow group"
-                        data-aos="fade-up" data-aos-delay="300">
-                        <div class="aspect-square bg-slate-100 mb-6 rounded-sm overflow-hidden relative">
-                            <!-- Placeholder image for welding seam -->
-                            <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80"
-                                alt="Sambungan Presisi"
-                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
-                        </div>
-                        <h3 class="text-xl font-black text-slate-900 mb-3 uppercase tracking-wide">Sambungan Tanpa Celah
-                        </h3>
-                        <p class="text-slate-600 font-medium">Titik temu antar bidang dibenamkan menggunakan laser
-                            tempel dan didempul otomotif sampai tak kasat mata, menyembunyikan sisi tajam untuk keamanan
-                            absolut.</p>
-                    </div>
-                </div>
+            
+            <div class="flex items-center gap-4 mt-8 border-t border-outline-variant/30 pt-8 w-64 justify-center">
+                <a href="../tentang.html" class="px-3 py-1 bg-primary text-white text-xs font-bold">ID</a>
+                <a href="#" class="px-3 py-1 bg-surface-container-highest text-on-surface text-xs font-bold">EN</a>
             </div>
-        </section>
+            
+            <a href="https://wa.me/6281234567890" target="_blank" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 font-bold tracking-widest uppercase mt-4 active:scale-95 transition-transform hover:bg-[#1DA851] rounded-full shadow-lg">
+                <span class="material-symbols-outlined">chat</span>
+                WhatsApp
+            </a>
+        </div>
+        
+</nav>
 
-        <!-- Google Maps Integration (B2B Requirement) -->
-        <section class="py-20 bg-white border-t border-gray-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-4 uppercase tracking-tight">Kunjungi
-                        Studio Fabrikasi Kami</h2>
-                    <p class="text-slate-600 max-w-2xl mx-auto text-lg font-medium">Bahan premium menghasilkan
-                        mahakarya. Lihat langsung proses manufaktur di workshop berstandar K3 kami.</p>
-                </div>
-                <!-- Embed Google Maps Responsive Wrapper -->
-                <div
-                    class="w-full aspect-[16/9] md:aspect-[21/9] bg-slate-100 border-2 border-slate-200 p-2 rounded-sm shadow-md">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126914.5422899453!2d106.7594738!3d-6.1950298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f704bc86280b%3A0xbc4e2be00c283726!2sJakarta!5e0!3m2!1sen!2sid!4v1689230551065"
-                        class="w-full h-full grayscale hover:grayscale-0 transition-all duration-700" style="border:0;"
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-            </div>
-        </section>
 
-    </main>
 
-    <!-- Footer Component Container -->
-    <div id="footer-container"></div>
+<!-- Top Navigation Bar -->
 
-    <!-- Scripts -->
-    <script src="components.js?v=4"></script>
-    <script src="data.js"></script>
-    <script src="app.js?v=4"></script>
-</body>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative w-full h-[870px] bg-surface overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Workshop Hero" class="w-full h-full object-cover grayscale-[0.5] brightness-75" data-alt="High-end industrial fabrication workshop with professional team" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxLLTtdKWyxH-aiqsojTJK7J1kRdH3PzhScGyuSyYU5fKgbxDA7KU4vQCxNnMGcQ23RbAesiQFBzCUWeYiRAsKOLtYFza-Sx68B8WLTNXQYBbvIsaPDRzKQC5xFcmXrqTTyIftKZ9KIQ94C9_cZWtzXt3HG5Olt1OzdGKESiqljgs_jgOmNHSVZ65woK7W0HXtZNSY_x-QGir6IqzNHrJ77qoqBVyoxGhXNObIBWajRFYDCN4HIaM3ZzusVvqyJ1cdAy9g0f5mKQ"/>
+<div class="absolute inset-0 bg-gradient-to-r from-[#1b1c1c]/80 to-transparent"></div>
+</div>
+<div class="relative z-10 h-full flex flex-col justify-center px-8 md:px-24 max-w-7xl mx-auto">
+<span class="inline-block text-primary font-bold tracking-[0.2em] uppercase text-xs mb-4">Pekerjaan Logam Presisi</span>
+<h1 class="text-4xl md:text-6xl font-black text-white leading-[0.9] tracking-tighter mb-8 max-w-4xl">
+                    SENI <br/> KETEGASAN <br/> INDUSTRIAL.
+                </h1>
+<p class="text-surface-variant text-lg md:text-xl max-w-xl font-light leading-relaxed">
+                    BesiKarya adalah atelier arsitektural yang berdedikasi pada besi kustom. Kami menjembatani rekayasa struktural dengan desain visual kelas atas.
+                </p>
+</div>
+</section>
+<!-- Warisan Kami Section -->
+<section class="bg-surface-container-lowest py-24 px-8 md:px-24">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 items-start">
+<div class="md:col-span-7">
+<h2 class="text-xs font-bold tracking-[0.3em] uppercase text-secondary mb-12">Warisan Kami</h2>
+<h3 class="text-4xl md:text-6xl font-black tracking-tighter text-on-surface mb-8 leading-none">
+                        Ditempa oleh tradisi, <br/> disempurnakan oleh teknologi.
+                    </h3>
+<div class="space-y-6 text-secondary text-lg leading-relaxed max-w-2xl">
+<p>
+                            Didirikan pada tahun 1994 sebagai bengkel keluarga kecil, BesiKarya telah berevolusi menjadi atelier industri terkemuka. Perjalanan kami didefinisikan oleh pencarian tanpa henti akan "Las Sempurna"—sebuah filosofi di mana integritas struktural bertemu kemurnian estetika.
+                        </p>
+<p>
+                            Kami tidak hanya memproduksi; kami berkolaborasi. Setiap balok, sambungan, dan permukaan adalah bukti komitmen kami terhadap keunggulan arsitektural. Hari ini, kami berdiri sebagai mitra di balik layar untuk berbagai proyek struktural yang paling ambisius.
+                        </p>
+</div>
+</div>
+<div class="md:col-span-5 relative">
+<div class="aspect-[4/5] bg-surface-dim overflow-hidden sharp-edge">
+<img alt="Welding Detail" class="w-full h-full object-cover" data-alt="Macro photo of precision welding sparks and metal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2eH7TOqWEAq7MR7lBktNsGXMewKDzAf3QhRZ6WB5oFQHLVS6ZnwbMZYn87YPDkq63BiTlIX6QJakmF_hrNBH4LOAkLMNz4rlJafrqybODNDyR-Fvk47k6emMOj9RdaqN2QWdufHmB31eMGnErYRjtNGYQo5mC3NYW5_IQpC7Tzj4E76fn4RqEOcc8jN4N5csZD4onbBZqgyYMXBsmhdzIHlemkcpRLDcZYVmte4O3U91zZ_8coYYFb4XGwd5lNrpxZUSRPgi9sQ"/>
+</div>
+<div class="absolute -bottom-8 -left-8 bg-primary p-8 hidden lg:block sharp-edge">
+<p class="text-white text-4xl font-black tracking-tighter leading-none">30+ <br/> <span class="text-sm font-medium tracking-widest uppercase">Tahun</span></p>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Values Section (Bento-ish Grid) -->
+<section class="bg-surface py-32 px-8 md:px-24 overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-2xl">
+<h2 class="text-xs font-bold tracking-[0.3em] uppercase text-primary mb-6">Nilai Inti Kami</h2>
+<h3 class="text-5xl font-black tracking-tighter text-on-surface leading-none">Pilar Presisi BesiKarya.</h3>
+</div>
+<p class="text-secondary max-w-xs text-sm uppercase tracking-widest font-bold">Prinsip yang memandu setiap ayunan palu kami.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+<!-- Value 1 -->
+<div class="p-12 border-l border-t md:border-b border-outline-variant/20 flex flex-col items-start hover:bg-surface-container-low transition-colors duration-300">
+<span class="material-symbols-outlined text-primary mb-8" data-icon="architecture" style="font-size: 40px;">architecture</span>
+<h4 class="text-2xl font-black tracking-tighter text-on-surface mb-4 uppercase">Intensi Arsitektural</h4>
+<p class="text-secondary leading-relaxed">Kami menghormati visi arsitek, memastikan fabrikasi kami selaras sempurna dengan estetika struktural yang dituju.</p>
+</div>
+<!-- Value 2 -->
+<div class="p-12 border-l border-t md:border-b border-outline-variant/20 flex flex-col items-start hover:bg-surface-container-low transition-colors duration-300">
+<span class="material-symbols-outlined text-primary mb-8" data-icon="precision_manufacturing" style="font-size: 40px;">precision_manufacturing</span>
+<h4 class="text-2xl font-black tracking-tighter text-on-surface mb-4 uppercase">Presisi Mikron</h4>
+<p class="text-secondary leading-relaxed">Dalam fabrikasi industrial, presisi milimeter adalah segalanya. Tingkat toleransi kami diatur untuk standar kedirgantaraan.</p>
+</div>
+<!-- Value 3 -->
+<div class="p-12 border-l border-r border-t md:border-b border-outline-variant/20 flex flex-col items-start hover:bg-surface-container-low transition-colors duration-300">
+<span class="material-symbols-outlined text-primary mb-8" data-icon="verified" style="font-size: 40px;">verified</span>
+<h4 class="text-2xl font-black tracking-tighter text-on-surface mb-4 uppercase">Integritas Material</h4>
+<p class="text-secondary leading-relaxed">Kami hanya menggunakan baja dan besi kelas premium yang menjamin kekuatan tanpa kompromi.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Quote / CTA -->
+<section class="bg-on-surface py-32 px-8 text-white text-center">
+<div class="max-w-4xl mx-auto">
+<span class="material-symbols-outlined text-primary text-6xl mb-8" data-icon="format_quote">format_quote</span>
+<p class="text-3xl md:text-5xl font-black tracking-tighter leading-tight mb-12 italic">
+                    "Kami tidak hanya membangun proyek; kami menempa mahakarya dalam balutan besi. Karya kami dirancang untuk bertahan melewati generasi."
+                </p>
+<p class="uppercase tracking-[0.3em] font-bold text-sm text-surface-variant">Gunawan Besi — Artisan Utama</p>
+</div>
+</section>
+</main>
+<!-- Integrated Google Maps Location -->
+<div class="w-full h-96 my-24 border-y border-outline-variant/20 relative grayscale hover:grayscale-0 transition-all duration-1000">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.81956135000001!3d-6.194741399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5390917b759%3A0x6b45e67356080477!2sPT%20BesiKarya%20Indonesia!5e0!3m2!1sen!2sid!4v1680000000000!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<!-- Footer -->
+<footer class="bg-zinc-900 dark:bg-black w-full rounded-none border-t border-zinc-800">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-full">
+<div class="md:col-span-1">
+<div class="text-lg font-bold text-white mb-6 uppercase tracking-tighter">BesiKarya</div>
+<p class="text-zinc-500 font-['Inter'] text-xs uppercase tracking-widest leading-loose">
+                    The intersection of industrial strength and architectural elegance. Established 2009.
+                </p>
+</div>
+<div class="md:col-span-1">
+<h4 class="text-orange-600 font-bold text-xs uppercase tracking-widest mb-6">Explore</h4>
+<ul class="space-y-4">
+<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="proyek.html">Portfolio</a></li>
+<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="proyek.html">Case Studies</a></li>
+<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="tentang.html">The Forge</a></li>
+<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="artikel.html">Sustainability</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="text-orange-600 font-bold text-xs uppercase tracking-widest mb-6">Resources</h4>
+<ul class="space-y-4">
+<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="katalog.html">Technical Specifications</a></li>
+<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="404.html">Global Logistics</a></li>
+<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="artikel.html">Maintenance Guides</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="text-orange-600 font-bold text-xs uppercase tracking-widest mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="404.html">Privacy Policy</a></li>
+<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="404.html">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-['Inter'] text-xs uppercase tracking-widest text-zinc-400">© 2024 BesiKarya Architectural Ironworks. All rights reserved.</span>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-zinc-500 hover:text-orange-500 cursor-pointer transition-colors">brand_awareness</span>
+<span class="material-symbols-outlined text-zinc-500 hover:text-orange-500 cursor-pointer transition-colors">architecture</span>
+<span class="material-symbols-outlined text-zinc-500 hover:text-orange-500 cursor-pointer transition-colors">home_repair_service</span>
+</div>
+</div>
+</footer>
 
-</html>
+
+
+
+
+
+
+</body></html>

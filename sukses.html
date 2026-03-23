@@ -1,76 +1,253 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Permintaan Diterima | BesiKarya</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%220%22 fill=%22%23ea580c%22/><text x=%2250%22 y=%2270%22 font-size=%2260%22 font-family=%22Inter, sans-serif%22 font-weight=%22black%22 fill=%22%23ffffff%22 text-anchor=%22middle%22>B</text></svg>">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS (CDN) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Request Received | BesiKarya</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+
+<meta name="description" content="BesiKarya: Atelier Industrial Premium berspesialisasi dalam pekerjaan besi arsitektural dan solusi logam kustom sejak 1994." />
+<meta property="og:title" content="BesiKarya | Architectural Ironworks" />
+<meta property="og:description" content="Precision metalcraft for contemporary architecture. Built for scale, forged for permanence." />
+
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚙️</text></svg>">
+
+
+
+<script id="tailwind-config">
         tailwind.config = {
+            darkMode: "class",
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: {
-                        brand: {
-                            dark: '#0f172a', /* Kept for legacy */
-                            light: '#f8fafc',
-                            accent: '#ea580c',
-                            muted: '#64748b'
-                        }
-                    }
-                }
-            }
+                        "primary-fixed-dim": "#ffb5a0",
+                        "on-tertiary-container": "#fefcff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#e2dfde",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-secondary-container": "#636262",
+                        "tertiary-container": "#0075d6",
+                        "on-error": "#ffffff",
+                        "on-surface": "#1b1c1c",
+                        "on-primary-fixed": "#3b0900",
+                        "surface-container-highest": "#e4e2e2",
+                        "surface-bright": "#fbf9f8",
+                        "background": "#fbf9f8",
+                        "tertiary-fixed-dim": "#a5c8ff",
+                        "on-primary-container": "#fffbff",
+                        "surface-dim": "#dbdad9",
+                        "on-background": "#1b1c1c",
+                        "tertiary-fixed": "#d4e3ff",
+                        "primary": "#ad2c00",
+                        "inverse-surface": "#303031",
+                        "surface-tint": "#b12d00",
+                        "secondary": "#5f5e5e",
+                        "on-primary": "#ffffff",
+                        "primary-fixed": "#ffdbd1",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "inverse-primary": "#ffb5a0",
+                        "tertiary": "#005cab",
+                        "inverse-on-surface": "#f2f0f0",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f5f3f3",
+                        "surface-container": "#efeded",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#872000",
+                        "on-tertiary-fixed-variant": "#004786",
+                        "surface-variant": "#e4e2e2",
+                        "on-surface-variant": "#5d4038",
+                        "surface-container-high": "#e9e8e7",
+                        "surface": "#fbf9f8",
+                        "primary-container": "#d83900",
+                        "outline-variant": "#e7bdb2",
+                        "on-tertiary-fixed": "#001c3a",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "outline": "#926f66",
+                        "secondary-fixed": "#e5e2e1",
+                        "error": "#ba1a1a"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+                },
+            },
         }
     </script>
-    <style>
-        body { background-color: #f8fafc; color: #1e293b; }
-    </style>
 </head>
-<body class="antialiased selection:bg-brand-accent selection:text-white flex flex-col min-h-screen">
+<body class="bg-surface text-on-surface antialiased">
+<nav class="fixed top-0 w-full z-50 border-b-0 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-8 py-4 max-w-full">
+<div class="text-xl font-black tracking-tighter text-zinc-900 dark:text-zinc-50 uppercase">BesiKarya</div>
+<div class="hidden md:flex items-center gap-8 font-['Inter'] font-medium tracking-tight text-sm">
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="proyek.html">Portofolio</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="katalog.html">Layanan</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="tentang.html">Proses</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="artikel.html">Jurnal</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="kontak.html">Contact</a>
+</div>
+<div class="hidden md:flex items-center gap-6">
+    <div class="flex items-center border border-outline-variant/30 rounded-sm overflow-hidden">
+        <a href="#" class="px-3 py-1 bg-primary text-white text-[10px] font-bold tracking-widest">ID</a>
+        <a href="en/sukses.html" class="px-3 py-1 bg-surface-container text-on-surface text-[10px] font-bold tracking-widest hover:bg-surface-variant transition-colors">EN</a>
+    </div>
+    <a href="kontak.html" class="bg-primary text-on-primary px-6 py-2 text-sm font-bold uppercase tracking-widest hover:bg-primary-container transition-colors duration-150 active:scale-95" style="display:inline-flex; align-items:center; justify-content:center;">KONSULTASI HARGA</a>
+</div>
+</div>
 
-    <!-- Navbar Component Container -->
-    <div id="navbar-container"></div>
+        <!-- Mobile Nav Toggle -->
+        <button onclick="document.getElementById('mobile-menu-overlay').classList.toggle('hidden')" class="md:hidden text-on-surface hover:text-primary transition-colors absolute right-8 top-1/2 -translate-y-1/2 z-50 relative">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+        
+        <!-- Bespoke Mobile Overlay -->
+        <div id="mobile-menu-overlay" class="hidden fixed inset-0 z-40 bg-surface/95 backdrop-blur-xl flex flex-col items-center justify-center space-y-8 animate-fade-in">
+            <button onclick="document.getElementById('mobile-menu-overlay').classList.add('hidden')" class="absolute top-8 right-8 text-on-surface hover:text-primary">
+                <span class="material-symbols-outlined text-4xl">close</span>
+            </button>
+            <div class="flex flex-col items-center space-y-6 text-xl tracking-widest uppercase font-black text-on-surface">
+                
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="proyek.html">Portofolio</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="katalog.html">Layanan</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="tentang.html">Proses</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="artikel.html">Jurnal</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="kontak.html">Contact</a>
 
-    <!-- Main Content -->
-        <main class="flex-grow flex items-center justify-center pt-24 pb-24 relative overflow-hidden bg-slate-50 border-b border-gray-200">
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504307651254-35680f4f7285?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center bg-no-repeat opacity-5 grayscale pointer-events-none"></div>
-
-        <div class="text-center px-4 relative z-10 max-w-2xl mx-auto">
-            <div class="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-8 shadow-sm">
-                <svg class="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
-                </svg>
             </div>
             
-            <h1 class="text-4xl md:text-5xl font-black text-slate-900 mb-6 uppercase tracking-tight">Permintaan <span class="text-brand-accent">Diterima</span></h1>
+            <div class="flex items-center gap-4 mt-8 border-t border-outline-variant/30 pt-8 w-64 justify-center">
+                <a href="#" class="px-3 py-1 bg-primary text-white text-xs font-bold">ID</a>
+                <a href="en/sukses.html" class="px-3 py-1 bg-surface-container-highest text-on-surface text-xs font-bold">EN</a>
+            </div>
             
-            <p class="text-slate-600 mb-10 text-lg leading-relaxed font-medium">
-                Terima kasih telah menghubungi BesiKarya. Blueprint dan detail proyek Anda telah masuk ke sistem kami. Tim estimator eksekutif kami akan segera meninjau dan menghubungi Anda kembali dalam waktu maksimal 2x24 jam kerja.
-            </p>
-            
-            <a href="index.html" class="inline-flex justify-center items-center gap-2 bg-slate-900 hover:bg-brand-accent text-white px-8 py-4 rounded-sm font-bold text-lg transition-colors duration-300 uppercase tracking-widest shadow-md">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-                Kembali ke Beranda
+            <a href="https://wa.me/6281234567890" target="_blank" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 font-bold tracking-widest uppercase mt-4 active:scale-95 transition-transform hover:bg-[#1DA851] rounded-full shadow-lg">
+                <span class="material-symbols-outlined">chat</span>
+                WhatsApp
             </a>
         </div>
-    </main>
+        
+</nav>
 
-    <!-- Footer Component Container -->
-    <div id="footer-container"></div>
 
-    <!-- Scripts -->
-    <script src="components.js"></script>
-    <script src="data.js"></script>
-    <script src="app.js"></script>
-</body>
-</html>
+
+<!-- Top Navigation (Suppressed for focused Transactional state per instructions, but placeholder logic included) -->
+<!-- Navigation is hidden for success screens to prioritize focus -->
+<main class="min-h-screen flex flex-col justify-center items-center px-6 py-24 relative overflow-hidden">
+<!-- Architectural Grid Background (Subtle) -->
+<div class="absolute inset-0 z-0 pointer-events-none opacity-20" style="background-image: radial-gradient(circle, #dbdad9 1px, transparent 1px); background-size: 40px 40px;">
+</div>
+<!-- Success Content Container -->
+<div class="relative z-10 w-full max-w-4xl bg-surface-container-lowest p-12 md:p-24 flex flex-col items-center text-center shadow-sm">
+<!-- Transmission Icon/Graphic -->
+<div class="mb-12 inline-flex items-center justify-center w-20 h-20 bg-surface-container-low border-b-2 border-primary">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="task_alt">task_alt</span>
+</div>
+<!-- Main Heading -->
+<h1 class="font-headline text-4xl md:text-6xl font-black tracking-tighter text-on-surface mb-8 uppercase">
+                PERMINTAAN DITERIMA
+            </h1>
+<!-- Narrative Text -->
+<div class="max-w-xl mx-auto mb-16">
+<p class="font-body text-secondary text-lg leading-relaxed mb-6">
+                    Inkuiri teknis dan data blueprint telah berhasil ditransmisikan ke atelier industrial kami. 
+                    Tim teknik kami akan meninjau spesifikasi Anda untuk kelayakan fabrikasi dan integritas struktural.
+                </p>
+<div class="flex items-center justify-center gap-4 py-4 bg-surface-container-low border-x border-outline-variant/20">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+<span class="font-label text-xs uppercase tracking-widest font-bold">Waktu Tinjauan: 24 Jam</span>
+</div>
+</div>
+<!-- CTA Actions -->
+<div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+<a class="bg-primary hover:bg-primary-container text-on-primary font-bold px-10 py-5 transition-all duration-150 flex items-center justify-center group" href="index.html">
+                    KEMBALI KE BERANDA
+                    <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Technical ID Footer -->
+<div class="mt-20 flex flex-col md:flex-row items-center gap-8 pt-8 border-t border-outline-variant/10 w-full justify-between">
+<div class="text-left">
+<p class="font-label text-[10px] text-on-secondary-container uppercase tracking-widest mb-1">Referensi Pertanyaan</p>
+<p class="font-headline font-bold text-sm tracking-tight text-on-surface">BK-FAB-2024-0892</p>
+</div>
+<div class="hidden md:block h-8 w-[1px] bg-outline-variant/30"></div>
+<div class="text-left">
+<p class="font-label text-[10px] text-on-secondary-container uppercase tracking-widest mb-1">Status</p>
+<p class="font-headline font-bold text-sm tracking-tight text-primary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span>
+                        DALAM ANTRIAN ANALISIS FABRIKASI
+                    </p>
+</div>
+</div>
+</div>
+<!-- Decorative Blueprint Element -->
+<div class="absolute bottom-0 right-0 p-12 opacity-10 hidden lg:block pointer-events-none">
+<span class="material-symbols-outlined text-[200px]" data-icon="architecture">architecture</span>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-900 dark:bg-black w-full rounded-none border-t border-zinc-800">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-full">
+<div class="md:col-span-1">
+<div class="text-lg font-bold text-white mb-6 uppercase tracking-tighter">BesiKarya</div>
+<p class="text-zinc-500 font-['Inter'] text-xs uppercase tracking-widest leading-loose">
+                    The intersection of industrial strength and architectural elegance. Established 2009.
+                </p>
+</div>
+<div class="md:col-span-1">
+<h4 class="text-orange-600 font-bold text-xs uppercase tracking-widest mb-6">Explore</h4>
+<ul class="space-y-4">
+<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="proyek.html">Portofolio</a></li>
+<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="proyek.html">Case Studies</a></li>
+<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="tentang.html">The Forge</a></li>
+<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="artikel.html">Sustainability</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="text-orange-600 font-bold text-xs uppercase tracking-widest mb-6">Resources</h4>
+<ul class="space-y-4">
+<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="katalog.html">Technical Specifications</a></li>
+<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="404.html">Global Logistics</a></li>
+<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="artikel.html">Maintenance Guides</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="text-orange-600 font-bold text-xs uppercase tracking-widest mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="404.html">Privacy Policy</a></li>
+<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="404.html">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-['Inter'] text-xs uppercase tracking-widest text-zinc-400">© 2024 BesiKarya Arsitektural Pekerjaan Besi. All rights reserved.</span>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-zinc-500 hover:text-orange-500 cursor-pointer transition-colors">brand_awareness</span>
+<span class="material-symbols-outlined text-zinc-500 hover:text-orange-500 cursor-pointer transition-colors">architecture</span>
+<span class="material-symbols-outlined text-zinc-500 hover:text-orange-500 cursor-pointer transition-colors">home_repair_service</span>
+</div>
+</div>
+</footer>
+
+
+
+
+
+
+
+</body></html>

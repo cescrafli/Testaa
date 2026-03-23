@@ -1,0 +1,2 @@
+ErrorDocument 404 /Testaa/404.html
+Options -Indexes

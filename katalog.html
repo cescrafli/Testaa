@@ -1,214 +1,408 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
-
+<html class="light" lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Katalog Showcase | BesiKarya</title>
-    <meta name="description" content="Katalog digital produk custom besi, kanopi, teralis, dan pagar.">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Katalog Produk | BesiKarya</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
-    <!-- Favicon -->
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%220%22 fill=%22%23ea580c%22/><text x=%2250%22 y=%2270%22 font-size=%2260%22 font-family=%22Inter, sans-serif%22 font-weight=%22black%22 fill=%22%23ffffff%22 text-anchor=%22middle%22>B</text></svg>">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .text-vertical { writing-mode: vertical-rl; transform: rotate(180deg); }
+    </style>
 
-    <!-- GLightbox CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+<meta name="description" content="BesiKarya: Atelier Industrial Premium berspesialisasi dalam pekerjaan besi arsitektural dan solusi logam kustom sejak 1994." />
+<meta property="og:title" content="BesiKarya | Architectural Ironworks" />
+<meta property="og:description" content="Precision metalcraft for contemporary architecture. Built for scale, forged for permanence." />
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Katalog Digital Showcase | BesiKarya">
-    <meta property="og:description"
-        content="Katalog digital produk custom besi, kanopi, teralis, dan pagar oleh BesiKarya.">
-    <meta property="og:image"
-        content="https://images.unsplash.com/photo-1504307651254-35680f4f7285?auto=format&fit=crop&w=1200&q=80">
-    <meta property="og:url" content="https://besikarya.com/katalog.html">
-    <meta property="og:type" content="website">
 
-    <!-- JSON-LD Local Business -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "BesiKarya Custom Ironworks",
-      "image": "https://images.unsplash.com/photo-1504307651254-35680f4f7285?auto=format&fit=crop&w=1200&q=80",
-      "description": "Jasa custom besi profesional untuk jendela, teralis, dan kanopi.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Jl. Arsitektur No. 128",
-        "addressLocality": "Jakarta Barat",
-        "postalCode": "11440",
-        "addressCountry": "ID"
-      },
-      "telephone": "+6285852317383",
-      "openingHours": "Mo,Tu,We,Th,Fr,Sa 08:00-17:00"
-    }
-    </script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚙️</text></svg>">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CSS (CDN) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
+
+<script id="tailwind-config">
         tailwind.config = {
+            darkMode: "class",
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: {
-                        brand: {
-                            dark: '#0f172a',
-                            light: '#f8fafc',
-                            accent: '#ea580c',
-                            muted: '#64748b'
-                        }
-                    }
-                }
-            }
+                        "primary-fixed-dim": "#ffb5a0",
+                        "on-tertiary-container": "#fefcff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#e2dfde",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-secondary-container": "#636262",
+                        "tertiary-container": "#0075d6",
+                        "on-error": "#ffffff",
+                        "on-surface": "#1b1c1c",
+                        "on-primary-fixed": "#3b0900",
+                        "surface-container-highest": "#e4e2e2",
+                        "surface-bright": "#fbf9f8",
+                        "background": "#fbf9f8",
+                        "tertiary-fixed-dim": "#a5c8ff",
+                        "on-primary-container": "#fffbff",
+                        "surface-dim": "#dbdad9",
+                        "on-background": "#1b1c1c",
+                        "tertiary-fixed": "#d4e3ff",
+                        "primary": "#ad2c00",
+                        "inverse-surface": "#303031",
+                        "surface-tint": "#b12d00",
+                        "secondary": "#5f5e5e",
+                        "on-primary": "#ffffff",
+                        "primary-fixed": "#ffdbd1",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "inverse-primary": "#ffb5a0",
+                        "tertiary": "#005cab",
+                        "inverse-on-surface": "#f2f0f0",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f5f3f3",
+                        "surface-container": "#efeded",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#872000",
+                        "on-tertiary-fixed-variant": "#004786",
+                        "surface-variant": "#e4e2e2",
+                        "on-surface-variant": "#5d4038",
+                        "surface-container-high": "#e9e8e7",
+                        "surface": "#fbf9f8",
+                        "primary-container": "#d83900",
+                        "outline-variant": "#e7bdb2",
+                        "on-tertiary-fixed": "#001c3a",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "outline": "#926f66",
+                        "secondary-fixed": "#e5e2e1",
+                        "error": "#ba1a1a"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+                },
+            },
         }
     </script>
-    <style>
-        body {
-            background-color: #f8fafc;
-            color: #1e293b;
-        }
-
-        .project-card {
-            transition: all 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-        }
-
-        .filter-btn.active {
-            background-color: #1e293b;
-            color: #ffffff;
-            font-weight: 700;
-            border-color: #1e293b;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-fade-in {
-            animation: fadeIn 0.4s ease-out forwards;
-        }
-
-        .glightbox-clean .gslide-description {
-            background: #0f172a !important;
-            color: white !important;
-        }
-
-        .glightbox-clean .gslide-title {
-            color: #ea580c !important;
-            font-weight: 900 !important;
-            font-family: 'Inter', sans-serif !important;
-            text-transform: uppercase;
-        }
-
-        .glightbox-clean .gslide-desc {
-            color: #cbd5e1 !important;
-            font-family: 'Inter', sans-serif !important;
-        }
-    </style>
 </head>
+<body class="bg-surface text-on-surface antialiased selection:bg-primary selection:text-white">
+<nav class="fixed top-0 w-full z-50 border-b-0 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-8 py-4 max-w-full">
+<div class="text-xl font-black tracking-tighter text-zinc-900 dark:text-zinc-50 uppercase">BesiKarya</div>
+<div class="hidden md:flex items-center gap-8 font-['Inter'] font-medium tracking-tight text-sm">
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="proyek.html">Portofolio</a>
+<a class="text-primary dark:text-primary border-b-2 border-primary font-black transition-colors duration-150" href="katalog.html">Layanan</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="tentang.html">Proses</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="artikel.html">Jurnal</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="kontak.html">Contact</a>
+</div>
+<div class="hidden md:flex items-center gap-6">
+    <div class="flex items-center border border-outline-variant/30 rounded-sm overflow-hidden">
+        <a href="#" class="px-3 py-1 bg-primary text-white text-[10px] font-bold tracking-widest">ID</a>
+        <a href="en/katalog.html" class="px-3 py-1 bg-surface-container text-on-surface text-[10px] font-bold tracking-widest hover:bg-surface-variant transition-colors">EN</a>
+    </div>
+    <a href="kontak.html" class="bg-primary text-on-primary px-6 py-2 text-sm font-bold uppercase tracking-widest hover:bg-primary-container transition-colors duration-150 active:scale-95" style="display:inline-flex; align-items:center; justify-content:center;">KONSULTASI HARGA</a>
+</div>
+</div>
 
-<body class="antialiased selection:bg-brand-accent selection:text-white flex flex-col min-h-screen">
-
-    <!-- Navbar Component Container -->
-    <div id="navbar-container"></div>
-
-    <!-- Main Content -->
-    <main class="flex-grow pt-24 bg-slate-50">
-        <!-- Digital Showcase / Catalog Section -->
-        <section class="py-16 relative border-b border-gray-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-                <!-- Breadcrumbs -->
-                <nav class="flex mb-8 text-sm font-medium text-slate-500" aria-label="Breadcrumb" data-aos="fade-down">
-                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
-                        <li class="inline-flex items-center">
-                            <a href="index.html" class="inline-flex items-center hover:text-brand-accent transition-colors">
-                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
-                            Beranda
-                            </a>
-                        </li>
-                        <li>
-                            <div class="flex items-center">
-                            <svg class="w-6 h-6 text-slate-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-                            <span class="ml-1 md:ml-2 text-slate-800 font-bold uppercase tracking-widest text-xs">Katalog Produk</span>
-                            </div>
-                        </li>
-                    </ol>
-                </nav>
-
-                <div class="text-center mb-12">
-                    <h1 class="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight uppercase">Katalog
-                        <span class="text-brand-accent">Produk</span></h1>
-                    <p class="text-slate-600 max-w-2xl mx-auto text-lg">Jelajahi portofolio mahakarya terbaik kami.
-                        Setiap desain dapat dikustomisasi secara presisi sesuai dengan arsitektur rumah Anda.</p>
-                </div>
-
-                <!-- Live Search -->
-                <div class="max-w-md mx-auto mb-10 relative">
-                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                        <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-                    </div>
-                    <input type="text" id="katalog-search"
-                        class="w-full bg-white border border-gray-300 text-slate-900 rounded-sm py-3 pl-12 pr-4 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors shadow-sm"
-                        placeholder="Cari berdasarkan model atau nama produk...">
-                </div>
-
-                <!-- Filters -->
-                <div class="flex flex-wrap justify-center gap-3 mb-12" id="filter-container">
-                    <button
-                        class="filter-btn active px-6 py-2 rounded-sm border border-gray-300 text-sm font-semibold transition-colors"
-                        data-filter="all">Semua</button>
-                    <button
-                        class="filter-btn px-6 py-2 rounded-sm border border-gray-300 text-slate-600 hover:text-slate-900 hover:border-gray-500 text-sm font-semibold transition-colors"
-                        data-filter="Kanopi">Kanopi</button>
-                    <button
-                        class="filter-btn px-6 py-2 rounded-sm border border-gray-300 text-slate-600 hover:text-slate-900 hover:border-gray-500 text-sm font-semibold transition-colors"
-                        data-filter="Teralis">Teralis</button>
-                    <button
-                        class="filter-btn px-6 py-2 rounded-sm border border-gray-300 text-slate-600 hover:text-slate-900 hover:border-gray-500 text-sm font-semibold transition-colors"
-                        data-filter="Jendela">Jendela</button>
-                    <button
-                        class="filter-btn px-6 py-2 rounded-sm border border-gray-300 text-slate-600 hover:text-slate-900 hover:border-gray-500 text-sm font-semibold transition-colors"
-                        data-filter="Pagar">Pagar</button>
-                </div>
-
-                <!-- Gallery Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="gallery-grid">
-                    <!-- Products will be injected here via JavaScript -->
-                </div>
+        <!-- Mobile Nav Toggle -->
+        <button onclick="document.getElementById('mobile-menu-overlay').classList.toggle('hidden')" class="md:hidden text-on-surface hover:text-primary transition-colors absolute right-8 top-1/2 -translate-y-1/2 z-50 relative">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+        
+        <!-- Bespoke Mobile Overlay -->
+        <div id="mobile-menu-overlay" class="hidden fixed inset-0 z-40 bg-surface/95 backdrop-blur-xl flex flex-col items-center justify-center space-y-8 animate-fade-in">
+            <button onclick="document.getElementById('mobile-menu-overlay').classList.add('hidden')" class="absolute top-8 right-8 text-on-surface hover:text-primary">
+                <span class="material-symbols-outlined text-4xl">close</span>
+            </button>
+            <div class="flex flex-col items-center space-y-6 text-xl tracking-widest uppercase font-black text-on-surface">
+                
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="proyek.html">Portofolio</a>
+<a class="text-primary dark:text-primary border-b-2 border-primary font-black transition-colors duration-150" href="katalog.html">Layanan</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="tentang.html">Proses</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="artikel.html">Jurnal</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="kontak.html">Contact</a>
 
             </div>
-        </section>
-    </main>
+            
+            <div class="flex items-center gap-4 mt-8 border-t border-outline-variant/30 pt-8 w-64 justify-center">
+                <a href="#" class="px-3 py-1 bg-primary text-white text-xs font-bold">ID</a>
+                <a href="en/katalog.html" class="px-3 py-1 bg-surface-container-highest text-on-surface text-xs font-bold">EN</a>
+            </div>
+            
+            <a href="https://wa.me/6281234567890" target="_blank" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 font-bold tracking-widest uppercase mt-4 active:scale-95 transition-transform hover:bg-[#1DA851] rounded-full shadow-lg">
+                <span class="material-symbols-outlined">chat</span>
+                WhatsApp
+            </a>
+        </div>
+        
+</nav>
 
-    <!-- Footer Component Container -->
-    <div id="footer-container"></div>
 
-    <!-- Scripts -->
-    <script src="components.js?v=4"></script>
-    <script src="data.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-    <script src="app.js?v=4"></script>
+
+<!-- Top Navigation Shell -->
+
+
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative px-8 py-20 md:py-32 max-w-screen-2xl mx-auto overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-end">
+<div class="md:col-span-8">
+<span class="label-md inline-block bg-primary text-white px-3 py-1 mb-6 text-[10px] font-bold tracking-[0.2em] uppercase">Architecture &amp; Steel</span>
+<h1 class="text-4xl md:text-6xl font-black tracking-tighter leading-[0.9] text-on-surface uppercase mb-8">
+    Product<br/><span class="text-primary">Catalog</span>
+</h1>
+<p class="text-lg md:text-xl text-secondary max-w-xl font-light leading-relaxed">
+    Curated industrial components engineered for architectural excellence. Precision-forged ironwork designed for modern structural integrity and aesthetic distinction.
+</p>
+</div>
+<div class="md:col-span-4 flex justify-end">
+<div class="text-vertical text-zinc-300 font-black text-6xl opacity-20 pointer-events-none select-none uppercase tracking-tighter">
+    BESIKARYA INDUSTRIAL
+</div>
+</div>
+</div>
+</section>
+
+<!-- Filter & Search Section -->
+<section class="bg-surface-container-low px-8 py-12">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+<!-- Search -->
+<div class="relative w-full md:max-w-md">
+<input class="w-full bg-surface-container-highest border-0 border-b-2 border-outline/20 focus:border-primary focus:ring-0 text-sm py-4 px-0 placeholder:text-zinc-400 uppercase tracking-widest font-medium transition-all" placeholder="Search by model or spec..." type="text"/>
+<span class="material-symbols-outlined absolute right-0 top-4 text-zinc-400">search</span>
+</div>
+<!-- Categories -->
+<div class="flex flex-wrap gap-2">
+<button class="px-6 py-2 bg-on-surface text-white text-[11px] font-bold tracking-widest uppercase transition-all">All</button>
+<button class="px-6 py-2 bg-transparent text-secondary border border-zinc-200 hover:border-primary hover:text-primary text-[11px] font-bold tracking-widest uppercase transition-all">Canopies</button>
+<button class="px-6 py-2 bg-transparent text-secondary border border-zinc-200 hover:border-primary hover:text-primary text-[11px] font-bold tracking-widest uppercase transition-all">Trellises</button>
+<button class="px-6 py-2 bg-transparent text-secondary border border-zinc-200 hover:border-primary hover:text-primary text-[11px] font-bold tracking-widest uppercase transition-all">Windows</button>
+<button class="px-6 py-2 bg-transparent text-secondary border border-zinc-200 hover:border-primary hover:text-primary text-[11px] font-bold tracking-widest uppercase transition-all">Fences</button>
+</div>
+</div>
+</section>
+
+<!-- Product Grid -->
+<section class="px-8 py-20 max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
+<!-- Product Card 1 -->
+<div class="group">
+<div class="relative aspect-[4/5] overflow-hidden bg-zinc-100 mb-8">
+<a href="https://lh3.googleusercontent.com/aida-public/AB6AXuBGSd3p97SEwsMaeNB6uFywrxFm52HGG8xBLg9LFXZsXV_IaZgsZzzsOdGxda14CXNXG5Y0jb4eUuHjiIVfSVmJ4q5BBFDNdax_ypwFNpz30EFaLo_IAOocK1oIZ3uTFRu0Q1XEI_P4v0Utykk2n1lJqAxhsML6mTg4HU8OxYXJuzUMLZni0DhMrSwrzX8bEBEVV3u7mS5Vq1ML4FKzNVmeZGgYMrwzxuJ8metdh0yRfW-Vt671yyoJ4KHrIP1WOy7biDV7ZhuPMw" class="glightbox"><img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern black steel security gate with vertical slats" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGSd3p97SEwsMaeNB6uFywrxFm52HGG8xBLg9LFXZsXV_IaZgsZzzsOdGxda14CXNXG5Y0jb4eUuHjiIVfSVmJ4q5BBFDNdax_ypwFNpz30EFaLo_IAOocK1oIZ3uTFRu0Q1XEI_P4v0Utykk2n1lJqAxhsML6mTg4HU8OxYXJuzUMLZni0DhMrSwrzX8bEBEVV3u7mS5Vq1ML4FKzNVmeZGgYMrwzxuJ8metdh0yRfW-Vt671yyoJ4KHrIP1WOy7biDV7ZhuPMw"/></a>
+<div class="absolute top-6 left-6">
+<span class="bg-white/90 backdrop-blur-md px-4 py-1 text-[10px] font-black tracking-widest uppercase text-on-surface">Model: BK-TR01</span>
+</div>
+</div>
+<div class="flex flex-col space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="text-3xl font-black tracking-tighter uppercase text-on-surface leading-none">Teralis Pintu Anti-Maling</h3>
+<span class="text-primary font-bold tracking-tighter text-xl">01</span>
+</div>
+<p class="text-secondary leading-relaxed font-light">High-tensile carbon steel frame with reinforced pivot points. Designed for maximum security without compromising architectural flow.</p>
+<div class="pt-4 border-t border-zinc-100 flex items-center justify-between">
+<div class="grid grid-cols-2 gap-x-8 gap-y-1">
+<span class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold">Material</span>
+<span class="text-[11px] uppercase tracking-tight text-on-surface font-medium">Forged Iron</span>
+<span class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold">Finish</span>
+<span class="text-[11px] uppercase tracking-tight text-on-surface font-medium">Matte Powder</span>
+</div>
+<a href="kontak.html" class="bg-primary text-white flex items-center gap-3 px-8 py-4 font-black text-xs uppercase tracking-widest hover:bg-primary-container transition-all active:scale-95">
+    <span class="material-symbols-outlined text-sm">phone_in_talk</span>
+    KONSULTASI HARGA
+</a>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group md:mt-24">
+<div class="relative aspect-[4/5] overflow-hidden bg-zinc-100 mb-8">
+<a href="https://lh3.googleusercontent.com/aida-public/AB6AXuBYqAq_mmleiIs_MyDZOzR4Q-F6XmkjitntvEfym-rn-PH3v1vZxHq6PARsb77sy6OLRAgaoaR43hBVq8imcsM1wI_I4KQQ7UTW4xErzIaofMv7hNNx8-VVjY_tb3An876sO7ZedT3P4A4cP0Ctrvpw4nJPUQAzlEwAQFGWmv81Siapkt4BuIyj4z-ljxVyrkiSoiyVWrWeLyoRkNO-q_Fx7Ce-9-og6ycVhYzC4PW8PgIbg7-S3eAx6eznxVQUy8lMMj358eF2Nw" class="glightbox"><img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Industrial steel canopy structure with transparent roofing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYqAq_mmleiIs_MyDZOzR4Q-F6XmkjitntvEfym-rn-PH3v1vZxHq6PARsb77sy6OLRAgaoaR43hBVq8imcsM1wI_I4KQQ7UTW4xErzIaofMv7hNNx8-VVjY_tb3An876sO7ZedT3P4A4cP0Ctrvpw4nJPUQAzlEwAQFGWmv81Siapkt4BuIyj4z-ljxVyrkiSoiyVWrWeLyoRkNO-q_Fx7Ce-9-og6ycVhYzC4PW8PgIbg7-S3eAx6eznxVQUy8lMMj358eF2Nw"/></a>
+<div class="absolute top-6 left-6">
+<span class="bg-white/90 backdrop-blur-md px-4 py-1 text-[10px] font-black tracking-widest uppercase text-on-surface">Model: BK-KN04</span>
+</div>
+</div>
+<div class="flex flex-col space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="text-3xl font-black tracking-tighter uppercase text-on-surface leading-none">Kanopi Balkon Alderon</h3>
+<span class="text-primary font-bold tracking-tighter text-xl">02</span>
+</div>
+<p class="text-secondary leading-relaxed font-light">Weather-resistant structural steel assembly with premium Alderon roofing. Engineered for tropical durability and heat reduction.</p>
+<div class="pt-4 border-t border-zinc-100 flex items-center justify-between">
+<div class="grid grid-cols-2 gap-x-8 gap-y-1">
+<span class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold">Material</span>
+<span class="text-[11px] uppercase tracking-tight text-on-surface font-medium">Galvanized Steel</span>
+<span class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold">Finish</span>
+<span class="text-[11px] uppercase tracking-tight text-on-surface font-medium">Anti-Corrosion</span>
+</div>
+<a href="kontak.html" class="bg-primary text-white flex items-center gap-3 px-8 py-4 font-black text-xs uppercase tracking-widest hover:bg-primary-container transition-all active:scale-95">
+    <span class="material-symbols-outlined text-sm">phone_in_talk</span>
+    KONSULTASI HARGA
+</a>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group">
+<div class="relative aspect-[4/5] overflow-hidden bg-zinc-100 mb-8">
+<a href="https://lh3.googleusercontent.com/aida-public/AB6AXuD4FNNYS4j-FpK4GDbFmzM755ni1ZHWwSPWnOKi1ye740vLXTQ4y1JYD9zSQ18eky7XV1FXzRxvuiy-68oWe0vZWUsD0jVOqkLlZpY4X0-zutVCedoLkhkyDWcSdc2DF_0ihXZyMWoLDFMl4H8ltRWJvVnLWLGLF2Qnqy639K9mzi2SlBA6kZTveFvL14SUUAzVbBR0YwJp_j2AJgvwOy7KwaBfGkn6k2UVBba2myLk9Uwp6VILX0P8q2mIsq0n-zVEQu9OARRWgA" class="glightbox"><img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Large industrial pivot window with black metal frame" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4FNNYS4j-FpK4GDbFmzM755ni1ZHWwSPWnOKi1ye740vLXTQ4y1JYD9zSQ18eky7XV1FXzRxvuiy-68oWe0vZWUsD0jVOqkLlZpY4X0-zutVCedoLkhkyDWcSdc2DF_0ihXZyMWoLDFMl4H8ltRWJvVnLWLGLF2Qnqy639K9mzi2SlBA6kZTveFvL14SUUAzVbBR0YwJp_j2AJgvwOy7KwaBfGkn6k2UVBba2myLk9Uwp6VILX0P8q2mIsq0n-zVEQu9OARRWgA"/></a>
+<div class="absolute top-6 left-6">
+<span class="bg-white/90 backdrop-blur-md px-4 py-1 text-[10px] font-black tracking-widest uppercase text-on-surface">Model: BK-JD09</span>
+</div>
+</div>
+<div class="flex flex-col space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="text-3xl font-black tracking-tighter uppercase text-on-surface leading-none">Jendela Industrial Pivot</h3>
+<span class="text-primary font-bold tracking-tighter text-xl">03</span>
+</div>
+<p class="text-secondary leading-relaxed font-light">Custom 360-degree rotation axis with slim-profile steel framing. Optimized for natural ventilation and minimalist facade design.</p>
+<div class="pt-4 border-t border-zinc-100 flex items-center justify-between">
+<div class="grid grid-cols-2 gap-x-8 gap-y-1">
+<span class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold">Material</span>
+<span class="text-[11px] uppercase tracking-tight text-on-surface font-medium">Hollow Steel</span>
+<span class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold">Finish</span>
+<span class="text-[11px] uppercase tracking-tight text-on-surface font-medium">Zinc Chromate</span>
+</div>
+<a href="kontak.html" class="bg-primary text-white flex items-center gap-3 px-8 py-4 font-black text-xs uppercase tracking-widest hover:bg-primary-container transition-all active:scale-95">
+    <span class="material-symbols-outlined text-sm">phone_in_talk</span>
+    KONSULTASI HARGA
+</a>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group md:mt-24">
+<div class="relative aspect-[4/5] overflow-hidden bg-zinc-100 mb-8">
+<a href="https://lh3.googleusercontent.com/aida-public/AB6AXuAR5W4cciDhVNXfBDpOUNU3MsDEiNjL8NUwbzoDLFg16oEFssjzBB1zSQAmpcaMSshreIFc9mT-LP_ure_g5pfg8q_D0r3Gc0B5J8_v4cy5ev4VgFXK2SLZ7dMGvE-mKOT-kKxniEK0Q3wFh02ReBcAQCFjQKc5aafQlQj9RtD1pm1HthN6kgQJnKwVrRUEJJJXlsDpIQ9-zjaNKO6AkxVrqA0kUsHQ_XrH7c6Syf25-TjK9t6B0TjETgSAMLVnSrIR8c0KnsvCyQ" class="glightbox"><img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Classic modern window trellis with ornate geometric pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR5W4cciDhVNXfBDpOUNU3MsDEiNjL8NUwbzoDLFg16oEFssjzBB1zSQAmpcaMSshreIFc9mT-LP_ure_g5pfg8q_D0r3Gc0B5J8_v4cy5ev4VgFXK2SLZ7dMGvE-mKOT-kKxniEK0Q3wFh02ReBcAQCFjQKc5aafQlQj9RtD1pm1HthN6kgQJnKwVrRUEJJJXlsDpIQ9-zjaNKO6AkxVrqA0kUsHQ_XrH7c6Syf25-TjK9t6B0TjETgSAMLVnSrIR8c0KnsvCyQ"/></a>
+<div class="absolute top-6 left-6">
+<span class="bg-white/90 backdrop-blur-md px-4 py-1 text-[10px] font-black tracking-widest uppercase text-on-surface">Model: BK-TR22</span>
+</div>
+</div>
+<div class="flex flex-col space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="text-3xl font-black tracking-tighter uppercase text-on-surface leading-none">Teralis Jendela Klasik Modern</h3>
+<span class="text-primary font-bold tracking-tighter text-xl">04</span>
+</div>
+<p class="text-secondary leading-relaxed font-light">Artisanal hand-wrought details paired with contemporary geometric patterns. A balanced approach to protection and elegance.</p>
+<div class="pt-4 border-t border-zinc-100 flex items-center justify-between">
+<div class="grid grid-cols-2 gap-x-8 gap-y-1">
+<span class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold">Material</span>
+<span class="text-[11px] uppercase tracking-tight text-on-surface font-medium">Solid Square Iron</span>
+<span class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold">Finish</span>
+<span class="text-[11px] uppercase tracking-tight text-on-surface font-medium">Hand Painted</span>
+</div>
+<a href="kontak.html" class="bg-primary text-white flex items-center gap-3 px-8 py-4 font-black text-xs uppercase tracking-widest hover:bg-primary-container transition-all active:scale-95">
+    <span class="material-symbols-outlined text-sm">phone_in_talk</span>
+    KONSULTASI HARGA
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Technical Specs / Materiality section -->
+<section class="bg-surface-dim/30 py-24 px-8">
+<div class="max-w-screen-2xl mx-auto">
+<div class="mb-16">
+<h2 class="text-4xl font-black tracking-tighter uppercase mb-2">Technical Standards</h2>
+<div class="w-20 h-1 bg-primary"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-1">
+<div class="bg-white p-10 border border-zinc-200/50">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">architecture</span>
+<h4 class="text-xs font-black tracking-[0.2em] uppercase mb-4 text-zinc-400">Precision</h4>
+<p class="text-sm font-medium uppercase leading-relaxed">Laser-cut components with 0.1mm tolerance threshold for seamless fitting.</p>
+</div>
+<div class="bg-white p-10 border border-zinc-200/50">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">shield</span>
+<h4 class="text-xs font-black tracking-[0.2em] uppercase mb-4 text-zinc-400">Protection</h4>
+<p class="text-sm font-medium uppercase leading-relaxed">Multi-layer anti-corrosion coating system resistant to high humidity.</p>
+</div>
+<div class="bg-white p-10 border border-zinc-200/50">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">settings_suggest</span>
+<h4 class="text-xs font-black tracking-[0.2em] uppercase mb-4 text-zinc-400">Customization</h4>
+<p class="text-sm font-medium uppercase leading-relaxed">Adaptive design language allows for bespoke scaling to any site blueprint.</p>
+</div>
+<div class="bg-white p-10 border border-zinc-200/50">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">verified</span>
+<h4 class="text-xs font-black tracking-[0.2em] uppercase mb-4 text-zinc-400">Warranty</h4>
+<p class="text-sm font-medium uppercase leading-relaxed">5-year structural integrity guarantee on all forged components.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-32 px-8 text-center max-w-4xl mx-auto">
+<h2 class="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-8 leading-[0.9]">Ready to Forge Your Vision?</h2>
+<p class="text-secondary text-lg mb-12 font-light max-w-2xl mx-auto">Our workshop is open for bespoke consultations. From technical blueprints to final installation, we manage the entire industrial workflow.</p>
+<div class="flex flex-col md:flex-row justify-center gap-4">
+<a href="katalog.pdf" download="BesiKarya_Catalog.pdf" class="bg-primary text-white px-12 py-5 font-black text-sm uppercase tracking-widest hover:bg-primary-container transition-all active:scale-95 flex items-center justify-center">Download PDF Catalog</a>
+<a href="kontak.html" class="bg-on-surface text-white px-12 py-5 font-black text-sm uppercase tracking-widest hover:bg-zinc-800 transition-all active:scale-95 flex items-center justify-center">WhatsApp Workshop</a>
+</div>
+</section>
+</main>
+
+<!-- Footer Shell -->
+
+
+
+
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+<script type="text/javascript">
+    const lightbox = GLightbox({ selector: '.glightbox' });
+</script>
+
+
+
+<footer class="bg-zinc-900 dark:bg-black w-full rounded-none border-t border-zinc-800">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-full">
+<div class="md:col-span-1">
+<div class="text-lg font-bold text-white mb-6 uppercase tracking-tighter">BesiKarya</div>
+<p class="text-zinc-500 font-['Inter'] text-xs uppercase tracking-widest leading-loose">
+                    The intersection of industrial strength and architectural elegance. Established 2009.
+                </p>
+</div>
+<div class="md:col-span-1">
+<h4 class="text-orange-600 font-bold text-xs uppercase tracking-widest mb-6">Explore</h4>
+<ul class="space-y-4">
+<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="proyek.html">Portofolio</a></li>
+<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="proyek.html">Case Studies</a></li>
+<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="tentang.html">The Forge</a></li>
+<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="artikel.html">Sustainability</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="text-orange-600 font-bold text-xs uppercase tracking-widest mb-6">Resources</h4>
+<ul class="space-y-4">
+<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="katalog.html">Technical Specifications</a></li>
+<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="404.html">Global Logistics</a></li>
+<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="artikel.html">Maintenance Guides</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="text-orange-600 font-bold text-xs uppercase tracking-widest mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="404.html">Privacy Policy</a></li>
+<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="404.html">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-['Inter'] text-xs uppercase tracking-widest text-zinc-400">© 2024 BesiKarya Arsitektural Pekerjaan Besi. All rights reserved.</span>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-zinc-500 hover:text-orange-500 cursor-pointer transition-colors">brand_awareness</span>
+<span class="material-symbols-outlined text-zinc-500 hover:text-orange-500 cursor-pointer transition-colors">architecture</span>
+<span class="material-symbols-outlined text-zinc-500 hover:text-orange-500 cursor-pointer transition-colors">home_repair_service</span>
+</div>
+</div>
+</footer>
 </body>
-
 </html>
