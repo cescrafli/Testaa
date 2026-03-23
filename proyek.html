@@ -26,70 +26,23 @@
 
 
 
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary-fixed-dim": "#ffb5a0",
-                        "on-tertiary-container": "#fefcff",
-                        "on-secondary": "#ffffff",
-                        "surface-container-lowest": "#ffffff",
-                        "secondary-container": "#e2dfde",
-                        "on-secondary-fixed-variant": "#474746",
-                        "on-secondary-container": "#636262",
-                        "tertiary-container": "#0075d6",
-                        "on-error": "#ffffff",
-                        "on-surface": "#1b1c1c",
-                        "on-primary-fixed": "#3b0900",
-                        "surface-container-highest": "#e4e2e2",
-                        "surface-bright": "#fbf9f8",
-                        "background": "#fbf9f8",
-                        "tertiary-fixed-dim": "#a5c8ff",
-                        "on-primary-container": "#fffbff",
-                        "surface-dim": "#dbdad9",
-                        "on-background": "#1b1c1c",
-                        "tertiary-fixed": "#d4e3ff",
-                        "primary": "#ad2c00",
-                        "inverse-surface": "#303031",
-                        "surface-tint": "#b12d00",
-                        "secondary": "#5f5e5e",
-                        "on-primary": "#ffffff",
-                        "primary-fixed": "#ffdbd1",
-                        "on-tertiary": "#ffffff",
-                        "secondary-fixed-dim": "#c8c6c5",
-                        "inverse-primary": "#ffb5a0",
-                        "tertiary": "#005cab",
-                        "inverse-on-surface": "#f2f0f0",
-                        "error-container": "#ffdad6",
-                        "surface-container-low": "#f5f3f3",
-                        "surface-container": "#efeded",
-                        "on-error-container": "#93000a",
-                        "on-primary-fixed-variant": "#872000",
-                        "on-tertiary-fixed-variant": "#004786",
-                        "surface-variant": "#e4e2e2",
-                        "on-surface-variant": "#5d4038",
-                        "surface-container-high": "#e9e8e7",
-                        "surface": "#fbf9f8",
-                        "primary-container": "#d83900",
-                        "outline-variant": "#e7bdb2",
-                        "on-tertiary-fixed": "#001c3a",
-                        "on-secondary-fixed": "#1c1b1b",
-                        "outline": "#926f66",
-                        "secondary-fixed": "#e5e2e1",
-                        "error": "#ba1a1a"
-                    },
-                    fontFamily: {
-                        "headline": ["Inter"],
-                        "body": ["Inter"],
-                        "label": ["Inter"]
-                    },
-                    borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
-                },
-            },
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: { sans: ['Inter', 'sans-serif'] },
+                colors: {
+                    brand: {
+                        dark: '#0f172a',
+                        light: '#f8fafc',
+                        accent: '#ea580c',
+                        muted: '#64748b'
+                    }
+                }
+            }
         }
-    </script>
+    }
+</script>
 </head>
 <body class="bg-slate-50 text-slate-900">
 <div id="navbar-container"></div>
@@ -181,26 +134,26 @@
 </div>
 </section>
 <!-- Technical Excellence Section -->
-<section class="bg-slate-50-dim/30 py-32 px-12">
+<section class="bg-slate-100 py-32 px-12">
 <div class="max-w-[1920px] mx-auto">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
 <div>
 <h2 class="text-5xl font-black tracking-tighter mb-8 leading-none">STANDAR FABRIKASI BESI ARSITEKTURAL</h2>
 <p class="text-slate-600 text-lg mb-12">Setiap proyek melalui proses penempaan presisi dan finishing premium untuk memastikan daya tahan serta estetika yang abadi.</p>
 <div class="grid grid-cols-2 gap-x-12 gap-y-8">
-<div class="border-l-2 border-primary pl-6">
+<div class="border-l-2 border-brand-accent pl-6">
 <span class="block text-xs font-bold tracking-widest text-brand-accent uppercase mb-2">Toleransi</span>
 <span class="text-xl font-bold text-slate-900">0.5mm Precision</span>
 </div>
-<div class="border-l-2 border-primary pl-6">
+<div class="border-l-2 border-brand-accent pl-6">
 <span class="block text-xs font-bold tracking-widest text-brand-accent uppercase mb-2">Material</span>
 <span class="text-xl font-bold text-slate-900">Grade A Steel</span>
 </div>
-<div class="border-l-2 border-primary pl-6">
+<div class="border-l-2 border-brand-accent pl-6">
 <span class="block text-xs font-bold tracking-widest text-brand-accent uppercase mb-2">Penyelesaian</span>
 <span class="text-xl font-bold text-slate-900">Powder Coated</span>
 </div>
-<div class="border-l-2 border-primary pl-6">
+<div class="border-l-2 border-brand-accent pl-6">
 <span class="block text-xs font-bold tracking-widest text-brand-accent uppercase mb-2">Garansi</span>
 <span class="text-xl font-bold text-slate-900">10 Year Structure</span>
 </div>
@@ -221,10 +174,10 @@
 <div class="max-w-4xl mx-auto">
 <h2 class="text-4xl md:text-6xl font-black tracking-tighter mb-12 leading-none">SIAP MEMULAI PROYEK ANDA?</h2>
 <div class="flex flex-col md:flex-row gap-6 justify-center">
-<button class="bg-brand-accent text-white px-12 py-6 text-sm font-bold tracking-widest uppercase hover:bg-brand-accent-container transition-all active:scale-95">
+<button class="bg-brand-accent text-white px-12 py-6 text-sm font-bold tracking-widest uppercase hover:bg-orange-700 transition-all active:scale-95">
                         Konsultasi Desain
                     </button>
-<button class="border-2 border-on-surface text-slate-900 px-12 py-6 text-sm font-bold tracking-widest uppercase hover:bg-on-surface hover:text-white transition-all active:scale-95">
+<button class="border-2 border-on-surface text-slate-900 px-12 py-6 text-sm font-bold tracking-widest uppercase hover:bg-slate-900 hover:text-white transition-all active:scale-95">
                         <a href="katalog.pdf" download>Unduh Katalog</a>
                     </button>
 </div>
