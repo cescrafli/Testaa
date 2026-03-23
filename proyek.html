@@ -3,15 +3,17 @@
 <html lang="id"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<title>Katalog Produk | BesiKarya</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
         body { font-family: 'Inter', sans-serif; }
+        .text-vertical { writing-mode: vertical-rl; transform: rotate(180deg); }
     </style>
 
 <meta name="description" content="BesiKarya: Atelier Industrial Premium berspesialisasi dalam pekerjaan besi arsitektural dan solusi logam kustom sejak 1994." />
@@ -89,58 +91,8 @@
         }
     </script>
 </head>
-<body class="bg-surface text-on-surface">
-<nav class="fixed top-0 w-full z-50 border-b-0 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md">
-<div class="flex justify-between items-center px-8 py-4 max-w-full">
-<div class="text-xl font-black tracking-tighter text-zinc-900 dark:text-zinc-50 uppercase">BesiKarya</div>
-<div class="hidden md:flex items-center gap-8 font-['Inter'] font-medium tracking-tight text-sm">
-<a class="text-primary dark:text-primary border-b-2 border-primary font-black transition-colors duration-150" href="proyek.html">Portofolio</a>
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="katalog.html">Layanan</a>
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="tentang.html">Proses</a>
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="artikel.html">Jurnal</a>
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="kontak.html">Contact</a>
-</div>
-<div class="hidden md:flex items-center gap-6">
-    <div class="flex items-center border border-outline-variant/30 rounded-sm overflow-hidden">
-        <a href="#" class="px-3 py-1 bg-primary text-white text-[10px] font-bold tracking-widest">ID</a>
-        <a href="en/proyek.html" class="px-3 py-1 bg-surface-container text-on-surface text-[10px] font-bold tracking-widest hover:bg-surface-variant transition-colors">EN</a>
-    </div>
-    <a href="kontak.html" class="bg-primary text-on-primary px-6 py-2 text-sm font-bold uppercase tracking-widest hover:bg-primary-container transition-colors duration-150 active:scale-95" style="display:inline-flex; align-items:center; justify-content:center;">KONSULTASI HARGA</a>
-</div>
-</div>
-
-        <!-- Mobile Nav Toggle -->
-        <button onclick="document.getElementById('mobile-menu-overlay').classList.toggle('hidden')" class="md:hidden text-on-surface hover:text-primary transition-colors absolute right-8 top-1/2 -translate-y-1/2 z-50 relative">
-            <span class="material-symbols-outlined text-3xl">menu</span>
-        </button>
-        
-        <!-- Bespoke Mobile Overlay -->
-        <div id="mobile-menu-overlay" class="hidden fixed inset-0 z-40 bg-surface/95 backdrop-blur-xl flex flex-col items-center justify-center space-y-8 animate-fade-in">
-            <button onclick="document.getElementById('mobile-menu-overlay').classList.add('hidden')" class="absolute top-8 right-8 text-on-surface hover:text-primary">
-                <span class="material-symbols-outlined text-4xl">close</span>
-            </button>
-            <div class="flex flex-col items-center space-y-6 text-xl tracking-widest uppercase font-black text-on-surface">
-                
-<a class="text-primary dark:text-primary border-b-2 border-primary font-black transition-colors duration-150" href="proyek.html">Portofolio</a>
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="katalog.html">Layanan</a>
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="tentang.html">Proses</a>
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="artikel.html">Jurnal</a>
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="kontak.html">Contact</a>
-
-            </div>
-            
-            <div class="flex items-center gap-4 mt-8 border-t border-outline-variant/30 pt-8 w-64 justify-center">
-                <a href="#" class="px-3 py-1 bg-primary text-white text-xs font-bold">ID</a>
-                <a href="en/proyek.html" class="px-3 py-1 bg-surface-container-highest text-on-surface text-xs font-bold">EN</a>
-            </div>
-            
-            <a href="https://wa.me/6281234567890" target="_blank" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 font-bold tracking-widest uppercase mt-4 active:scale-95 transition-transform hover:bg-[#1DA851] rounded-full shadow-lg">
-                <span class="material-symbols-outlined">chat</span>
-                WhatsApp
-            </a>
-        </div>
-        
-</nav>
+<body class="bg-slate-50 text-slate-900">
+<div id="navbar-container"></div>
 
 
 
@@ -151,12 +103,12 @@
 <section class="px-12 py-24 mb-12">
 <div class="max-w-[1920px] mx-auto">
 <div class="flex flex-col md:flex-row items-baseline gap-12">
-<h1 class="text-7xl md:text-9xl font-black tracking-tighter text-on-surface leading-[0.85] w-full md:w-2/3">
+<h1 class="text-7xl md:text-9xl font-black tracking-tighter text-slate-900 leading-[0.85] w-full md:w-2/3">
                         GALERI PROYEK LAPANGAN
                     </h1>
 <div class="w-full md:w-1/3 space-y-6">
-<div class="h-1 w-24 bg-primary"></div>
-<p class="text-secondary text-lg leading-relaxed max-w-sm">
+<div class="h-1 w-24 bg-brand-accent"></div>
+<p class="text-slate-600 text-lg leading-relaxed max-w-sm">
                             Menampilkan kurasi instalasi besi arsitektural untuk residensial mewah dan komersial elit di Jakarta. Presisi industri berpadu dengan estetika kontemporer.
                         </p>
 </div>
@@ -165,11 +117,11 @@
 </section>
 <!-- Filter / Technical Navigation -->
 <section class="px-12 mb-20">
-<div class="max-w-[1920px] mx-auto flex flex-wrap gap-8 border-b border-outline-variant/20 pb-8">
-<button class="text-xs tracking-[0.2em] font-bold text-primary uppercase">SEMUA PROYEK</button>
-<button class="text-xs tracking-[0.2em] font-medium text-secondary hover:text-primary transition-colors uppercase">RESIDENSIAL MEWAH</button>
-<button class="text-xs tracking-[0.2em] font-medium text-secondary hover:text-primary transition-colors uppercase">KOMERSIAL ELIT</button>
-<button class="text-xs tracking-[0.2em] font-medium text-secondary hover:text-primary transition-colors uppercase">BESI KUSTOM</button>
+<div class="max-w-[1920px] mx-auto flex flex-wrap gap-8 border-b border-gray-200/20 pb-8">
+<button class="text-xs tracking-[0.2em] font-bold text-brand-accent uppercase">SEMUA PROYEK</button>
+<button class="text-xs tracking-[0.2em] font-medium text-slate-600 hover:text-brand-accent transition-colors uppercase">RESIDENSIAL MEWAH</button>
+<button class="text-xs tracking-[0.2em] font-medium text-slate-600 hover:text-brand-accent transition-colors uppercase">KOMERSIAL ELIT</button>
+<button class="text-xs tracking-[0.2em] font-medium text-slate-600 hover:text-brand-accent transition-colors uppercase">BESI KUSTOM</button>
 </div>
 </section>
 <!-- Asymmetric Project Grid -->
@@ -177,86 +129,86 @@
 <div class="max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
 <!-- Project 1: Large Featured -->
 <div class="md:col-span-8 group cursor-pointer">
-<div class="relative overflow-hidden aspect-[16/9] bg-surface-container">
+<div class="relative overflow-hidden aspect-[16/9] bg-slate-100">
 <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuBAy1TYW0yzGd3wrVbn3naZ8-tdae1Zz-sI76lMtdaDif3K4bvHJn-GG14QYUjRp09lcZzNpwOezzwsIbNSFzzRFV8ul0ORDK9Rc_PPfaZ6sYOIIhFZ9I-Ut7xuLOXslJ0xE3dus2NVmFeMA4rZYbatTT4ZtSUw19ITolFpTwIUyk0dq63K8TQ3Qe2ntud9GJ1iXnqoDb6gkH9C-QVUWNDeDVLIvuMuTPy8u3eT0yKALSGTdOSOkV9TRUj_qTibpEfAwP5kt39U5Q" class="glightbox"><img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern geometric iron gate for luxury villa" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAy1TYW0yzGd3wrVbn3naZ8-tdae1Zz-sI76lMtdaDif3K4bvHJn-GG14QYUjRp09lcZzNpwOezzwsIbNSFzzRFV8ul0ORDK9Rc_PPfaZ6sYOIIhFZ9I-Ut7xuLOXslJ0xE3dus2NVmFeMA4rZYbatTT4ZtSUw19ITolFpTwIUyk0dq63K8TQ3Qe2ntud9GJ1iXnqoDb6gkH9C-QVUWNDeDVLIvuMuTPy8u3eT0yKALSGTdOSOkV9TRUj_qTibpEfAwP5kt39U5Q"/></a>
 <div class="absolute inset-0 bg-gradient-to-t from-on-surface/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 </div>
 <div class="mt-6 flex justify-between items-start">
 <div>
-<span class="text-[10px] tracking-[0.3em] font-bold text-primary uppercase mb-2 block">RESIDENSIAL MEWAH — MENTENG</span>
-<h3 class="text-2xl font-bold tracking-tight text-on-surface">Gerbang Obsidian</h3>
+<span class="text-[10px] tracking-[0.3em] font-bold text-brand-accent uppercase mb-2 block">RESIDENSIAL MEWAH — MENTENG</span>
+<h3 class="text-2xl font-bold tracking-tight text-slate-900">Gerbang Obsidian</h3>
 </div>
-<span class="material-symbols-outlined text-secondary group-hover:text-primary transition-colors">north_east</span>
+<span class="material-symbols-outlined text-slate-600 group-hover:text-brand-accent transition-colors">north_east</span>
 </div>
 </div>
 <!-- Project 2: Vertical Side -->
 <div class="md:col-span-4 group cursor-pointer md:mt-24">
-<div class="relative overflow-hidden aspect-[3/4] bg-surface-container">
+<div class="relative overflow-hidden aspect-[3/4] bg-slate-100">
 <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuAF8K0uITQ1tiJpTdZc5kexzmnQdyfNcyOQzdKq8fWhz9PcntVE4oF7zenBeg4IQI194G7IjT2z5Madqd8KMIPlylneS5lL-3veesNwaU1ER6CluyW_4cjNqRcjiQ0NfbSezoUMUX0t6cWI0s1MRCCkV3jXJqsuZ2K3bl5VPybUIzDvjz6pBZLEnLihxkZZ3637e1UFhe6A4iYkxlKIlO4PiLD4uSSTYvjBSWDbr8ih_VPNH041ores2E5a7vYjXIQZVm0CyraXCQ" class="glightbox"><img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Intricate forged iron spiral staircase detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF8K0uITQ1tiJpTdZc5kexzmnQdyfNcyOQzdKq8fWhz9PcntVE4oF7zenBeg4IQI194G7IjT2z5Madqd8KMIPlylneS5lL-3veesNwaU1ER6CluyW_4cjNqRcjiQ0NfbSezoUMUX0t6cWI0s1MRCCkV3jXJqsuZ2K3bl5VPybUIzDvjz6pBZLEnLihxkZZ3637e1UFhe6A4iYkxlKIlO4PiLD4uSSTYvjBSWDbr8ih_VPNH041ores2E5a7vYjXIQZVm0CyraXCQ"/></a>
 <div class="absolute inset-0 bg-gradient-to-t from-on-surface/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 </div>
 <div class="mt-6">
-<span class="text-[10px] tracking-[0.3em] font-bold text-primary uppercase mb-2 block">KOMERSIAL ELIT — SCBD</span>
-<h3 class="text-2xl font-bold tracking-tight text-on-surface">Tangga Spiral Korporat Aria</h3>
+<span class="text-[10px] tracking-[0.3em] font-bold text-brand-accent uppercase mb-2 block">KOMERSIAL ELIT — SCBD</span>
+<h3 class="text-2xl font-bold tracking-tight text-slate-900">Tangga Spiral Korporat Aria</h3>
 </div>
 </div>
 <!-- Project 3: Offset Bottom Left -->
 <div class="md:col-span-5 group cursor-pointer -mt-12">
-<div class="relative overflow-hidden aspect-square bg-surface-container">
+<div class="relative overflow-hidden aspect-square bg-slate-100">
 <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuDNv7J3nWcirWqpWIT0cCBi6EVgjepP6d89m8AHgBHnaXcuvlO5LfNeueeNPLkLjRC2c9vp18FnBz0Jh_vE257YsKBitcTHE8yiFXoYLlJeWdaPeDTazabKjdEryAzaAAgNbJ3QLbMhidCOvJluNLMixeSstI-uhwlxmNIs158-5YWOgyNSRpHj7JnwvM2qc9oMCTqJmTtTymwaHv8xH2PkPcuFIlYDj2e9MME2W3YSccDZfkNpIiHBT2PRxGBa7cH-nBrLVD3o9w" class="glightbox"><img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Minimalist black iron railings for modern balcony" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNv7J3nWcirWqpWIT0cCBi6EVgjepP6d89m8AHgBHnaXcuvlO5LfNeueeNPLkLjRC2c9vp18FnBz0Jh_vE257YsKBitcTHE8yiFXoYLlJeWdaPeDTazabKjdEryAzaAAgNbJ3QLbMhidCOvJluNLMixeSstI-uhwlxmNIs158-5YWOgyNSRpHj7JnwvM2qc9oMCTqJmTtTymwaHv8xH2PkPcuFIlYDj2e9MME2W3YSccDZfkNpIiHBT2PRxGBa7cH-nBrLVD3o9w"/></a>
 <div class="absolute inset-0 bg-gradient-to-t from-on-surface/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 </div>
 <div class="mt-6">
-<span class="text-[10px] tracking-[0.3em] font-bold text-primary uppercase mb-2 block">BESI KUSTOM — PIK</span>
-<h3 class="text-2xl font-bold tracking-tight text-on-surface">Sistem Balustrade Monolit</h3>
+<span class="text-[10px] tracking-[0.3em] font-bold text-brand-accent uppercase mb-2 block">BESI KUSTOM — PIK</span>
+<h3 class="text-2xl font-bold tracking-tight text-slate-900">Sistem Balustrade Monolit</h3>
 </div>
 </div>
 <!-- Project 4: Wide Bottom Right -->
 <div class="md:col-span-7 group cursor-pointer">
-<div class="relative overflow-hidden aspect-[4/3] bg-surface-container">
+<div class="relative overflow-hidden aspect-[4/3] bg-slate-100">
 <div class="absolute inset-0 bg-[#dbdad9]/10"></div>
 <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuDdmnFtKCYypDPZGkz9qHvu-IxDnmdn1m_9Zl3Rs193VdPhbfU1NyAqJDYqBCdPlmxGpd_H-gYflt3hpms23obzam03MTx4OC0GanUw7RYJ24P0nHCUlt8EHrSnC8W6W6KthL7ecGcAG_0J6iiMaZB2AcN-aWuZZgJ9iAF0DCy_nWix0RL1iesnQVKQFEcji9VWxUZSan9WX6Lem66Ndk5KSZKyAZjp8174vCEPtYB-3TddwQJd_2bp38D7jUa61Ark-kzZtPksdg" class="glightbox"><img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Architectural iron screen for a private garden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdmnFtKCYypDPZGkz9qHvu-IxDnmdn1m_9Zl3Rs193VdPhbfU1NyAqJDYqBCdPlmxGpd_H-gYflt3hpms23obzam03MTx4OC0GanUw7RYJ24P0nHCUlt8EHrSnC8W6W6KthL7ecGcAG_0J6iiMaZB2AcN-aWuZZgJ9iAF0DCy_nWix0RL1iesnQVKQFEcji9VWxUZSan9WX6Lem66Ndk5KSZKyAZjp8174vCEPtYB-3TddwQJd_2bp38D7jUa61Ark-kzZtPksdg"/></a>
 <div class="absolute inset-0 bg-gradient-to-t from-on-surface/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 </div>
 <div class="mt-6 flex justify-between items-start">
 <div>
-<span class="text-[10px] tracking-[0.3em] font-bold text-primary uppercase mb-2 block">KOMERSIAL ELIT — KUNINGAN</span>
-<h3 class="text-2xl font-bold tracking-tight text-on-surface">Fasad Layar Zenith</h3>
+<span class="text-[10px] tracking-[0.3em] font-bold text-brand-accent uppercase mb-2 block">KOMERSIAL ELIT — KUNINGAN</span>
+<h3 class="text-2xl font-bold tracking-tight text-slate-900">Fasad Layar Zenith</h3>
 </div>
-<span class="material-symbols-outlined text-secondary group-hover:text-primary transition-colors">north_east</span>
+<span class="material-symbols-outlined text-slate-600 group-hover:text-brand-accent transition-colors">north_east</span>
 </div>
 </div>
 </div>
 </section>
 <!-- Technical Excellence Section -->
-<section class="bg-surface-dim/30 py-32 px-12">
+<section class="bg-slate-50-dim/30 py-32 px-12">
 <div class="max-w-[1920px] mx-auto">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
 <div>
 <h2 class="text-5xl font-black tracking-tighter mb-8 leading-none">STANDAR FABRIKASI BESI ARSITEKTURAL</h2>
-<p class="text-secondary text-lg mb-12">Setiap proyek melalui proses penempaan presisi dan finishing premium untuk memastikan daya tahan serta estetika yang abadi.</p>
+<p class="text-slate-600 text-lg mb-12">Setiap proyek melalui proses penempaan presisi dan finishing premium untuk memastikan daya tahan serta estetika yang abadi.</p>
 <div class="grid grid-cols-2 gap-x-12 gap-y-8">
 <div class="border-l-2 border-primary pl-6">
-<span class="block text-xs font-bold tracking-widest text-primary uppercase mb-2">Toleransi</span>
-<span class="text-xl font-bold text-on-surface">0.5mm Precision</span>
+<span class="block text-xs font-bold tracking-widest text-brand-accent uppercase mb-2">Toleransi</span>
+<span class="text-xl font-bold text-slate-900">0.5mm Precision</span>
 </div>
 <div class="border-l-2 border-primary pl-6">
-<span class="block text-xs font-bold tracking-widest text-primary uppercase mb-2">Material</span>
-<span class="text-xl font-bold text-on-surface">Grade A Steel</span>
+<span class="block text-xs font-bold tracking-widest text-brand-accent uppercase mb-2">Material</span>
+<span class="text-xl font-bold text-slate-900">Grade A Steel</span>
 </div>
 <div class="border-l-2 border-primary pl-6">
-<span class="block text-xs font-bold tracking-widest text-primary uppercase mb-2">Penyelesaian</span>
-<span class="text-xl font-bold text-on-surface">Powder Coated</span>
+<span class="block text-xs font-bold tracking-widest text-brand-accent uppercase mb-2">Penyelesaian</span>
+<span class="text-xl font-bold text-slate-900">Powder Coated</span>
 </div>
 <div class="border-l-2 border-primary pl-6">
-<span class="block text-xs font-bold tracking-widest text-primary uppercase mb-2">Garansi</span>
-<span class="text-xl font-bold text-on-surface">10 Year Structure</span>
+<span class="block text-xs font-bold tracking-widest text-brand-accent uppercase mb-2">Garansi</span>
+<span class="text-xl font-bold text-slate-900">10 Year Structure</span>
 </div>
 </div>
 </div>
-<div class="aspect-square bg-surface-container relative">
+<div class="aspect-square bg-slate-100 relative">
 <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuArKjY9prEMgwN5g5YVC-GOb7wjwLYJJ-CbgjE4a4m8G3TjeREQgDM85xSXsLLTjuNKtL2fcwiXAhB6g4GhM7w98AMf5VLwK7lnmS17NGCCKd4-huCisSTmKQ8IBisDT3GFGVnQsno1uHTBfWVh9wIG_wZNGJ_GN1dCPFEIGaC3m9FUKg_4rlsltTAvHEHB4CrI3V8EUGc8maACKkelUM8SHzElrUB2RFwQd8nGDUzC8Kx4Lkv-38IgeZ2WR91ik_FFWx3q1H0b8Q" class="glightbox"><img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000" data-alt="Macro detail of a clean weld on industrial iron" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArKjY9prEMgwN5g5YVC-GOb7wjwLYJJ-CbgjE4a4m8G3TjeREQgDM85xSXsLLTjuNKtL2fcwiXAhB6g4GhM7w98AMf5VLwK7lnmS17NGCCKd4-huCisSTmKQ8IBisDT3GFGVnQsno1uHTBfWVh9wIG_wZNGJ_GN1dCPFEIGaC3m9FUKg_4rlsltTAvHEHB4CrI3V8EUGc8maACKkelUM8SHzElrUB2RFwQd8nGDUzC8Kx4Lkv-38IgeZ2WR91ik_FFWx3q1H0b8Q"/></a>
-<div class="absolute -bottom-8 -left-8 bg-primary text-white p-12 hidden md:block">
+<div class="absolute -bottom-8 -left-8 bg-brand-accent text-white p-12 hidden md:block">
 <span class="text-6xl font-black tracking-tighter block mb-2">25+</span>
 <span class="text-xs tracking-[0.3em] uppercase font-bold">Tahun Penguasaan</span>
 </div>
@@ -265,14 +217,14 @@
 </div>
 </section>
 <!-- Call to Action -->
-<section class="py-40 px-12 text-center bg-surface">
+<section class="py-40 px-12 text-center bg-slate-50">
 <div class="max-w-4xl mx-auto">
 <h2 class="text-4xl md:text-6xl font-black tracking-tighter mb-12 leading-none">SIAP MEMULAI PROYEK ANDA?</h2>
 <div class="flex flex-col md:flex-row gap-6 justify-center">
-<button class="bg-primary text-white px-12 py-6 text-sm font-bold tracking-widest uppercase hover:bg-primary-container transition-all active:scale-95">
+<button class="bg-brand-accent text-white px-12 py-6 text-sm font-bold tracking-widest uppercase hover:bg-brand-accent-container transition-all active:scale-95">
                         Konsultasi Desain
                     </button>
-<button class="border-2 border-on-surface text-on-surface px-12 py-6 text-sm font-bold tracking-widest uppercase hover:bg-on-surface hover:text-white transition-all active:scale-95">
+<button class="border-2 border-on-surface text-slate-900 px-12 py-6 text-sm font-bold tracking-widest uppercase hover:bg-on-surface hover:text-white transition-all active:scale-95">
                         <a href="katalog.pdf" download>Unduh Katalog</a>
                     </button>
 </div>
@@ -280,48 +232,7 @@
 </section>
 </main>
 <!-- Footer -->
-<footer class="bg-zinc-900 dark:bg-black w-full rounded-none border-t border-zinc-800">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-full">
-<div class="md:col-span-1">
-<div class="text-lg font-bold text-white mb-6 uppercase tracking-tighter">BesiKarya</div>
-<p class="text-zinc-500 font-['Inter'] text-xs uppercase tracking-widest leading-loose">
-                    The intersection of industrial strength and architectural elegance. Established 2009.
-                </p>
-</div>
-<div class="md:col-span-1">
-<h4 class="text-orange-600 font-bold text-xs uppercase tracking-widest mb-6">Explore</h4>
-<ul class="space-y-4">
-<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="proyek.html">Portofolio</a></li>
-<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="proyek.html">Case Studies</a></li>
-<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="tentang.html">The Forge</a></li>
-<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="artikel.html">Sustainability</a></li>
-</ul>
-</div>
-<div class="md:col-span-1">
-<h4 class="text-orange-600 font-bold text-xs uppercase tracking-widest mb-6">Resources</h4>
-<ul class="space-y-4">
-<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="katalog.html">Technical Specifications</a></li>
-<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="404.html">Global Logistics</a></li>
-<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="artikel.html">Maintenance Guides</a></li>
-</ul>
-</div>
-<div class="md:col-span-1">
-<h4 class="text-orange-600 font-bold text-xs uppercase tracking-widest mb-6">Legal</h4>
-<ul class="space-y-4">
-<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="404.html">Privacy Policy</a></li>
-<li><a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-200 font-['Inter'] text-xs uppercase tracking-widest" href="404.html">Terms of Service</a></li>
-</ul>
-</div>
-</div>
-<div class="px-12 py-8 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4">
-<span class="font-['Inter'] text-xs uppercase tracking-widest text-zinc-400">© 2024 BesiKarya Arsitektural Pekerjaan Besi. All rights reserved.</span>
-<div class="flex gap-6">
-<span class="material-symbols-outlined text-zinc-500 hover:text-orange-500 cursor-pointer transition-colors">brand_awareness</span>
-<span class="material-symbols-outlined text-zinc-500 hover:text-orange-500 cursor-pointer transition-colors">architecture</span>
-<span class="material-symbols-outlined text-zinc-500 hover:text-orange-500 cursor-pointer transition-colors">home_repair_service</span>
-</div>
-</div>
-</footer>
+<div id="footer-container"></div>
 
 
 
@@ -332,5 +243,39 @@
 <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
 <script type="text/javascript">
     const lightbox = GLightbox({ selector: '.glightbox' });
+</script>
+<script src="components.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>
+window.addEventListener('ComponentsLoaded', () => {
+    setTimeout(() => {
+
+        const waLink = document.createElement('a');
+        const waNumber = typeof WHATSAPP_NUMBER !== 'undefined' ? WHATSAPP_NUMBER : '6285852317383';
+        const defaultMessage = encodeURIComponent("Halo BesiKarya, saya ingin konsultasi eksekutif terkait pembuatan konstruksi besi custom.");
+        waLink.href = `https://wa.me/${waNumber}?text=${defaultMessage}`;
+        waLink.target = "_blank";
+        waLink.rel = "noopener noreferrer";
+        waLink.className = "fixed bottom-6 right-4 md:right-6 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:bg-[#20bd5a] hover:scale-110 transition-all duration-300 z-50 flex items-center justify-center group touch-manipulation opacity-0 pointer-events-none translate-y-4";
+        waLink.setAttribute('aria-label', 'Konsultasi via WhatsApp');
+        waLink.innerHTML = `
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 0 5.387 0 12.035c0 2.126.553 4.195 1.604 6.014L.226 23.336l5.422-1.423a12.028 12.028 0 006.383 1.834h.005c6.645 0 12.03-5.387 12.03-12.035C24.066 5.387 18.677 0 12.031 0zm0 21.734h-.004a9.982 9.982 0 01-5.088-1.385l-.365-.217-3.784.992.992-3.69-.238-.378a9.972 9.972 0 01-1.53-5.321C1.983 6.495 6.494 1.984 12.03 1.984c5.539 0 10.046 4.511 10.046 10.047 0 5.536-4.507 10.047-10.045 10.047zm5.514-7.53c-.302-.151-1.791-.884-2.068-.985-.278-.101-.482-.151-.683.151-.202.302-.782.985-.959 1.187-.175.202-.352.226-.654.075-1.554-.775-2.731-1.455-3.782-3.25-.215-.367-.024-.565.127-.716.136-.135.302-.352.453-.528.151-.176.202-.302.302-.503.1-.202.05-.378-.025-.528-.076-.151-.683-1.649-.935-2.257-.246-.593-.497-.512-.683-.522H7.43c-.201 0-.528.075-.805.378-.277.302-1.056 1.031-1.056 2.515s1.082 2.917 1.233 3.118c.151.202 2.126 3.243 5.147 4.545 1.701.734 2.522.84 3.425.968 1.011.144 2.13.06 2.66-.411.666-.594 1.272-1.636 1.4-2.316.128-.68.128-1.263.09-1.385-.038-.122-.138-.151-.44-.302z"/></svg>            
+            <span class="absolute right-full mr-4 bg-slate-900 text-white text-sm px-3 py-1.5 rounded-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none font-medium">Chat Interaktif Langsung</span>
+        `;
+        document.body.appendChild(waLink);
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                waLink.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+                waLink.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+            } else {
+                waLink.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+                waLink.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+            }
+        });
+
+    }, 200);
+});
 </script>
 </body></html>
