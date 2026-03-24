@@ -357,8 +357,8 @@ window.addEventListener('ComponentsLoaded', () => {
         }
     });
 
-    if (typeof portfolioData !== 'undefined') {
-        new DigitalShowcase(portfolioData, WHATSAPP_NUMBER);
+    if (typeof window.portfolioData !== 'undefined') {
+        new DigitalShowcase(window.portfolioData, window.WHATSAPP_NUMBER);
         console.log("Digital Showcase UI + Corporate Light Theme initialized.");
     } else {
         console.error("Error: portfolioData is not defined. Ensure data.js is loaded before app.js");

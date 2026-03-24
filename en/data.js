@@ -1,6 +1,6 @@
 // Config: Portfolio Showcase Data
 // This acts as our lightweight "database" (JSON structure)
-const portfolioData = [
+window.portfolioData = [
     {
         id: 1,
         title: "Kanopi Minimalis Kaca Tempered",
@@ -51,4 +51,4 @@ const portfolioData = [
     }
 ];
 
-const WHATSAPP_NUMBER = "6285852317383"; // Format: 62xx
+window.WHATSAPP_NUMBER = "6285852317383"; // Format: 62xx
