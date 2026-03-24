@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Katalog Produk | BesiKarya</title>
+    <title>Layanan & Katalog | BesiKarya</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&amp;display=swap"
         rel="stylesheet" />
     <link
@@ -297,6 +297,18 @@
     </footer>
     <script type="module" src="data.js"></script>
     <script type="module" src="app.js"></script>
+
+<script>
+(function() {
+  var path = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('nav a[href]').forEach(function(a) {
+    if (a.getAttribute('href') === path) {
+      a.classList.add('text-primary', 'font-black');
+      a.classList.remove('text-zinc-600', 'dark:text-zinc-400');
+    }
+  });
+})();
+</script>
 </body>
 
 </html>

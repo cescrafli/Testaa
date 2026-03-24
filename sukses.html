@@ -3,7 +3,7 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Request Received | BesiKarya</title>
+<title>Permintaan Diterima | BesiKarya</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -185,4 +185,16 @@
 
 
 
+
+<script>
+(function() {
+  var path = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('nav a[href]').forEach(function(a) {
+    if (a.getAttribute('href') === path) {
+      a.classList.add('text-primary', 'font-black');
+      a.classList.remove('text-zinc-600', 'dark:text-zinc-400');
+    }
+  });
+})();
+</script>
 </body></html>

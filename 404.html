@@ -200,4 +200,16 @@
 
 
 
+
+<script>
+(function() {
+  var path = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('nav a[href]').forEach(function(a) {
+    if (a.getAttribute('href') === path) {
+      a.classList.add('text-primary', 'font-black');
+      a.classList.remove('text-zinc-600', 'dark:text-zinc-400');
+    }
+  });
+})();
+</script>
 </body></html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Product Catalog | BesiKarya</title>
+    <title>Services & Catalog | BesiKarya</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&amp;display=swap"
         rel="stylesheet" />
     <link
@@ -50,8 +50,8 @@
             </div>
             <div class="hidden md:flex items-center gap-6">
                 <div class="flex items-center border border-outline-variant/30 rounded-sm overflow-hidden">
-                    <a href="#" class="px-3 py-1 bg-primary text-white text-xs font-bold tracking-widest">ID</a>
-                    <a href="index.html"
+                    <a href="../katalog.html" class="px-3 py-1 bg-primary text-white text-xs font-bold tracking-widest">ID</a>
+                    <a href="#"
                         class="px-3 py-1 bg-surface-container text-on-surface text-xs font-bold tracking-widest hover:bg-surface-variant transition-colors">EN</a>
                 </div>
                 <a href="kontak.html"
@@ -91,8 +91,8 @@
             </div>
 
             <div class="flex items-center gap-4 mt-8 border-t border-outline-variant/30 pt-8 w-64 justify-center">
-                <a href="#" class="px-6 py-3 bg-primary text-white text-xs font-bold">ID</a>
-                <a href="index.html"
+                <a href="../katalog.html" class="px-6 py-3 bg-primary text-white text-xs font-bold">ID</a>
+                <a href="#"
                     class="px-6 py-3 bg-surface-container-highest text-on-surface text-xs font-bold">EN</a>
             </div>
 
@@ -296,6 +296,18 @@
     </footer>
     <script type="module" src="data.js"></script>
     <script type="module" src="app.js"></script>
+
+<script>
+(function() {
+  var path = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('nav a[href]').forEach(function(a) {
+    if (a.getAttribute('href') === path) {
+      a.classList.add('text-primary', 'font-black');
+      a.classList.remove('text-zinc-600', 'dark:text-zinc-400');
+    }
+  });
+})();
+</script>
 </body>
 
 </html>

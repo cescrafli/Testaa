@@ -36,8 +36,8 @@
 </div>
 <div class="hidden md:flex items-center gap-6">
     <div class="flex items-center border border-outline-variant/30 rounded-sm overflow-hidden">
-        <a href="#" class="px-3 py-1 bg-primary text-white text-xs font-bold tracking-widest">ID</a>
-        <a href="index.html" class="px-3 py-1 bg-surface-container text-on-surface text-xs font-bold tracking-widest hover:bg-surface-variant transition-colors">EN</a>
+        <a href="../404.html" class="px-3 py-1 bg-primary text-white text-xs font-bold tracking-widest">ID</a>
+        <a href="#" class="px-3 py-1 bg-surface-container text-on-surface text-xs font-bold tracking-widest hover:bg-surface-variant transition-colors">EN</a>
     </div>
     <a href="kontak.html" class="bg-primary text-on-primary px-6 py-2 text-sm font-bold uppercase tracking-widest hover:bg-primary-container transition-colors duration-150 active:scale-95" style="display:inline-flex; align-items:center; justify-content:center;">KONSULTASI HARGA</a>
 </div>
@@ -65,8 +65,8 @@
             </div>
             
             <div class="flex items-center gap-4 mt-8 border-t border-outline-variant/30 pt-8 w-64 justify-center">
-                <a href="#" class="px-6 py-3 bg-primary text-white text-xs font-bold">ID</a>
-                <a href="index.html" class="px-6 py-3 bg-surface-container-highest text-on-surface text-xs font-bold">EN</a>
+                <a href="../404.html" class="px-6 py-3 bg-primary text-white text-xs font-bold">ID</a>
+                <a href="#" class="px-6 py-3 bg-surface-container-highest text-on-surface text-xs font-bold">EN</a>
             </div>
             
             <a href="https://wa.me/6285852317383" target="_blank" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 font-bold tracking-widest uppercase mt-4 active:scale-95 transition-transform hover:bg-[#1DA851] rounded-full shadow-lg" aria-label="Chat with us on WhatsApp">
@@ -200,4 +200,16 @@
 
 
 
+
+<script>
+(function() {
+  var path = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('nav a[href]').forEach(function(a) {
+    if (a.getAttribute('href') === path) {
+      a.classList.add('text-primary', 'font-black');
+      a.classList.remove('text-zinc-600', 'dark:text-zinc-400');
+    }
+  });
+})();
+</script>
 </body></html>
