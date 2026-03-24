@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 export default defineConfig({
+  base: './', // Required for XAMPP/sub-folder hosting - makes all asset paths relative
   plugins: [
     ViteImageOptimizer({
       png: { quality: 80 },
