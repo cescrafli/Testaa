@@ -11,9 +11,9 @@
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
         }
         body { font-family: 'Inter', sans-serif; }
-        .text-vertical { writing-mode: vertical-rl; transform: rotate(180deg); }
     </style>
 
 <meta name="description" content="BesiKarya: Premium Industrial Atelier specializing in architectural ironworks and custom metal solutions since 1994." />
@@ -97,17 +97,31 @@
 <div class="text-xl font-black tracking-tighter text-zinc-900 dark:text-zinc-50 uppercase">BesiKarya</div>
 <div class="hidden md:flex items-center gap-8 font-['Inter'] font-medium tracking-tight text-sm">
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="proyek.html">Portfolio</a>
-<a class="text-primary dark:text-primary border-b-2 border-primary font-black transition-colors duration-150" href="katalog.html">Services</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="katalog.html">Services</a>
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="tentang.html">Process</a>
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="artikel.html">Insights</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="artikel.html">Journal</a>
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="kontak.html">Contact</a>
+<div class="hidden md:flex items-center gap-4 border-l border-zinc-300 dark:border-zinc-700 pl-6 ml-2">
+    <a href="#" onclick="switchLang('id'); return false;" class="lang-id font-medium text-zinc-500 dark:text-orange-500 text-sm hover:underline">ID</a>
+    <span class="text-zinc-300 dark:text-zinc-700 text-sm">|</span>
+    <a href="#" onclick="switchLang('en'); return false;" class="lang-en font-black text-orange-600 dark:text-zinc-400 text-sm hover:text-orange-600 dark:hover:text-orange-500 hover:underline">EN</a>
+</div>
+<script>
+function switchLang(target) {
+    let path = window.location.pathname;
+    let page = path.split('/').pop() || 'index.html';
+    let isEn = path.includes('/en/');
+    if (target === 'en' && !isEn) window.location.href = 'en/' + page;
+    else if (target === 'id' && isEn) window.location.href = '../' + page;
+}
+</script>
 </div>
 <div class="hidden md:flex items-center gap-6">
     <div class="flex items-center border border-outline-variant/30 rounded-sm overflow-hidden">
-        <a href="../katalog.html" class="px-3 py-1 bg-surface-container text-on-surface text-[10px] font-bold tracking-widest hover:bg-surface-variant transition-colors">ID</a>
-        <a href="#" class="px-3 py-1 bg-primary text-white text-[10px] font-bold tracking-widest">EN</a>
+        <a href="#" class="px-3 py-1 bg-primary text-white text-[10px] font-bold tracking-widest">ID</a>
+        <a href="en/index.html" class="px-3 py-1 bg-surface-container text-on-surface text-[10px] font-bold tracking-widest hover:bg-surface-variant transition-colors">EN</a>
     </div>
-    <a href="kontak.html" class="bg-primary text-on-primary px-6 py-2 text-sm font-bold uppercase tracking-widest hover:bg-primary-container transition-colors duration-150 active:scale-95" style="display:inline-flex; align-items:center; justify-content:center;">Request Quote</a>
+    <a href="kontak.html" class="bg-primary text-on-primary px-6 py-2 text-sm font-bold uppercase tracking-widest hover:bg-primary-container transition-colors duration-150 active:scale-95" style="display:inline-flex; align-items:center; justify-content:center;">KONSULTASI HARGA</a>
 </div>
 </div>
 
@@ -124,16 +138,30 @@
             <div class="flex flex-col items-center space-y-6 text-xl tracking-widest uppercase font-black text-on-surface">
                 
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="proyek.html">Portfolio</a>
-<a class="text-primary dark:text-primary border-b-2 border-primary font-black transition-colors duration-150" href="katalog.html">Services</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="katalog.html">Services</a>
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="tentang.html">Process</a>
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="artikel.html">Insights</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="artikel.html">Journal</a>
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="kontak.html">Contact</a>
+<div class="hidden md:flex items-center gap-4 border-l border-zinc-300 dark:border-zinc-700 pl-6 ml-2">
+    <a href="#" onclick="switchLang('id'); return false;" class="lang-id font-medium text-zinc-500 dark:text-orange-500 text-sm hover:underline">ID</a>
+    <span class="text-zinc-300 dark:text-zinc-700 text-sm">|</span>
+    <a href="#" onclick="switchLang('en'); return false;" class="lang-en font-black text-orange-600 dark:text-zinc-400 text-sm hover:text-orange-600 dark:hover:text-orange-500 hover:underline">EN</a>
+</div>
+<script>
+function switchLang(target) {
+    let path = window.location.pathname;
+    let page = path.split('/').pop() || 'index.html';
+    let isEn = path.includes('/en/');
+    if (target === 'en' && !isEn) window.location.href = 'en/' + page;
+    else if (target === 'id' && isEn) window.location.href = '../' + page;
+}
+</script>
 
             </div>
             
             <div class="flex items-center gap-4 mt-8 border-t border-outline-variant/30 pt-8 w-64 justify-center">
-                <a href="../katalog.html" class="px-3 py-1 bg-primary text-white text-xs font-bold">ID</a>
-                <a href="#" class="px-3 py-1 bg-surface-container-highest text-on-surface text-xs font-bold">EN</a>
+                <a href="#" class="px-3 py-1 bg-primary text-white text-xs font-bold">ID</a>
+                <a href="en/index.html" class="px-3 py-1 bg-surface-container-highest text-on-surface text-xs font-bold">EN</a>
             </div>
             
             <a href="https://wa.me/6281234567890" target="_blank" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 font-bold tracking-widest uppercase mt-4 active:scale-95 transition-transform hover:bg-[#1DA851] rounded-full shadow-lg">
@@ -175,136 +203,23 @@
 <div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
 <!-- Search -->
 <div class="relative w-full md:max-w-md">
-<input class="w-full bg-surface-container-highest border-0 border-b-2 border-outline/20 focus:border-primary focus:ring-0 text-sm py-4 px-0 placeholder:text-zinc-400 uppercase tracking-widest font-medium transition-all" placeholder="Search by model or spec..." type="text"/>
+<input id="katalog-search" class="w-full bg-surface-container-highest border-0 border-b-2 border-outline/20 focus:border-primary focus:ring-0 text-sm py-4 px-0 placeholder:text-zinc-400 uppercase tracking-widest font-medium transition-all" placeholder="Search by model or spec..." type="text"/>
 <span class="material-symbols-outlined absolute right-0 top-4 text-zinc-400">search</span>
 </div>
 <!-- Categories -->
-<div class="flex flex-wrap gap-2">
-<button class="px-6 py-2 bg-on-surface text-white text-[11px] font-bold tracking-widest uppercase transition-all">All</button>
-<button class="px-6 py-2 bg-transparent text-secondary border border-zinc-200 hover:border-primary hover:text-primary text-[11px] font-bold tracking-widest uppercase transition-all">Canopies</button>
-<button class="px-6 py-2 bg-transparent text-secondary border border-zinc-200 hover:border-primary hover:text-primary text-[11px] font-bold tracking-widest uppercase transition-all">Trellises</button>
-<button class="px-6 py-2 bg-transparent text-secondary border border-zinc-200 hover:border-primary hover:text-primary text-[11px] font-bold tracking-widest uppercase transition-all">Windows</button>
-<button class="px-6 py-2 bg-transparent text-secondary border border-zinc-200 hover:border-primary hover:text-primary text-[11px] font-bold tracking-widest uppercase transition-all">Fences</button>
+<div class="flex flex-wrap gap-2" id="katalog-category-filter">
+<button class="filter-btn active px-6 py-2 bg-on-surface text-white text-[11px] font-bold tracking-widest uppercase transition-all" data-filter="all">All</button>
+<button class="filter-btn px-6 py-2 bg-transparent text-secondary border border-zinc-200 hover:border-primary hover:text-primary text-[11px] font-bold tracking-widest uppercase transition-all" data-filter="Canopies">Canopies</button>
+<button class="filter-btn px-6 py-2 bg-transparent text-secondary border border-zinc-200 hover:border-primary hover:text-primary text-[11px] font-bold tracking-widest uppercase transition-all" data-filter="Trellises">Trellises</button>
+<button class="filter-btn px-6 py-2 bg-transparent text-secondary border border-zinc-200 hover:border-primary hover:text-primary text-[11px] font-bold tracking-widest uppercase transition-all" data-filter="Windows">Windows</button>
+<button class="filter-btn px-6 py-2 bg-transparent text-secondary border border-zinc-200 hover:border-primary hover:text-primary text-[11px] font-bold tracking-widest uppercase transition-all" data-filter="Gates">Gates</button>
 </div>
 </div>
 </section>
 
 <!-- Product Grid -->
 <section class="px-8 py-20 max-w-screen-2xl mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
-<!-- Product Card 1 -->
-<div class="group">
-<div class="relative aspect-[4/5] overflow-hidden bg-zinc-100 mb-8">
-<a href="https://lh3.googleusercontent.com/aida-public/AB6AXuBGSd3p97SEwsMaeNB6uFywrxFm52HGG8xBLg9LFXZsXV_IaZgsZzzsOdGxda14CXNXG5Y0jb4eUuHjiIVfSVmJ4q5BBFDNdax_ypwFNpz30EFaLo_IAOocK1oIZ3uTFRu0Q1XEI_P4v0Utykk2n1lJqAxhsML6mTg4HU8OxYXJuzUMLZni0DhMrSwrzX8bEBEVV3u7mS5Vq1ML4FKzNVmeZGgYMrwzxuJ8metdh0yRfW-Vt671yyoJ4KHrIP1WOy7biDV7ZhuPMw" class="glightbox"><img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern black steel security gate with vertical slats" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGSd3p97SEwsMaeNB6uFywrxFm52HGG8xBLg9LFXZsXV_IaZgsZzzsOdGxda14CXNXG5Y0jb4eUuHjiIVfSVmJ4q5BBFDNdax_ypwFNpz30EFaLo_IAOocK1oIZ3uTFRu0Q1XEI_P4v0Utykk2n1lJqAxhsML6mTg4HU8OxYXJuzUMLZni0DhMrSwrzX8bEBEVV3u7mS5Vq1ML4FKzNVmeZGgYMrwzxuJ8metdh0yRfW-Vt671yyoJ4KHrIP1WOy7biDV7ZhuPMw"/></a>
-<div class="absolute top-6 left-6">
-<span class="bg-white/90 backdrop-blur-md px-4 py-1 text-[10px] font-black tracking-widest uppercase text-on-surface">Model: BK-TR01</span>
-</div>
-</div>
-<div class="flex flex-col space-y-4">
-<div class="flex justify-between items-start">
-<h3 class="text-3xl font-black tracking-tighter uppercase text-on-surface leading-none">Anti-Theft Door Trellis</h3>
-<span class="text-primary font-bold tracking-tighter text-xl">01</span>
-</div>
-<p class="text-secondary leading-relaxed font-light">High-tensile carbon steel frame with reinforced pivot points. Designed for maximum security without compromising architectural flow.</p>
-<div class="pt-4 border-t border-zinc-100 flex items-center justify-between">
-<div class="grid grid-cols-2 gap-x-8 gap-y-1">
-<span class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold">Material</span>
-<span class="text-[11px] uppercase tracking-tight text-on-surface font-medium">Forged Iron</span>
-<span class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold">Finish</span>
-<span class="text-[11px] uppercase tracking-tight text-on-surface font-medium">Matte Powder</span>
-</div>
-<a href="kontak.html" class="bg-primary text-white flex items-center gap-3 px-8 py-4 font-black text-xs uppercase tracking-widest hover:bg-primary-container transition-all active:scale-95">
-    <span class="material-symbols-outlined text-sm">phone_in_talk</span>
-    REQUEST QUOTE
-</a>
-</div>
-</div>
-</div>
-<!-- Product Card 2 -->
-<div class="group md:mt-24">
-<div class="relative aspect-[4/5] overflow-hidden bg-zinc-100 mb-8">
-<a href="https://lh3.googleusercontent.com/aida-public/AB6AXuBYqAq_mmleiIs_MyDZOzR4Q-F6XmkjitntvEfym-rn-PH3v1vZxHq6PARsb77sy6OLRAgaoaR43hBVq8imcsM1wI_I4KQQ7UTW4xErzIaofMv7hNNx8-VVjY_tb3An876sO7ZedT3P4A4cP0Ctrvpw4nJPUQAzlEwAQFGWmv81Siapkt4BuIyj4z-ljxVyrkiSoiyVWrWeLyoRkNO-q_Fx7Ce-9-og6ycVhYzC4PW8PgIbg7-S3eAx6eznxVQUy8lMMj358eF2Nw" class="glightbox"><img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Industrial steel canopy structure with transparent roofing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYqAq_mmleiIs_MyDZOzR4Q-F6XmkjitntvEfym-rn-PH3v1vZxHq6PARsb77sy6OLRAgaoaR43hBVq8imcsM1wI_I4KQQ7UTW4xErzIaofMv7hNNx8-VVjY_tb3An876sO7ZedT3P4A4cP0Ctrvpw4nJPUQAzlEwAQFGWmv81Siapkt4BuIyj4z-ljxVyrkiSoiyVWrWeLyoRkNO-q_Fx7Ce-9-og6ycVhYzC4PW8PgIbg7-S3eAx6eznxVQUy8lMMj358eF2Nw"/></a>
-<div class="absolute top-6 left-6">
-<span class="bg-white/90 backdrop-blur-md px-4 py-1 text-[10px] font-black tracking-widest uppercase text-on-surface">Model: BK-KN04</span>
-</div>
-</div>
-<div class="flex flex-col space-y-4">
-<div class="flex justify-between items-start">
-<h3 class="text-3xl font-black tracking-tighter uppercase text-on-surface leading-none">Alderon Balcony Canopy</h3>
-<span class="text-primary font-bold tracking-tighter text-xl">02</span>
-</div>
-<p class="text-secondary leading-relaxed font-light">Weather-resistant structural steel assembly with premium Alderon roofing. Engineered for tropical durability and heat reduction.</p>
-<div class="pt-4 border-t border-zinc-100 flex items-center justify-between">
-<div class="grid grid-cols-2 gap-x-8 gap-y-1">
-<span class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold">Material</span>
-<span class="text-[11px] uppercase tracking-tight text-on-surface font-medium">Galvanized Steel</span>
-<span class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold">Finish</span>
-<span class="text-[11px] uppercase tracking-tight text-on-surface font-medium">Anti-Corrosion</span>
-</div>
-<a href="kontak.html" class="bg-primary text-white flex items-center gap-3 px-8 py-4 font-black text-xs uppercase tracking-widest hover:bg-primary-container transition-all active:scale-95">
-    <span class="material-symbols-outlined text-sm">phone_in_talk</span>
-    REQUEST QUOTE
-</a>
-</div>
-</div>
-</div>
-<!-- Product Card 3 -->
-<div class="group">
-<div class="relative aspect-[4/5] overflow-hidden bg-zinc-100 mb-8">
-<a href="https://lh3.googleusercontent.com/aida-public/AB6AXuD4FNNYS4j-FpK4GDbFmzM755ni1ZHWwSPWnOKi1ye740vLXTQ4y1JYD9zSQ18eky7XV1FXzRxvuiy-68oWe0vZWUsD0jVOqkLlZpY4X0-zutVCedoLkhkyDWcSdc2DF_0ihXZyMWoLDFMl4H8ltRWJvVnLWLGLF2Qnqy639K9mzi2SlBA6kZTveFvL14SUUAzVbBR0YwJp_j2AJgvwOy7KwaBfGkn6k2UVBba2myLk9Uwp6VILX0P8q2mIsq0n-zVEQu9OARRWgA" class="glightbox"><img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Large industrial pivot window with black metal frame" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4FNNYS4j-FpK4GDbFmzM755ni1ZHWwSPWnOKi1ye740vLXTQ4y1JYD9zSQ18eky7XV1FXzRxvuiy-68oWe0vZWUsD0jVOqkLlZpY4X0-zutVCedoLkhkyDWcSdc2DF_0ihXZyMWoLDFMl4H8ltRWJvVnLWLGLF2Qnqy639K9mzi2SlBA6kZTveFvL14SUUAzVbBR0YwJp_j2AJgvwOy7KwaBfGkn6k2UVBba2myLk9Uwp6VILX0P8q2mIsq0n-zVEQu9OARRWgA"/></a>
-<div class="absolute top-6 left-6">
-<span class="bg-white/90 backdrop-blur-md px-4 py-1 text-[10px] font-black tracking-widest uppercase text-on-surface">Model: BK-JD09</span>
-</div>
-</div>
-<div class="flex flex-col space-y-4">
-<div class="flex justify-between items-start">
-<h3 class="text-3xl font-black tracking-tighter uppercase text-on-surface leading-none">Industrial Pivot Window</h3>
-<span class="text-primary font-bold tracking-tighter text-xl">03</span>
-</div>
-<p class="text-secondary leading-relaxed font-light">Custom 360-degree rotation axis with slim-profile steel framing. Optimized for natural ventilation and minimalist facade design.</p>
-<div class="pt-4 border-t border-zinc-100 flex items-center justify-between">
-<div class="grid grid-cols-2 gap-x-8 gap-y-1">
-<span class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold">Material</span>
-<span class="text-[11px] uppercase tracking-tight text-on-surface font-medium">Hollow Steel</span>
-<span class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold">Finish</span>
-<span class="text-[11px] uppercase tracking-tight text-on-surface font-medium">Zinc Chromate</span>
-</div>
-<a href="kontak.html" class="bg-primary text-white flex items-center gap-3 px-8 py-4 font-black text-xs uppercase tracking-widest hover:bg-primary-container transition-all active:scale-95">
-    <span class="material-symbols-outlined text-sm">phone_in_talk</span>
-    REQUEST QUOTE
-</a>
-</div>
-</div>
-</div>
-<!-- Product Card 4 -->
-<div class="group md:mt-24">
-<div class="relative aspect-[4/5] overflow-hidden bg-zinc-100 mb-8">
-<a href="https://lh3.googleusercontent.com/aida-public/AB6AXuAR5W4cciDhVNXfBDpOUNU3MsDEiNjL8NUwbzoDLFg16oEFssjzBB1zSQAmpcaMSshreIFc9mT-LP_ure_g5pfg8q_D0r3Gc0B5J8_v4cy5ev4VgFXK2SLZ7dMGvE-mKOT-kKxniEK0Q3wFh02ReBcAQCFjQKc5aafQlQj9RtD1pm1HthN6kgQJnKwVrRUEJJJXlsDpIQ9-zjaNKO6AkxVrqA0kUsHQ_XrH7c6Syf25-TjK9t6B0TjETgSAMLVnSrIR8c0KnsvCyQ" class="glightbox"><img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Classic modern window trellis with ornate geometric pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR5W4cciDhVNXfBDpOUNU3MsDEiNjL8NUwbzoDLFg16oEFssjzBB1zSQAmpcaMSshreIFc9mT-LP_ure_g5pfg8q_D0r3Gc0B5J8_v4cy5ev4VgFXK2SLZ7dMGvE-mKOT-kKxniEK0Q3wFh02ReBcAQCFjQKc5aafQlQj9RtD1pm1HthN6kgQJnKwVrRUEJJJXlsDpIQ9-zjaNKO6AkxVrqA0kUsHQ_XrH7c6Syf25-TjK9t6B0TjETgSAMLVnSrIR8c0KnsvCyQ"/></a>
-<div class="absolute top-6 left-6">
-<span class="bg-white/90 backdrop-blur-md px-4 py-1 text-[10px] font-black tracking-widest uppercase text-on-surface">Model: BK-TR22</span>
-</div>
-</div>
-<div class="flex flex-col space-y-4">
-<div class="flex justify-between items-start">
-<h3 class="text-3xl font-black tracking-tighter uppercase text-on-surface leading-none">Classic Modern Window Trellis</h3>
-<span class="text-primary font-bold tracking-tighter text-xl">04</span>
-</div>
-<p class="text-secondary leading-relaxed font-light">Artisanal hand-wrought details paired with contemporary geometric patterns. A balanced approach to protection and elegance.</p>
-<div class="pt-4 border-t border-zinc-100 flex items-center justify-between">
-<div class="grid grid-cols-2 gap-x-8 gap-y-1">
-<span class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold">Material</span>
-<span class="text-[11px] uppercase tracking-tight text-on-surface font-medium">Solid Square Iron</span>
-<span class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold">Finish</span>
-<span class="text-[11px] uppercase tracking-tight text-on-surface font-medium">Hand Painted</span>
-</div>
-<a href="kontak.html" class="bg-primary text-white flex items-center gap-3 px-8 py-4 font-black text-xs uppercase tracking-widest hover:bg-primary-container transition-all active:scale-95">
-    <span class="material-symbols-outlined text-sm">phone_in_talk</span>
-    REQUEST QUOTE
-</a>
-</div>
-</div>
-</div>
-</div>
+<div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20"></div>
 </section>
 
 <!-- Technical Specs / Materiality section -->
@@ -396,7 +311,7 @@
 </div>
 </div>
 <div class="px-12 py-8 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4">
-<span class="font-['Inter'] text-xs uppercase tracking-widest text-zinc-400">© 2024 BesiKarya Architectural Ironworks. All rights reserved.</span>
+<span class="font-['Inter'] text-xs uppercase tracking-widest text-zinc-400">© 2024 BesiKarya Arsitektural Pekerjaan Besi. All rights reserved.</span>
 <div class="flex gap-6">
 <span class="material-symbols-outlined text-zinc-500 hover:text-orange-500 cursor-pointer transition-colors">brand_awareness</span>
 <span class="material-symbols-outlined text-zinc-500 hover:text-orange-500 cursor-pointer transition-colors">architecture</span>
@@ -404,5 +319,7 @@
 </div>
 </div>
 </footer>
+<script src="../data.js" defer></script>
+<script src="../app.js"" defer></script>
 </body>
 </html>

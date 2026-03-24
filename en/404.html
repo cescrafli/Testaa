@@ -11,6 +11,7 @@
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
         }
         body { font-family: 'Inter', sans-serif; }
     </style>
@@ -97,15 +98,29 @@
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="proyek.html">Portfolio</a>
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="katalog.html">Services</a>
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="tentang.html">Process</a>
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="artikel.html">Insights</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="artikel.html">Journal</a>
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="kontak.html">Contact</a>
+<div class="hidden md:flex items-center gap-4 border-l border-zinc-300 dark:border-zinc-700 pl-6 ml-2">
+    <a href="#" onclick="switchLang('id'); return false;" class="lang-id font-medium text-zinc-500 dark:text-orange-500 text-sm hover:underline">ID</a>
+    <span class="text-zinc-300 dark:text-zinc-700 text-sm">|</span>
+    <a href="#" onclick="switchLang('en'); return false;" class="lang-en font-black text-orange-600 dark:text-zinc-400 text-sm hover:text-orange-600 dark:hover:text-orange-500 hover:underline">EN</a>
+</div>
+<script>
+function switchLang(target) {
+    let path = window.location.pathname;
+    let page = path.split('/').pop() || 'index.html';
+    let isEn = path.includes('/en/');
+    if (target === 'en' && !isEn) window.location.href = 'en/' + page;
+    else if (target === 'id' && isEn) window.location.href = '../' + page;
+}
+</script>
 </div>
 <div class="hidden md:flex items-center gap-6">
     <div class="flex items-center border border-outline-variant/30 rounded-sm overflow-hidden">
-        <a href="../404.html" class="px-3 py-1 bg-surface-container text-on-surface text-[10px] font-bold tracking-widest hover:bg-surface-variant transition-colors">ID</a>
-        <a href="#" class="px-3 py-1 bg-primary text-white text-[10px] font-bold tracking-widest">EN</a>
+        <a href="#" class="px-3 py-1 bg-primary text-white text-[10px] font-bold tracking-widest">ID</a>
+        <a href="en/index.html" class="px-3 py-1 bg-surface-container text-on-surface text-[10px] font-bold tracking-widest hover:bg-surface-variant transition-colors">EN</a>
     </div>
-    <a href="kontak.html" class="bg-primary text-on-primary px-6 py-2 text-sm font-bold uppercase tracking-widest hover:bg-primary-container transition-colors duration-150 active:scale-95" style="display:inline-flex; align-items:center; justify-content:center;">Request Quote</a>
+    <a href="kontak.html" class="bg-primary text-on-primary px-6 py-2 text-sm font-bold uppercase tracking-widest hover:bg-primary-container transition-colors duration-150 active:scale-95" style="display:inline-flex; align-items:center; justify-content:center;">KONSULTASI HARGA</a>
 </div>
 </div>
 
@@ -124,14 +139,28 @@
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="proyek.html">Portfolio</a>
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="katalog.html">Services</a>
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="tentang.html">Process</a>
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="artikel.html">Insights</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="artikel.html">Journal</a>
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="kontak.html">Contact</a>
+<div class="hidden md:flex items-center gap-4 border-l border-zinc-300 dark:border-zinc-700 pl-6 ml-2">
+    <a href="#" onclick="switchLang('id'); return false;" class="lang-id font-medium text-zinc-500 dark:text-orange-500 text-sm hover:underline">ID</a>
+    <span class="text-zinc-300 dark:text-zinc-700 text-sm">|</span>
+    <a href="#" onclick="switchLang('en'); return false;" class="lang-en font-black text-orange-600 dark:text-zinc-400 text-sm hover:text-orange-600 dark:hover:text-orange-500 hover:underline">EN</a>
+</div>
+<script>
+function switchLang(target) {
+    let path = window.location.pathname;
+    let page = path.split('/').pop() || 'index.html';
+    let isEn = path.includes('/en/');
+    if (target === 'en' && !isEn) window.location.href = 'en/' + page;
+    else if (target === 'id' && isEn) window.location.href = '../' + page;
+}
+</script>
 
             </div>
             
             <div class="flex items-center gap-4 mt-8 border-t border-outline-variant/30 pt-8 w-64 justify-center">
-                <a href="../404.html" class="px-3 py-1 bg-primary text-white text-xs font-bold">ID</a>
-                <a href="#" class="px-3 py-1 bg-surface-container-highest text-on-surface text-xs font-bold">EN</a>
+                <a href="#" class="px-3 py-1 bg-primary text-white text-xs font-bold">ID</a>
+                <a href="en/index.html" class="px-3 py-1 bg-surface-container-highest text-on-surface text-xs font-bold">EN</a>
             </div>
             
             <a href="https://wa.me/6281234567890" target="_blank" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 font-bold tracking-widest uppercase mt-4 active:scale-95 transition-transform hover:bg-[#1DA851] rounded-full shadow-lg">
@@ -250,7 +279,7 @@
 </div>
 </div>
 <div class="px-12 py-8 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4">
-<span class="font-['Inter'] text-xs uppercase tracking-widest text-zinc-400">© 2024 BesiKarya Architectural Ironworks. All rights reserved.</span>
+<span class="font-['Inter'] text-xs uppercase tracking-widest text-zinc-400">© 2024 BesiKarya Arsitektural Pekerjaan Besi. All rights reserved.</span>
 <div class="flex gap-6">
 <span class="material-symbols-outlined text-zinc-500 hover:text-orange-500 cursor-pointer transition-colors">brand_awareness</span>
 <span class="material-symbols-outlined text-zinc-500 hover:text-orange-500 cursor-pointer transition-colors">architecture</span>

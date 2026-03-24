@@ -97,6 +97,20 @@
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="tentang.html">Proses</a>
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="artikel.html">Jurnal</a>
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="kontak.html">Contact</a>
+<div class="hidden md:flex items-center gap-4 border-l border-zinc-300 dark:border-zinc-700 pl-6 ml-2">
+    <a href="#" onclick="switchLang('id'); return false;" class="lang-id font-black text-orange-600 dark:text-orange-500 text-sm hover:underline">ID</a>
+    <span class="text-zinc-300 dark:text-zinc-700 text-sm">|</span>
+    <a href="#" onclick="switchLang('en'); return false;" class="lang-en font-medium text-zinc-500 dark:text-zinc-400 text-sm hover:text-orange-600 dark:hover:text-orange-500 hover:underline">EN</a>
+</div>
+<script>
+function switchLang(target) {
+    let path = window.location.pathname;
+    let page = path.split('/').pop() || 'index.html';
+    let isEn = path.includes('/en/');
+    if (target === 'en' && !isEn) window.location.href = 'en/' + page;
+    else if (target === 'id' && isEn) window.location.href = '../' + page;
+}
+</script>
 </div>
 <div class="hidden md:flex items-center gap-6">
     <div class="flex items-center border border-outline-variant/30 rounded-sm overflow-hidden">
@@ -124,6 +138,20 @@
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="tentang.html">Proses</a>
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="artikel.html">Jurnal</a>
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="kontak.html">Contact</a>
+<div class="hidden md:flex items-center gap-4 border-l border-zinc-300 dark:border-zinc-700 pl-6 ml-2">
+    <a href="#" onclick="switchLang('id'); return false;" class="lang-id font-black text-orange-600 dark:text-orange-500 text-sm hover:underline">ID</a>
+    <span class="text-zinc-300 dark:text-zinc-700 text-sm">|</span>
+    <a href="#" onclick="switchLang('en'); return false;" class="lang-en font-medium text-zinc-500 dark:text-zinc-400 text-sm hover:text-orange-600 dark:hover:text-orange-500 hover:underline">EN</a>
+</div>
+<script>
+function switchLang(target) {
+    let path = window.location.pathname;
+    let page = path.split('/').pop() || 'index.html';
+    let isEn = path.includes('/en/');
+    if (target === 'en' && !isEn) window.location.href = 'en/' + page;
+    else if (target === 'id' && isEn) window.location.href = '../' + page;
+}
+</script>
 
             </div>
             
