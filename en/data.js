@@ -3,51 +3,51 @@
 window.portfolioData = [
     {
         id: 1,
-        title: "Kanopi Minimalis Kaca Tempered",
+        title: "Minimalist Tempered Glass Canopy",
         category: "Canopies",
-        description: "Rangka hollow galvanis 5x10 dengan atap kaca tempered 8mm. Elegan dan modern untuk carport.",
-        image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=800",
-        message: "Halo, saya tertarik dengan Kanopi Minimalis Kaca Tempered."
+        description: "5x10 galvanized hollow frame with 8mm tempered glass roof. Elegant and modern for carports.",
+        image: "/assets/kanopi-kaca-tempered.jpg",
+        message: "Hello, I am interested in the Minimalist Tempered Glass Canopy."
     },
     {
         id: 2,
-        title: "Teralis Jendela Klasik Modern",
+        title: "Modern Classic Window Trellis",
         category: "Trellises",
-        description: "Besi nako murni 12mm dengan desain kubisme. Aman namun tidak menghalangi pandangan.",
-        image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800",
-        message: "Halo, saya tertarik dengan Teralis Jendela Klasik Modern."
+        description: "12mm solid square iron with cubism design. Secure yet doesn't block the view.",
+        image: "/assets/teralis-klasik.jpg",
+        message: "Hello, I am interested in the Modern Classic Window Trellis."
     },
     {
         id: 3,
-        title: "Jendela Industrial Pivot",
+        title: "Industrial Pivot Window",
         category: "Windows",
-        description: "Bungkus besi plat dengan sistem pivot putar tengah. Sangat cocok untuk sirkulasi udara maksimal bergaya kafe.",
-        image: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&q=80&w=800",
-        message: "Halo, saya tertarik dengan Jendela Industrial Pivot."
+        description: "Iron plate casing with a center pivot system. Perfect for maximum air circulation with a cafe-style aesthetic.",
+        image: "/assets/jendela-industrial-pivot.jpg",
+        message: "Hello, I am interested in the Industrial Pivot Window."
     },
     {
         id: 4,
-        title: "Pagar Laser Cutting Motif Abstrak",
+        title: "Abstract Motif Laser Cut Fence",
         category: "Fences",
-        description: "Plat besi 2mm yang di-cutting menggunakan mesin laser presisi. Mewah dan tidak pasaran.",
-        image: "https://images.unsplash.com/photo-1582260659610-85fbd2be4cb6?auto=format&fit=crop&q=80&w=800",
-        message: "Halo, saya tertarik dengan Pagar Laser Cutting Motif."
+        description: "2mm iron plate cut using a precision laser machine. Luxurious and unique.",
+        image: "/assets/pagar-laser-cutting.jpg",
+        message: "Hello, I am interested in the Abstract Motif Laser Cut Fence."
     },
     {
         id: 5,
-        title: "Kanopi Balkon Alderon",
+        title: "Alderon Balcony Canopy",
         category: "Canopies",
-        description: "Cocok untuk area cuci jemur atau balkon. Menggunakan atap alderon double layer yang dingin dan kedap suara.",
-        image: "https://images.unsplash.com/photo-1590204780516-724bc2f84e36?auto=format&fit=crop&q=80&w=800",
-        message: "Halo, open-konsultasi untuk pembuatan Kanopi Balkon Alderon."
+        description: "Suitable for laundry areas or balconies. Uses double-layer Alderon roofing that's cool and soundproof.",
+        image: "/assets/kanopi-balkon-alderon.jpg",
+        message: "Hello, I would like to consult about the Alderon Balcony Canopy."
     },
     {
         id: 6,
-        title: "Teralis Pintu Anti-Maling",
+        title: "Anti-Theft Door Trellis",
         category: "Trellises",
-        description: "Teralis pintu besi solid dengan sistem kunci tanam ganda. Keamanan tingkat tinggi berlapis estetika.",
-        image: "https://images.unsplash.com/photo-1497985474320-f55ae0e6ea17?auto=format&fit=crop&q=80&w=800",
-        message: "Halo, saya ingin menanyakan harga pembuatan Teralis Pintu Anti-Maling."
+        description: "Solid iron door trellis with a double deadbolt system. High-level security layered with aesthetics.",
+        image: "/assets/teralis-pintu-anti-maling.jpg",
+        message: "Hello, I'd like to inquire about the pricing for the Anti-Theft Door Trellis."
     }
 ];
 

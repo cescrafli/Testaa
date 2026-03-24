@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="flex items-center gap-2 text-xs font-bold">
                             <a href="${idLinkHref}" class="text-slate-400">ID</a> <span class="text-gray-300">|</span> <a href="${enLinkHref}" class="text-brand-accent">EN</a>
                         </div>
-                        <button id="mobile-menu-btn" aria-label="Buka menu utama" aria-expanded="false" class="text-slate-600 hover:text-slate-900 focus:outline-none bg-slate-50 p-2 rounded-sm border border-gray-200">
+                        <button id="mobile-menu-btn" aria-label="Open main menu" aria-expanded="false" class="text-slate-600 hover:text-slate-900 focus:outline-none bg-slate-50 p-2 rounded-sm border border-gray-200">
                             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                             </svg>
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="font-black text-2xl tracking-tighter text-white uppercase">Besi<span class="text-brand-accent">Karya</span></span>
                         </div>
                         <p class="text-slate-400 text-sm leading-relaxed mb-6 font-medium pr-4">
-                            Fabrikasi dan instalasi konstruksi besi kustom untuk properti residensial dan komersial eksklusif. Komitmen pada presisi geometri maksimal.
+                            Custom iron fabrication and installation for exclusive residential and commercial properties. Committed to maximum geometric precision.
                         </p>
                     </div>
                     <div>
@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
                 <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p class="text-xs text-slate-500 font-semibold uppercase tracking-widest">© 2026 BesiKarya Industrial Group.</p>
+                    <p class="text-xs text-slate-500 font-semibold uppercase tracking-widest">© 2024 BesiKarya Industrial Group.</p>
                     <p class="text-xs text-slate-600 font-semibold uppercase tracking-widest">Multi-Page Static Infrastructure.</p>
                 </div>
             </div>

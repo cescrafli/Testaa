@@ -6,7 +6,7 @@ window.portfolioData = [
         title: "Kanopi Minimalis Kaca Tempered",
         category: "Kanopi",
         description: "Rangka hollow galvanis 5x10 dengan atap kaca tempered 8mm. Elegan dan modern untuk carport.",
-        image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=800",
+        image: "/assets/kanopi-kaca-tempered.jpg",
         message: "Halo, saya tertarik dengan Kanopi Minimalis Kaca Tempered."
     },
     {
@@ -14,7 +14,7 @@ window.portfolioData = [
         title: "Teralis Jendela Klasik Modern",
         category: "Teralis",
         description: "Besi nako murni 12mm dengan desain kubisme. Aman namun tidak menghalangi pandangan.",
-        image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800",
+        image: "/assets/teralis-klasik.jpg",
         message: "Halo, saya tertarik dengan Teralis Jendela Klasik Modern."
     },
     {
@@ -22,7 +22,7 @@ window.portfolioData = [
         title: "Jendela Industrial Pivot",
         category: "Jendela",
         description: "Bungkus besi plat dengan sistem pivot putar tengah. Sangat cocok untuk sirkulasi udara maksimal bergaya kafe.",
-        image: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&q=80&w=800",
+        image: "/assets/jendela-industrial-pivot.jpg",
         message: "Halo, saya tertarik dengan Jendela Industrial Pivot."
     },
     {
@@ -30,7 +30,7 @@ window.portfolioData = [
         title: "Pagar Laser Cutting Motif Abstrak",
         category: "Pagar",
         description: "Plat besi 2mm yang di-cutting menggunakan mesin laser presisi. Mewah dan tidak pasaran.",
-        image: "https://images.unsplash.com/photo-1582260659610-85fbd2be4cb6?auto=format&fit=crop&q=80&w=800",
+        image: "/assets/pagar-laser-cutting.jpg",
         message: "Halo, saya tertarik dengan Pagar Laser Cutting Motif."
     },
     {
@@ -38,7 +38,7 @@ window.portfolioData = [
         title: "Kanopi Balkon Alderon",
         category: "Kanopi",
         description: "Cocok untuk area cuci jemur atau balkon. Menggunakan atap alderon double layer yang dingin dan kedap suara.",
-        image: "https://images.unsplash.com/photo-1590204780516-724bc2f84e36?auto=format&fit=crop&q=80&w=800",
+        image: "/assets/kanopi-balkon-alderon.jpg",
         message: "Halo, open-konsultasi untuk pembuatan Kanopi Balkon Alderon."
     },
     {
@@ -46,7 +46,7 @@ window.portfolioData = [
         title: "Teralis Pintu Anti-Maling",
         category: "Teralis",
         description: "Teralis pintu besi solid dengan sistem kunci tanam ganda. Keamanan tingkat tinggi berlapis estetika.",
-        image: "https://images.unsplash.com/photo-1497985474320-f55ae0e6ea17?auto=format&fit=crop&q=80&w=800",
+        image: "/assets/teralis-pintu-anti-maling.jpg",
         message: "Halo, saya ingin menanyakan harga pembuatan Teralis Pintu Anti-Maling."
     }
 ];
