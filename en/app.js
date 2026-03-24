@@ -168,7 +168,7 @@ class DigitalShowcase {
 
         const skeletonHTML = `
             <div class="project-card bg-white border border-gray-200 rounded-sm overflow-hidden flex flex-col h-full shadow-sm animate-pulse">
-                <div class="aspect-[4/3] bg-slate-200 w-full"></div>
+                <div class="aspect-square bg-slate-200 w-full"></div>
                 <div class="p-6 flex flex-col flex-grow">
                     <div class="h-6 bg-slate-200 rounded w-3/4 mb-4 mt-2"></div>
                     <div class="h-4 bg-slate-200 rounded w-full mb-2"></div>
@@ -214,7 +214,7 @@ class DigitalShowcase {
 
         return `
             <div class="group">
-                <div class="relative aspect-[4/5] overflow-hidden bg-zinc-100 mb-8">
+                <div class="relative aspect-square overflow-hidden bg-zinc-100 mb-8">
                     <a href="${item.image}" class="glightbox block w-full h-full"><img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="${item.title}" src="${item.image}" loading="lazy"/></a>
                     <div class="absolute top-6 left-6">
                         <span class="bg-white/90 backdrop-blur-md px-4 py-1 text-[10px] font-black tracking-widest uppercase text-on-surface">Model: ${modelPrefix}</span>
@@ -263,7 +263,7 @@ class DigitalShowcase {
 
         const skeletonHTML = `
             <div class="project-card bg-white border border-gray-200 rounded-sm overflow-hidden flex flex-col h-full shadow-sm animate-pulse">
-                <div class="aspect-[4/3] bg-slate-200 w-full"></div>
+                <div class="aspect-square bg-slate-200 w-full"></div>
                 <div class="p-6 flex flex-col flex-grow">
                     <div class="h-6 bg-slate-200 rounded w-3/4 mb-4 mt-2"></div>
                     <div class="h-4 bg-slate-200 rounded w-full mb-2"></div>

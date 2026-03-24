@@ -100,25 +100,12 @@
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="tentang.html">Proses</a>
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="artikel.html">Jurnal</a>
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="kontak.html">Contact</a>
-<div class="hidden md:flex items-center gap-4 border-l border-zinc-300 dark:border-zinc-700 pl-6 ml-2">
-    <a href="#" onclick="switchLang('id'); return false;" class="lang-id font-black text-orange-600 dark:text-orange-500 text-sm hover:underline">ID</a>
-    <span class="text-zinc-300 dark:text-zinc-700 text-sm">|</span>
-    <a href="#" onclick="switchLang('en'); return false;" class="lang-en font-medium text-zinc-500 dark:text-zinc-400 text-sm hover:text-orange-600 dark:hover:text-orange-500 hover:underline">EN</a>
-</div>
-<script>
-function switchLang(target) {
-    let path = window.location.pathname;
-    let page = path.split('/').pop() || 'index.html';
-    let isEn = path.includes('/en/');
-    if (target === 'en' && !isEn) window.location.href = 'en/' + page;
-    else if (target === 'id' && isEn) window.location.href = '../' + page;
-}
-</script>
+
 </div>
 <div class="hidden md:flex items-center gap-6">
     <div class="flex items-center border border-outline-variant/30 rounded-sm overflow-hidden">
-        <a href="#" class="px-3 py-1 bg-primary text-white text-[10px] font-bold tracking-widest">ID</a>
-        <a href="en/index.html" class="px-3 py-1 bg-surface-container text-on-surface text-[10px] font-bold tracking-widest hover:bg-surface-variant transition-colors">EN</a>
+        <a href="#" class="px-3 py-1 bg-primary text-white text-xs font-bold tracking-widest">ID</a>
+        <a href="en/kontak.html" class="px-3 py-1 bg-surface-container text-on-surface text-xs font-bold tracking-widest hover:bg-surface-variant transition-colors">EN</a>
     </div>
     <a href="kontak.html" class="bg-primary text-on-primary px-6 py-2 text-sm font-bold uppercase tracking-widest hover:bg-primary-container transition-colors duration-150 active:scale-95" style="display:inline-flex; align-items:center; justify-content:center;">KONSULTASI HARGA</a>
 </div>
@@ -141,26 +128,13 @@ function switchLang(target) {
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="tentang.html">Proses</a>
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="artikel.html">Jurnal</a>
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="kontak.html">Contact</a>
-<div class="hidden md:flex items-center gap-4 border-l border-zinc-300 dark:border-zinc-700 pl-6 ml-2">
-    <a href="#" onclick="switchLang('id'); return false;" class="lang-id font-black text-orange-600 dark:text-orange-500 text-sm hover:underline">ID</a>
-    <span class="text-zinc-300 dark:text-zinc-700 text-sm">|</span>
-    <a href="#" onclick="switchLang('en'); return false;" class="lang-en font-medium text-zinc-500 dark:text-zinc-400 text-sm hover:text-orange-600 dark:hover:text-orange-500 hover:underline">EN</a>
-</div>
-<script>
-function switchLang(target) {
-    let path = window.location.pathname;
-    let page = path.split('/').pop() || 'index.html';
-    let isEn = path.includes('/en/');
-    if (target === 'en' && !isEn) window.location.href = 'en/' + page;
-    else if (target === 'id' && isEn) window.location.href = '../' + page;
-}
-</script>
+
 
             </div>
             
             <div class="flex items-center gap-4 mt-8 border-t border-outline-variant/30 pt-8 w-64 justify-center">
-                <a href="#" class="px-3 py-1 bg-primary text-white text-xs font-bold">ID</a>
-                <a href="en/index.html" class="px-3 py-1 bg-surface-container-highest text-on-surface text-xs font-bold">EN</a>
+                <a href="#" class="px-6 py-3 bg-primary text-white text-xs font-bold">ID</a>
+                <a href="en/kontak.html" class="px-6 py-3 bg-surface-container-highest text-on-surface text-xs font-bold">EN</a>
             </div>
             
             <a href="https://wa.me/6281234567890" target="_blank" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 font-bold tracking-widest uppercase mt-4 active:scale-95 transition-transform hover:bg-[#1DA851] rounded-full shadow-lg">
@@ -199,11 +173,11 @@ function switchLang(target) {
 <h3 class="text-xs font-black tracking-[0.3em] uppercase text-secondary border-b border-surface-variant pb-2">Metadata Proyek</h3>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 <div class="group">
-<label class="block text-[10px] font-black uppercase tracking-widest text-secondary mb-2 group-focus-within:text-primary transition-colors">Nama Perusahaan</label>
+<label class="block text-xs font-black uppercase tracking-widest text-secondary mb-2 group-focus-within:text-primary transition-colors">Nama Perusahaan</label>
 <input class="w-full bg-surface-container-highest border-none border-b-2 border-outline focus:border-primary focus:ring-0 px-4 py-4 text-sm transition-all outline-none" name="company_name" placeholder="cth. Atelier Barat" type="text" required/>
 </div>
 <div class="group">
-<label class="block text-[10px] font-black uppercase tracking-widest text-secondary mb-2 group-focus-within:text-primary transition-colors">Tipe Proyek</label>
+<label class="block text-xs font-black uppercase tracking-widest text-secondary mb-2 group-focus-within:text-primary transition-colors">Tipe Proyek</label>
 <select name="project_type" required class="w-full bg-surface-container-highest border-none border-b-2 border-outline focus:border-primary focus:ring-0 px-4 py-4 text-sm transition-all outline-none appearance-none">
 <option>Kerangka Struktural</option>
 <option>Ornamen Kustom</option>
@@ -212,16 +186,16 @@ function switchLang(target) {
 </select>
 </div>
 <div class="group">
-<label class="block text-[10px] font-black uppercase tracking-widest text-secondary mb-2 group-focus-within:text-primary transition-colors">Spesifikasi Material</label>
+<label class="block text-xs font-black uppercase tracking-widest text-secondary mb-2 group-focus-within:text-primary transition-colors">Spesifikasi Material</label>
 <input class="w-full bg-surface-container-highest border-none border-b-2 border-outline focus:border-primary focus:ring-0 px-4 py-4 text-sm transition-all outline-none" name="material_specs" placeholder="cth. Baja Tahan Karat 316 / Corten" type="text" required/>
 </div>
 <div class="group">
-<label class="block text-[10px] font-black uppercase tracking-widest text-secondary mb-2 group-focus-within:text-primary transition-colors">Estimasi Linimasa</label>
+<label class="block text-xs font-black uppercase tracking-widest text-secondary mb-2 group-focus-within:text-primary transition-colors">Estimasi Linimasa</label>
 <input class="w-full bg-surface-container-highest border-none border-b-2 border-outline focus:border-primary focus:ring-0 px-4 py-4 text-sm transition-all outline-none" name="estimated_timeline" placeholder="cth. Selesai Q4 2024" type="text" required/>
 </div>
 </div>
 <div class="group">
-<label class="block text-[10px] font-black uppercase tracking-widest text-secondary mb-2 group-focus-within:text-primary transition-colors">Kebutuhan Teknis &amp; Catatan</label>
+<label class="block text-xs font-black uppercase tracking-widest text-secondary mb-2 group-focus-within:text-primary transition-colors">Kebutuhan Teknis &amp; Catatan</label>
 <textarea name="technical_notes" required class="w-full bg-surface-container-highest border-none border-b-2 border-outline focus:border-primary focus:ring-0 px-4 py-4 text-sm transition-all outline-none resize-none" placeholder="Uraikan semua persyaratan beban, preferensi penyelesaian (finishing), atau batasan lokasi pemasangan..." rows="4"></textarea>
 </div>
 </div>
@@ -236,15 +210,15 @@ function switchLang(target) {
 </div>
 <div class="grid grid-cols-2 md:grid-cols-3 gap-6 border-t border-secondary/20 pt-8">
 <div>
-<p class="text-[9px] uppercase tracking-widest text-secondary font-black mb-1">Enkripsi</p>
+<p class="text-[10px] uppercase tracking-widest text-secondary font-black mb-1">Enkripsi</p>
 <p class="text-sm font-medium">AES-256 Bit</p>
 </div>
 <div>
-<p class="text-[9px] uppercase tracking-widest text-secondary font-black mb-1">Akses</p>
+<p class="text-[10px] uppercase tracking-widest text-secondary font-black mb-1">Akses</p>
 <p class="text-sm font-medium">Hanya Teknisi</p>
 </div>
 <div>
-<p class="text-[9px] uppercase tracking-widest text-secondary font-black mb-1">Penyimpanan</p>
+<p class="text-[10px] uppercase tracking-widest text-secondary font-black mb-1">Penyimpanan</p>
 <p class="text-sm font-medium">Umur Proyek + 1th</p>
 </div>
 </div>
@@ -252,12 +226,12 @@ function switchLang(target) {
 </div>
 <!-- Right: Upload Area -->
 <div class="lg:col-span-5 flex flex-col gap-8">
-<label for="blueprints" id="drop-zone" class="flex-grow border-2 border-dashed border-outline-variant bg-surface group hover:bg-surface-container-low transition-colors flex flex-col items-center justify-center p-12 min-h-[500px] text-center cursor-pointer relative">
+<label for="blueprints" id="drop-zone" class="flex-grow border-2 border-dashed border-outline-variant bg-surface group hover:bg-surface-container-low transition-colors flex flex-col items-center justify-center p-12 min-h-[350px] text-center cursor-pointer relative">
     <input type="file" id="blueprints" name="blueprints" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" accept=".dwg,.dxf,.pdf,.step" multiple required>
     <span class="material-symbols-outlined text-6xl text-secondary group-hover:text-primary transition-colors mb-6" data-icon="upload_file">upload_file</span>
     <h3 class="text-2xl font-black tracking-tight mb-4" id="upload-text">TARIK BLUEPRINT KE SINI</h3>
     <p class="text-secondary text-sm max-w-xs mb-8" id="upload-subtext">Mendukung format DWG, DXF, PDF, atau STEP. Ukuran maks file: 150MB per lembar.</p>
-    <span class="bg-secondary-container text-on-secondary-container px-6 py-3 font-bold uppercase tracking-widest text-[10px] hover:bg-secondary hover:text-white transition-all pointer-events-none">
+    <span class="bg-secondary-container text-on-secondary-container px-6 py-3 font-bold uppercase tracking-widest text-xs hover:bg-secondary hover:text-white transition-all pointer-events-none">
         Pilih dari penyimpanan lokal
     </span>
 </label>
@@ -275,11 +249,11 @@ function switchLang(target) {
     });
 </script>
 <div class="space-y-4">
-<button type="submit" class="w-full bg-primary text-on-primary py-6 text-sm font-black uppercase tracking-[0.2em] shadow-lg shadow-primary/20 hover:bg-primary-container transition-all flex items-center justify-center gap-3">
+<button type="submit" class="w-full bg-primary text-on-primary py-4 text-sm font-black uppercase tracking-[0.2em] shadow-lg shadow-primary/20 hover:bg-primary-container transition-all flex items-center justify-center gap-3">
                         Kirim Pertanyaan Teknis
                         <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
 </button>
-<p class="text-center text-[10px] font-bold text-secondary tracking-widest uppercase opacity-60">Eksekusi mengikuti presisi.</p>
+<p class="text-center text-xs font-bold text-secondary tracking-widest uppercase opacity-60">Eksekusi mengikuti presisi.</p>
 </div>
 </div>
 </form>

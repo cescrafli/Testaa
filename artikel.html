@@ -100,25 +100,12 @@
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="tentang.html">Proses</a>
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="artikel.html">Jurnal</a>
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="kontak.html">Contact</a>
-<div class="hidden md:flex items-center gap-4 border-l border-zinc-300 dark:border-zinc-700 pl-6 ml-2">
-    <a href="#" onclick="switchLang('id'); return false;" class="lang-id font-black text-orange-600 dark:text-orange-500 text-sm hover:underline">ID</a>
-    <span class="text-zinc-300 dark:text-zinc-700 text-sm">|</span>
-    <a href="#" onclick="switchLang('en'); return false;" class="lang-en font-medium text-zinc-500 dark:text-zinc-400 text-sm hover:text-orange-600 dark:hover:text-orange-500 hover:underline">EN</a>
-</div>
-<script>
-function switchLang(target) {
-    let path = window.location.pathname;
-    let page = path.split('/').pop() || 'index.html';
-    let isEn = path.includes('/en/');
-    if (target === 'en' && !isEn) window.location.href = 'en/' + page;
-    else if (target === 'id' && isEn) window.location.href = '../' + page;
-}
-</script>
+
 </div>
 <div class="hidden md:flex items-center gap-6">
     <div class="flex items-center border border-outline-variant/30 rounded-sm overflow-hidden">
-        <a href="#" class="px-3 py-1 bg-primary text-white text-[10px] font-bold tracking-widest">ID</a>
-        <a href="en/index.html" class="px-3 py-1 bg-surface-container text-on-surface text-[10px] font-bold tracking-widest hover:bg-surface-variant transition-colors">EN</a>
+        <a href="#" class="px-3 py-1 bg-primary text-white text-xs font-bold tracking-widest">ID</a>
+        <a href="en/artikel.html" class="px-3 py-1 bg-surface-container text-on-surface text-xs font-bold tracking-widest hover:bg-surface-variant transition-colors">EN</a>
     </div>
     <a href="kontak.html" class="bg-primary text-on-primary px-6 py-2 text-sm font-bold uppercase tracking-widest hover:bg-primary-container transition-colors duration-150 active:scale-95" style="display:inline-flex; align-items:center; justify-content:center;">KONSULTASI HARGA</a>
 </div>
@@ -141,26 +128,13 @@ function switchLang(target) {
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="tentang.html">Proses</a>
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="artikel.html">Jurnal</a>
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150" href="kontak.html">Contact</a>
-<div class="hidden md:flex items-center gap-4 border-l border-zinc-300 dark:border-zinc-700 pl-6 ml-2">
-    <a href="#" onclick="switchLang('id'); return false;" class="lang-id font-black text-orange-600 dark:text-orange-500 text-sm hover:underline">ID</a>
-    <span class="text-zinc-300 dark:text-zinc-700 text-sm">|</span>
-    <a href="#" onclick="switchLang('en'); return false;" class="lang-en font-medium text-zinc-500 dark:text-zinc-400 text-sm hover:text-orange-600 dark:hover:text-orange-500 hover:underline">EN</a>
-</div>
-<script>
-function switchLang(target) {
-    let path = window.location.pathname;
-    let page = path.split('/').pop() || 'index.html';
-    let isEn = path.includes('/en/');
-    if (target === 'en' && !isEn) window.location.href = 'en/' + page;
-    else if (target === 'id' && isEn) window.location.href = '../' + page;
-}
-</script>
+
 
             </div>
             
             <div class="flex items-center gap-4 mt-8 border-t border-outline-variant/30 pt-8 w-64 justify-center">
-                <a href="#" class="px-3 py-1 bg-primary text-white text-xs font-bold">ID</a>
-                <a href="en/index.html" class="px-3 py-1 bg-surface-container-highest text-on-surface text-xs font-bold">EN</a>
+                <a href="#" class="px-6 py-3 bg-primary text-white text-xs font-bold">ID</a>
+                <a href="en/artikel.html" class="px-6 py-3 bg-surface-container-highest text-on-surface text-xs font-bold">EN</a>
             </div>
             
             <a href="https://wa.me/6281234567890" target="_blank" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 font-bold tracking-widest uppercase mt-4 active:scale-95 transition-transform hover:bg-[#1DA851] rounded-full shadow-lg">
@@ -184,7 +158,7 @@ function switchLang(target) {
 <span class="font-label text-sm tracking-[0.5em] font-black text-on-surface">EST. 2024</span>
 </div>
 <div class="relative z-10 max-w-6xl">
-<span class="inline-block bg-primary text-white px-4 py-1 text-[10px] font-bold tracking-[0.2em] uppercase mb-8">Engineering Intelligence</span>
+<span class="inline-block bg-primary text-white px-4 py-1 text-xs font-bold tracking-[0.2em] uppercase mb-8">Engineering Intelligence</span>
 <h1 class="text-[clamp(4rem,12vw,10rem)] leading-[0.85] font-black text-on-surface tracking-tighter mb-12">
     JURNAL<br/>EDUKASI
 </h1>
@@ -204,14 +178,14 @@ function switchLang(target) {
 <!-- Featured Article -->
 <section class="bg-surface px-8 md:px-24 py-24 md:py-32">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-0 border border-outline-variant/20">
-<div class="relative aspect-square md:aspect-auto h-full min-h-[500px] overflow-hidden group">
+<div class="relative aspect-square md:aspect-auto h-full min-h-[350px] overflow-hidden group">
 <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Macro close-up of industrial steel texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAH3JDs73k4iRX4RdsByKg4Nr1TpO1ZFKY6iRU3uFc9D2Mk8eRpoywZIcXMJ93RIiMLEP4gljZBclRGLrxgpmcoc21_SmevXWMOz_NSGNsrELkhT2juD2oR4F9WSYXgAQkDf0D-WJk1VmmXDVYIg7QvUk-KoAkbibnQHMBdlHmsBs1PVOF7zG7R-6HiTvW3CiE9txCq4XE8E_qvEOOw1ICMX_olHSuafwwWQJ_lxUUBVuPy0B-n5yh22zyZR4Rz6ZbU6LiBMgQOQ"/>
 <div class="absolute inset-0 bg-primary/10 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity"></div>
 </div>
 <div class="bg-surface-container-lowest p-12 md:p-24 flex flex-col justify-center">
 <div class="flex gap-4 mb-8">
-<span class="text-[10px] font-bold tracking-widest uppercase text-primary">Technical Analysis</span>
-<span class="text-[10px] font-bold tracking-widest uppercase text-secondary">12 Min Read</span>
+<span class="text-xs font-bold tracking-widest uppercase text-primary">Technical Analysis</span>
+<span class="text-xs font-bold tracking-widest uppercase text-secondary">12 Min Read</span>
 </div>
 <h2 class="text-4xl md:text-5xl font-bold text-on-surface leading-tight mb-8 tracking-tight">
     Critical Differences Between Galvanized Hollow Iron and Ordinary Black Hollow
@@ -231,7 +205,7 @@ function switchLang(target) {
 <section class="bg-surface-container-low px-8 md:px-24 py-24">
 <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
 <div>
-<span class="text-[10px] font-black tracking-[0.3em] uppercase text-primary mb-4 block">Archive</span>
+<span class="text-xs font-black tracking-[0.3em] uppercase text-primary mb-4 block">Archive</span>
 <h3 class="text-4xl font-bold tracking-tight text-on-surface">Structural Discourse</h3>
 </div>
 <div class="flex gap-4">
@@ -249,13 +223,13 @@ function switchLang(target) {
 <div class="aspect-video overflow-hidden relative">
 <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Modern house facade with metal laser cut fence" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWterWLWHSeDdLLjMfy6ZumpsKZc0gsfESeholjjDnYlMQD-kSjpsR9dXReiPR1UGGKRL6EnDEUtDxXC3S71L9kNaRBKqoPSd413WD7MRfZlc45N72fuSdjBupLM78GEGqfZJM8ETV1nMoRb3E9cTsTsybd8bkfO3h2l3G9IxHsStmDxZL2hMRK3dX9PRW4ZSwgsESA6CGQp093fGE_P3q7gXwuq859HZnB5UwdoK3wT8fzeD6YC4oFPE9f4elgV1EGnNEhOCVhQ"/>
 <div class="absolute bottom-4 left-4">
-<span class="bg-white px-3 py-1 text-[9px] font-bold uppercase tracking-wider shadow-sm">Trends</span>
+<span class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider shadow-sm">Trends</span>
 </div>
 </div>
 <div class="p-8">
 <h4 class="text-xl font-bold text-on-surface mb-4 group-hover:text-primary transition-colors">2026 Facade and Laser Cutting Fence Trends for Tropical Houses</h4>
 <p class="text-secondary text-sm leading-relaxed mb-6">Exploring geometric patterns that facilitate airflow while maintaining privacy and architectural integrity.</p>
-<div class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-on-surface">
+<div class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-on-surface">
 <span>Read Article</span>
 <span class="material-symbols-outlined text-sm">north_east</span>
 </div>
@@ -266,13 +240,13 @@ function switchLang(target) {
 <div class="aspect-video overflow-hidden relative">
 <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Technical drawing of steel structural joints" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdHaPuRgnP8_zToG76MQLdu44xdq1WLyKLJgLc9SnFpsNsIBr2vX24Kfl7wnQUt74jmC_AmcoeuKlesACtx9uoqwYUcHCpEk3oTLQ9c41tZSMqJ3oQTAmXPE2EZK-z0ecFY_SCATdsqSC-fYw41JnW-xQQ9qmNRMUWrmkpDAJUAvPdIRKUDVJWYCABUjiS8M46wrcJJncdXePIlu8SB_zYPD44Met3ZZR9jEfm-tODkEAlwIfDApwp0KtETdOAlfq_bqeFYqtHvQ"/>
 <div class="absolute bottom-4 left-4">
-<span class="bg-white px-3 py-1 text-[9px] font-bold uppercase tracking-wider shadow-sm">Methods</span>
+<span class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider shadow-sm">Methods</span>
 </div>
 </div>
 <div class="p-8">
 <h4 class="text-xl font-bold text-on-surface mb-4 group-hover:text-primary transition-colors">Precision Welding: TIG vs MIG in Architectural Finishing</h4>
 <p class="text-secondary text-sm leading-relaxed mb-6">Why the aesthetic finish of a joint is just as critical as its structural load-bearing capacity.</p>
-<div class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-on-surface">
+<div class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-on-surface">
 <span>Read Article</span>
 <span class="material-symbols-outlined text-sm">north_east</span>
 </div>
@@ -283,13 +257,13 @@ function switchLang(target) {
 <div class="aspect-video overflow-hidden relative">
 <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Industrial workshop with iron fabrication tools" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRdUzaHBZ4YcMihV6q9orESSZiWPpapCeOQ-_us19EVxQKaJND1JWxV06uKBhRkdXajaFT9A-TtZYZvGWcxP_crly1WbqsvKWJtBQbTQRXq2DzJfNuklAbQBIKlZU4oyK3ae3MQrqwHQr7FAmCBoy45aKvL-r8l0_1Mq_eHxIk-eNgq7grghwW8vJih8Bzs69iuRYZEGYJqQesxIa16DTC8e1289fg6jYbMfduorxLinTK4fkUvyisGWTC6Ql7V1X7NSizAA-dXw"/>
 <div class="absolute bottom-4 left-4">
-<span class="bg-white px-3 py-1 text-[9px] font-bold uppercase tracking-wider shadow-sm">Sustainability</span>
+<span class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider shadow-sm">Sustainability</span>
 </div>
 </div>
 <div class="p-8">
 <h4 class="text-xl font-bold text-on-surface mb-4 group-hover:text-primary transition-colors">Circular Iron: The Lifecycle of Architectural Steel</h4>
 <p class="text-secondary text-sm leading-relaxed mb-6">How modern fabrication techniques minimize waste and maximize the recyclability of structural materials.</p>
-<div class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-on-surface">
+<div class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-on-surface">
 <span>Read Article</span>
 <span class="material-symbols-outlined text-sm">north_east</span>
 </div>
@@ -320,14 +294,14 @@ function switchLang(target) {
 <div class="hidden lg:flex items-center justify-center">
 <div class="relative w-full max-w-md aspect-[3/4] bg-surface-container-highest p-12 flex flex-col justify-between">
 <div class="border-t border-on-surface/10 pt-4">
-<span class="text-on-surface text-[10px] font-black tracking-widest uppercase">Volume 04 / 2024</span>
+<span class="text-on-surface text-xs font-black tracking-widest uppercase">Volume 04 / 2024</span>
 </div>
 <div class="flex flex-col gap-2">
 <span class="text-on-surface text-6xl font-black tracking-tighter">B/K</span>
 <span class="text-on-surface text-sm font-bold tracking-widest uppercase">Technical Catalog</span>
 </div>
 <div class="border-b border-on-surface/10 pb-4">
-<p class="text-secondary text-[10px] leading-tight">PRECISION ARCHITECTURAL IRONWORKS &amp; CUSTOM FABRICATION SOLUTIONS</p>
+<p class="text-secondary text-xs leading-tight">PRECISION ARCHITECTURAL IRONWORKS &amp; CUSTOM FABRICATION SOLUTIONS</p>
 </div>
 <!-- Decorative element to make it look like a physical catalog -->
 <div class="absolute -right-4 top-1/2 -translate-y-1/2 h-4/5 w-4 bg-on-surface/5 shadow-xl"></div>
